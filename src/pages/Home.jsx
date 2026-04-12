@@ -36,11 +36,11 @@ export default function Home({ setPage }) {
       <div className="hero">
         <div className="hero-content">
           <div className="hero-tag">✦ <span>California Licensed</span> Life &amp; Health Agents</div>
-          <h1>Health coverage guidance you can <em>actually trust.</em></h1>
+          <h1>A clearer way to navigate <em>Medicare and health coverage.</em></h1>
           <p className="hero-sub">
             Medicare decisions and health insurance choices can feel complicated.
-            We help you slow down, understand your real options, and choose coverage
-            with clarity — without the pressure.
+            We help you slow down, understand your options, and choose coverage
+            that actually fits — without the pressure.
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>

@@ -12,7 +12,7 @@ export default function About({ setPage }) {
           <p>
             We're Chris and Helga Archibald — licensed insurance agents and partners in
             business and in life. We started AnchorPath Insurance Services to help people
-            navigate Medicare and health insurance decisions with clarity, patience, and trust.
+            navigate Medicare and health insurance decisions with clarity, patience, and care.
           </p>
         </div>
       </div>
@@ -24,7 +24,7 @@ export default function About({ setPage }) {
             ['🌿', 'Honesty first', 'We tell you what we actually think is best for your situation — not what earns the biggest commission.'],
             ['🤲', 'Patience always', 'No rushing, no jargon. We move at your pace until you feel completely confident in your decision.'],
             ['🔍', 'Clear explanations', 'We believe you deserve to understand your coverage, not just have it. Complex terms, explained plainly.'],
-            ['🌅', 'Long-term relationships', "We're building a practice based on trust, not transactions. We're here for the long haul."],
+            ['🌅', 'Long-term relationships', "We're building a practice around people, not transactions. We're here before, during, and after enrollment."],
           ].map(([icon, h, p]) => (
             <div key={h} className="value-item">
               <div className="value-icon">{icon}</div>
@@ -40,7 +40,7 @@ export default function About({ setPage }) {
         <p>
           The idea behind AnchorPath is simple. Most people making health coverage decisions —
           whether they're approaching Medicare or shopping for a family health plan — don't have
-          a trusted guide in their corner. They're sorting through options on their own, often
+          someone in their corner who can explain things clearly. They're sorting through options on their own, often
           under time pressure, without a clear picture of what they're actually choosing or what
           it means for their health and their budget.
         </p>
