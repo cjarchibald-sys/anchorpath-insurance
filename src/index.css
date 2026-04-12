@@ -420,6 +420,95 @@ nav {
 /* === CARDS 2-COLUMN VARIANT === */
 .cards-2 { grid-template-columns: repeat(2, 1fr) !important; }
 
+/* === WHO WE HELP SECTION === */
+.who-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4.5rem 2.5rem;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.who-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s;
+}
+
+.who-item:hover { box-shadow: 0 4px 18px rgba(46, 109, 164, 0.08); }
+
+.who-check {
+  color: var(--blue);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+.who-item p {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* === CONTACT — WHAT TO EXPECT === */
+.contact-expect { margin-top: 0.5rem; }
+
+.expect-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.expect-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.expect-check {
+  color: var(--blue);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+/* === CONTACT DISCLAIMER === */
+.contact-disclaimer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem 3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+}
+
+/* === EDUCATIONAL DISCLAIMER (Basics / Plans pages) === */
+.edu-disclaimer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem 3.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+}
+
+.edu-disclaimer strong { color: var(--navy); }
+
 /* === TESTIMONIAL PLACEHOLDER === */
 .testimonial-placeholder {
   text-align: center;
@@ -1059,6 +1148,12 @@ footer strong { color: rgba(255, 255, 255, 0.9); }
 
   .cards-2 { grid-template-columns: 1fr !important; }
 
+  .who-section { padding: 3rem 1.5rem; }
+  .who-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-disclaimer { padding: 1.25rem 1.5rem 2.5rem; }
+  .edu-disclaimer { padding: 1.25rem 1.5rem 2.5rem; }
+
   .cta-band { padding: 3.5rem 1.5rem; }
   footer { padding: 2rem 1.5rem; }
 }
@@ -1066,4 +1161,5 @@ footer strong { color: rgba(255, 255, 255, 0.9); }
 @media (max-width: 500px) {
   .values-inner { grid-template-columns: 1fr; }
   .hero-tag { font-size: 0.72rem; }
+  .who-grid { grid-template-columns: 1fr; }
 }

@@ -66,7 +66,15 @@ export default function Basics({ setPage }) {
       <div className="cta-band">
         <h2>Still have questions? Let's talk.</h2>
         <p>Every situation is different. We're happy to walk through your specific enrollment window or coverage needs.</p>
-        <button className="btn-cta" onClick={() => setPage('contact')}>Get Personalized Help</button>
+        <button className="btn-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+      </div>
+
+      <div className="edu-disclaimer">
+        <strong>Educational information only.</strong> The content on this page is provided for general
+        informational purposes and does not constitute insurance advice. Medicare plan options, costs,
+        and availability vary by location and individual eligibility. We are not affiliated with or
+        endorsed by the U.S. government or the federal Medicare program. Please speak with a licensed
+        agent before making enrollment decisions.
       </div>
     </>
   )

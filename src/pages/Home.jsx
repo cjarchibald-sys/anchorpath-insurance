@@ -13,14 +13,15 @@ export default function Home({ setPage }) {
 
   return (
     <>
-      {/* Hero */}
+      {/* ── Hero ─────────────────────────────────────────────────── */}
       <div className="hero">
         <div className="hero-content">
           <div className="hero-tag">✦ <span>California Licensed</span> Life &amp; Health Agents</div>
-          <h1>A clear path to the <em>right health coverage.</em></h1>
+          <h1>Health coverage guidance you can <em>actually trust.</em></h1>
           <p className="hero-sub">
-            Whether you're navigating Medicare or choosing a plan for yourself or your family,
-            we help you understand your options and make confident decisions.
+            Medicare decisions and health insurance choices can feel complicated.
+            We help you slow down, understand your real options, and choose coverage
+            with clarity — without the pressure.
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
@@ -30,16 +31,16 @@ export default function Home({ setPage }) {
         <div className="hero-visual"><HeroIllo /></div>
       </div>
 
-      {/* Two audience paths */}
+      {/* ── Two audience paths ───────────────────────────────────── */}
       <div className="paths-section">
         <div className="paths-inner">
-          <div className="section-label paths-label">Who are you looking for help with?</div>
+          <div className="section-label paths-label">Which best describes you?</div>
           <div className="paths-grid">
             <div className="path-card path-card--blue">
               <div className="path-card-img"><MedicarePathIllo /></div>
               <div className="path-card-body">
-                <h3>Medicare Coverage</h3>
-                <p>Turning 65? Already on Medicare? Need help understanding your options or reviewing your current plan? We help make Medicare easier to understand and easier to navigate.</p>
+                <h3>Medicare</h3>
+                <p>Turning 65, new to Medicare, or reviewing your current plan? We help you understand your options and choose coverage with confidence.</p>
                 <button className="btn-path-blue" onClick={() => setPage('contact')}>Get Medicare Guidance →</button>
               </div>
             </div>
@@ -47,7 +48,7 @@ export default function Home({ setPage }) {
               <div className="path-card-img"><FamilyPathIllo /></div>
               <div className="path-card-body">
                 <h3>Individual &amp; Family Health Plans</h3>
-                <p>Need health coverage for yourself or your family? Whether you're self-employed, between jobs, or simply exploring your options, we help you find a plan that fits your needs and budget.</p>
+                <p>Need coverage for yourself or your family? We help you compare options and find a plan that fits your needs and budget.</p>
                 <button className="btn-path-gold" onClick={() => setPage('contact')}>Explore Health Plan Options →</button>
               </div>
             </div>
@@ -55,13 +56,13 @@ export default function Home({ setPage }) {
         </div>
       </div>
 
-      {/* Lead magnet */}
+      {/* ── Lead magnet ──────────────────────────────────────────── */}
       <div className="lead-strip">
         <div className="lead-strip-inner">
           <div className="lead-strip-icon">📋</div>
           <div className="lead-strip-text">
-            <strong>Get the Medicare Roadmap — at no charge</strong>
-            <span>A practical guide to help you understand your Medicare options before you enroll.</span>
+            <strong>Free Medicare Roadmap — yours at no charge</strong>
+            <span>A plain-language guide to help you understand your Medicare options before you enroll.</span>
           </div>
           {!leadSent ? (
             <form className="lead-form" onSubmit={handleLead}>
@@ -71,7 +72,7 @@ export default function Home({ setPage }) {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
               />
-              <button type="submit" className="btn-gold">Send Me the Roadmap →</button>
+              <button type="submit" className="btn-gold">Send Me the Guide →</button>
             </form>
           ) : (
             <div className="lead-success">✓ On its way to your inbox!</div>
@@ -79,41 +80,41 @@ export default function Home({ setPage }) {
         </div>
       </div>
 
-      {/* Trust bar */}
+      {/* ── Trust bar ────────────────────────────────────────────── */}
       <div className="trust-bar">
         {[
-          'CA Licensed — Life & Health',
-          'Complimentary consultations',
-          'Independent & unbiased',
-          'Medicare & individual health coverage',
+          'CA Licensed Life & Health Agents',
+          'No-cost, no-obligation consultations',
+          'Independent — not tied to any single carrier',
+          'Medicare and individual health plan guidance',
         ].map(t => (
           <div key={t} className="trust-item"><span className="trust-check">✦</span> {t}</div>
         ))}
       </div>
 
-      {/* How We Help — 3 steps */}
+      {/* ── How it works ─────────────────────────────────────────── */}
       <div className="section">
-        <div className="section-label">How we help</div>
+        <div className="section-label">How it works</div>
         <div className="section-title">A simple, personal process</div>
         <div className="section-sub">
-          We don't start with products. We start with you — your situation, your questions, and what matters most.
+          We don't start with products. We start with you.
         </div>
         <div className="how-steps">
           {[
             [
               '1',
               'Understand Your Situation',
-              'We start by learning about your needs, priorities, and questions — no forms to fill out, no pressure, just a real conversation.',
+              'We start by learning about your needs, priorities, and questions — no forms, no pressure, just a real conversation.',
             ],
             [
               '2',
               'Review Your Options',
-              'We walk you through the coverage options available and explain what matters most, in plain language you can actually use.',
+              'We walk you through the coverage options available to you and explain what matters most, in plain language you can actually use.',
             ],
             [
               '3',
               'Make a Confident Decision',
-              'We help you choose a path that fits your needs, with clarity and confidence — at whatever pace works for you.',
+              'We help you choose a plan that fits your needs — with clarity and confidence, at whatever pace works for you.',
             ],
           ].map(([n, h, p]) => (
             <div key={n} className="step">
@@ -124,22 +125,23 @@ export default function Home({ setPage }) {
         </div>
       </div>
 
-      {/* Why AnchorPath differentiation */}
+      {/* ── Why AnchorPath ───────────────────────────────────────── */}
       <div className="why-section">
         <div className="why-inner">
           <div className="why-text">
             <div className="section-label">Why AnchorPath</div>
-            <h2>A different kind of insurance experience</h2>
+            <h2>Guidance first. Products second.</h2>
             <p>
-              Most people don't need more insurance jargon. They need someone who can explain
-              their options clearly and help them make the right decision. That's how we work.
+              Most people navigating health coverage don't need more options thrown at them —
+              they need someone who will slow down, listen, and explain things clearly.
+              That's how we work.
             </p>
             <div className="independence-checks" style={{ marginTop: '1.5rem' }}>
               {[
-                'Clear, personalized guidance — not a one-size-fits-all pitch',
+                'Clear, personalized guidance — tailored to your actual situation',
                 'Support for Medicare and individual or family health coverage decisions',
-                'A no-pressure, education-first approach',
-                'Help understanding your options, not just selling plans',
+                'Independent — we compare options across multiple carriers',
+                'A calm, no-pressure approach — education first, always',
               ].map(t => (
                 <div key={t} className="icheck">
                   <div className="icheck-dot">✦</div>
@@ -148,36 +150,37 @@ export default function Home({ setPage }) {
               ))}
             </div>
             <div style={{ marginTop: '2rem' }}>
-              <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+              <button className="btn-primary" onClick={() => setPage('about')}>Learn About Us</button>
             </div>
           </div>
           <div className="why-illo"><IndependenceIllo /></div>
         </div>
       </div>
 
-      {/* Services — two focus areas */}
+      {/* ── Services ─────────────────────────────────────────────── */}
       <div className="section">
-        <div className="section-label">What we offer</div>
-        <div className="section-title">Two areas of focus</div>
+        <div className="section-label">Our focus</div>
+        <div className="section-title">Two areas. Done well.</div>
         <div className="section-sub">
-          We keep our focus intentional — so we can serve you well in the decisions that matter most.
+          We work in two areas — Medicare and individual/family health coverage.
+          That's it. Keeping our focus narrow means we can serve you well in the decisions that matter most.
         </div>
         <div className="cards-3 cards-2">
           <div className="card">
-            <div className="card-illo" style={{ background: 'linear-gradient(160deg,#e8f4fb,#f0f7fc)' }}><GuidanceIllo /></div>
+            <div className="card-illo"><GuidanceIllo /></div>
             <div className="card-body">
               <h3>Medicare Plans</h3>
-              <p>Guidance for those turning 65, enrolling in Medicare, reviewing existing coverage, or comparing plan options including Medicare Advantage, Medigap, and Part D.</p>
+              <p>We work with people turning 65, newly enrolled in Medicare, wondering whether their current plan still makes sense, or comparing Advantage, Medigap, and Part D options. We explain the differences clearly — so you can choose with confidence.</p>
               <div style={{ marginTop: '1rem' }}>
                 <button className="btn-plan" onClick={() => setPage('basics')}>Learn About Medicare →</button>
               </div>
             </div>
           </div>
           <div className="card">
-            <div className="card-illo" style={{ background: 'linear-gradient(160deg,#fdf3e0,#fffbf4)' }}><ExplainIllo /></div>
+            <div className="card-illo"><ExplainIllo /></div>
             <div className="card-body">
               <h3>Individual &amp; Family Health Insurance</h3>
-              <p>Help evaluating health plan options for individuals, couples, and families seeking coverage outside an employer plan — including marketplace and private options.</p>
+              <p>We work with self-employed individuals, families buying their own coverage, people between jobs, and anyone who needs a health plan outside of an employer. We help you compare options and find something that actually fits.</p>
               <div style={{ marginTop: '1rem' }}>
                 <button className="btn-plan" onClick={() => setPage('contact')}>Request a Coverage Review →</button>
               </div>
@@ -186,20 +189,34 @@ export default function Home({ setPage }) {
         </div>
       </div>
 
-      {/* Client Experience — placeholder for real testimonials */}
-      {/* TODO: Replace with real client testimonials when available */}
-      <div className="testimonial-strip">
-        <div className="testimonial-placeholder">
-          <div className="section-label" style={{ display: 'block', marginBottom: '0.5rem' }}>Client Experience</div>
-          <div className="section-title" style={{ marginBottom: '0.75rem' }}>What our clients say</div>
-          <p style={{ maxWidth: '520px', margin: '0 auto', color: 'var(--muted)', fontSize: '1rem' }}>
-            We'll share client experiences here as they become available.
-            Hearing from the people we've helped is something we value deeply.
-          </p>
+      {/* ── Who we help ──────────────────────────────────────────── */}
+      <div className="who-section">
+        <div className="section-label">Who we help</div>
+        <div className="section-title">You're in the right place if…</div>
+        <div className="section-sub">
+          We serve a focused group of people. If any of these describe your situation, we'd love to talk.
+        </div>
+        <div className="who-grid">
+          {[
+            "You're turning 65 and don't know where to start with Medicare",
+            "You're already on Medicare and wondering if your current plan still makes sense",
+            "You're self-employed and looking for health coverage that fits your budget",
+            "You're between jobs and need coverage now",
+            "You're shopping for a health plan for yourself or your family",
+            "You just want to understand your options — with no pressure to buy",
+          ].map(item => (
+            <div key={item} className="who-item">
+              <span className="who-check">✦</span>
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+          <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
         </div>
       </div>
 
-      {/* Final CTA */}
+      {/* ── Final CTA ────────────────────────────────────────────── */}
       <div className="cta-band">
         <h2>Ready to find the right coverage?</h2>
         <p>Start with a conversation — complimentary, and completely on your terms.</p>

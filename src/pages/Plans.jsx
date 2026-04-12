@@ -67,7 +67,15 @@ export default function Plans({ setPage }) {
       <div className="cta-band">
         <h2>Not sure which plan fits you?</h2>
         <p>That's exactly what we're here for. Let's compare your real options together.</p>
-        <button className="btn-cta" onClick={() => setPage('contact')}>Start the Conversation</button>
+        <button className="btn-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+      </div>
+
+      <div className="edu-disclaimer">
+        <strong>Educational information only.</strong> Plan descriptions are for general informational
+        purposes and may not reflect current availability, pricing, or benefits in your area. Medicare
+        plan options, costs, and features vary by carrier and location. We are not affiliated with or
+        endorsed by the U.S. government or the federal Medicare program. Speak with a licensed agent
+        to review options specific to your situation.
       </div>
     </>
   )

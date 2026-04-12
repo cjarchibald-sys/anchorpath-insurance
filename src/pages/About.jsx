@@ -3,15 +3,21 @@ import { AboutIllo } from '../illustrations'
 export default function About({ setPage }) {
   return (
     <>
+      {/* ── Hero split ───────────────────────────────────────────── */}
       <div className="about-split">
         <div className="about-illo"><AboutIllo /></div>
         <div className="about-content-hero">
           <div className="about-role">California Licensed Agents · Life &amp; Health</div>
           <h1>We built AnchorPath because health coverage decisions deserve real guidance — not guesswork.</h1>
-          <p>We're Chris and Helga Archibald — licensed insurance agents and partners in business and in life. We started AnchorPath Insurance Services to help people navigate Medicare and health insurance with clarity, patience, and trust.</p>
+          <p>
+            We're Chris and Helga Archibald — licensed insurance agents and partners in
+            business and in life. We started AnchorPath Insurance Services to help people
+            navigate Medicare and health insurance decisions with clarity, patience, and trust.
+          </p>
         </div>
       </div>
 
+      {/* ── Values ───────────────────────────────────────────────── */}
       <div className="values-strip">
         <div className="values-inner">
           {[
@@ -29,35 +35,38 @@ export default function About({ setPage }) {
         </div>
       </div>
 
+      {/* ── Our story ────────────────────────────────────────────── */}
       <div className="about-body">
         <p>
-          We believe choosing health coverage should feel less confusing and more personal.
-          As licensed insurance agents working together, we built AnchorPath Insurance Services
-          to help people navigate Medicare and health insurance decisions with clarity, patience,
-          and trust.
+          The idea behind AnchorPath is simple. Most people making health coverage decisions —
+          whether they're approaching Medicare or shopping for a family health plan — don't have
+          a trusted guide in their corner. They're sorting through options on their own, often
+          under time pressure, without a clear picture of what they're actually choosing or what
+          it means for their health and their budget.
         </p>
         <p className="pullquote">
-          "We know these choices can feel overwhelming — especially when the stakes are high for
-          your health, your family, and your budget."
+          "We know these choices can feel overwhelming — especially when the stakes are high
+          for your health, your family, and your budget."
         </p>
         <p>
-          That's exactly why we work the way we do. We start by listening. We ask about your
-          situation — your doctors, your medications, your priorities, your budget. Then we walk
-          you through the options that are actually relevant to you, in plain language, with no
+          That's why we work the way we do. We start by listening. We ask about your situation —
+          your doctors, your medications, your priorities, your budget. Then we walk you through
+          the options that are actually relevant to your circumstances, in plain language, with no
           pressure and no agenda other than helping you make the right choice.
         </p>
         <p>
-          As independent agents, we're not tied to any single carrier. We can compare options
-          across the market and recommend what genuinely makes sense for your situation.
-          Whether you're turning 65, navigating Medicare for the first time, or looking for
-          health coverage for yourself or your family — our goal is to make the process simpler,
-          more understandable, and more personal for every client we serve.
+          As independent agents, we're not tied to any single carrier. We compare options across
+          the market and recommend what genuinely makes sense for you — whether that's a Medicare
+          plan, a marketplace option, or something else entirely. Our only loyalty is to your
+          coverage needs.
         </p>
         <p>
-          Our consultations are always complimentary. There's no obligation, no countdown clock,
-          and no script — just a real conversation about your needs, your options, and how we
+          Our consultations are always complimentary. There's no obligation, no script, and no
+          countdown clock — just a real conversation about your needs, your options, and how we
           can help.
         </p>
+
+        {/* ── Credentials ──────────────────────────────────────── */}
         <div className="creds">
           {[
             '🏅 CA Life & Health Licensed',
@@ -68,6 +77,7 @@ export default function About({ setPage }) {
             <div key={c} className="cred-badge">{c}</div>
           ))}
         </div>
+
         <div style={{ marginTop: '1.5rem' }}>
           <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
         </div>
