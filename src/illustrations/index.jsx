@@ -16,9 +16,9 @@ function Img({ id, w, h, alt, style = {} }) {
 export function HeroIllo() {
   return (
     <Img
-      id="photo-1573497019940-1c28c88b4f3e"
+      id="photo-1559757148-5c350d0d3c56"
       w={600} h={460}
-      alt="Friendly Medicare insurance advisor"
+      alt="Happy senior couple enjoying the outdoors"
       style={{
         borderRadius: '16px',
         boxShadow: '0 8px 40px rgba(46,109,164,0.18)',
