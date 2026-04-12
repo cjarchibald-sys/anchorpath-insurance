@@ -65,7 +65,7 @@ export default function Basics({ setPage }) {
 
       <div className="cta-band">
         <h2>Still have questions? Let's talk.</h2>
-        <p>Every situation is different. I'm happy to walk through your specific enrollment window or coverage needs.</p>
+        <p>Every situation is different. We're happy to walk through your specific enrollment window or coverage needs.</p>
         <button className="btn-cta" onClick={() => setPage('contact')}>Get Personalized Help</button>
       </div>
     </>

@@ -66,7 +66,7 @@ export default function Plans({ setPage }) {
 
       <div className="cta-band">
         <h2>Not sure which plan fits you?</h2>
-        <p>That's exactly what I'm here for. Let's compare your real options together.</p>
+        <p>That's exactly what we're here for. Let's compare your real options together.</p>
         <button className="btn-cta" onClick={() => setPage('contact')}>Start the Conversation</button>
       </div>
     </>

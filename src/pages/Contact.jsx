@@ -46,8 +46,8 @@ export default function Contact() {
 
       <div className="contact-wrap">
         <div className="contact-info">
-          <h2>I'd love to hear from you</h2>
-          <p>Whether you're brand new to Medicare or re-evaluating your current coverage, I'm happy to help. Consultations are always complimentary.</p>
+          <h2>We'd love to hear from you</h2>
+          <p>Whether you're brand new to Medicare or re-evaluating your current coverage, we're happy to help. Consultations are always complimentary.</p>
           {[
             ['📍','Serving','Bay Area & all of California'],
             ['📞','Phone','(408) 564-9295'],
@@ -65,7 +65,7 @@ export default function Contact() {
         </div>
 
         <div className="contact-form">
-          <h3>Send me a message</h3>
+          <h3>Send us a message</h3>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Your name</label>
@@ -80,7 +80,7 @@ export default function Contact() {
               <input type="email" placeholder="you@email.com" value={form.email} onChange={e => setForm({...form, email:e.target.value})} />
             </div>
             <div className="form-group">
-              <label>What can I help you with?</label>
+              <label>What can we help you with?</label>
               <select value={form.topic} onChange={e => setForm({...form, topic:e.target.value})}>
                 <option value="">Select a topic...</option>
                 <option>Turning 65 — first-time Medicare</option>
@@ -92,11 +92,11 @@ export default function Contact() {
               </select>
             </div>
             <div className="form-group">
-              <label>Anything else you'd like me to know?</label>
+              <label>Anything else you'd like us to know?</label>
               <textarea placeholder="Medications, current coverage, timing questions..." value={form.notes} onChange={e => setForm({...form, notes:e.target.value})} />
             </div>
             <button type="submit" className={`btn-submit${submitted?' success':''}`} disabled={submitting || submitted}>
-              {submitted ? '✓ Message sent — I\'ll be in touch soon!' : submitting ? 'Sending…' : 'Send Message →'}
+              {submitted ? '✓ Message sent — we\'ll be in touch soon!' : submitting ? 'Sending…' : 'Send Message →'}
             </button>
             {error && <p className="form-error">{error}</p>}
           </form>
