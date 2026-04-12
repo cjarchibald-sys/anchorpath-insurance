@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ContactIllo } from '../illustrations'
 
 // Sign up at formspree.io, create a form, and paste your endpoint here:
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgorwrog'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
