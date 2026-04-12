@@ -405,11 +405,8 @@ nav {
 .card:hover { box-shadow: 0 6px 28px rgba(46, 109, 164, 0.1); transform: translateY(-2px); }
 
 .card-illo {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 160px;
+  overflow: hidden;
 }
 
 .card-body { padding: 1.5rem; }
@@ -774,10 +771,7 @@ nav {
 
 .plan-illo {
   height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
+  overflow: hidden;
 }
 
 .plan-body { padding: 1.5rem; }
@@ -848,10 +842,7 @@ nav {
 
 .part-illo {
   height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
+  overflow: hidden;
 }
 
 .part-body { padding: 1.5rem; }
