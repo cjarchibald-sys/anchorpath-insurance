@@ -4,11 +4,30 @@ import { HeroIllo, IndependenceIllo, GuidanceIllo, ExplainIllo, MedicarePathIllo
 export default function Home({ setPage }) {
   const [email, setEmail] = useState('')
   const [leadSent, setLeadSent] = useState(false)
+  const [leadSending, setLeadSending] = useState(false)
+  const [leadError, setLeadError] = useState(null)
 
-  function handleLead(e) {
+  async function handleLead(e) {
     e.preventDefault()
     if (!email || !email.includes('@')) return
-    setLeadSent(true)
+    setLeadSending(true)
+    setLeadError(null)
+    try {
+      const res = await fetch('/api/send-roadmap', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (res.ok) {
+        setLeadSent(true)
+      } else {
+        setLeadError('Something went wrong. Please try again.')
+      }
+    } catch {
+      setLeadError('Unable to send. Please try again.')
+    } finally {
+      setLeadSending(false)
+    }
   }
 
   return (
@@ -65,15 +84,21 @@ export default function Home({ setPage }) {
             <span>A plain-language guide to help you understand your Medicare options before you enroll.</span>
           </div>
           {!leadSent ? (
-            <form className="lead-form" onSubmit={handleLead}>
-              <input
-                type="email"
-                placeholder="Your email address"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-              <button type="submit" className="btn-gold">Send Me the Guide →</button>
-            </form>
+            <div>
+              <form className="lead-form" onSubmit={handleLead}>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  disabled={leadSending}
+                />
+                <button type="submit" className="btn-gold" disabled={leadSending}>
+                  {leadSending ? 'Sending…' : 'Send Me the Guide →'}
+                </button>
+              </form>
+              {leadError && <p style={{ color: '#c62828', fontSize: '0.82rem', marginTop: '0.5rem' }}>{leadError}</p>}
+            </div>
           ) : (
             <div className="lead-success">✓ On its way to your inbox!</div>
           )}
