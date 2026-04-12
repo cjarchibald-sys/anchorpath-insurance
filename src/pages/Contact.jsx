@@ -28,8 +28,8 @@ export default function Contact() {
           <p>Whether you're brand new to Medicare or re-evaluating your current coverage, I'm happy to help. Consultations are always complimentary.</p>
           {[
             ['📍','Serving','Bay Area & all of California'],
-            ['📞','Phone','(555) 000-0000'],
-            ['✉️','Email','hello@anchorpathinsurance.com'],
+            ['📞','Phone','(408) 564-9295'],
+            ['✉️','Email','chris@anchorpathinsurance.com'],
             ['🕐','Availability','Mon–Fri, 9am–5pm PT · Evenings by request'],
           ].map(([icon, label, val]) => (
             <div key={label} className="contact-item">

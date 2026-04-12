@@ -7,7 +7,7 @@ export default function About({ setPage }) {
         <div className="about-illo"><AboutIllo /></div>
         <div className="about-content-hero">
           <div className="about-role">California Licensed Agent · Life &amp; Health</div>
-          <h1>Hi, I'm [Your Name] — and I started this business because of people I love.</h1>
+          <h1>Hi, I'm Chris Archibald — and I started this business because of people I love.</h1>
           <p>I watched friends and family struggle to navigate Medicare alone — overwhelmed, confused, and sometimes making decisions they later regretted. I decided to do something about it.</p>
         </div>
       </div>
