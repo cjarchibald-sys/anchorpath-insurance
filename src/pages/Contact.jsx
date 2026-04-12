@@ -1,14 +1,36 @@
 import { useState } from 'react'
 import { ContactIllo } from '../illustrations'
 
+// Sign up at formspree.io, create a form, and paste your endpoint here:
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(null)
   const [form, setForm] = useState({ name:'', phone:'', email:'', topic:'', notes:'' })
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 5000)
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+        setForm({ name:'', phone:'', email:'', topic:'', notes:'' })
+      } else {
+        setError('Something went wrong. Please try again or call directly.')
+      }
+    } catch {
+      setError('Unable to send. Please try again or call directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -73,9 +95,10 @@ export default function Contact() {
               <label>Anything else you'd like me to know?</label>
               <textarea placeholder="Medications, current coverage, timing questions..." value={form.notes} onChange={e => setForm({...form, notes:e.target.value})} />
             </div>
-            <button type="submit" className={`btn-submit${submitted?' success':''}`}>
-              {submitted ? '✓ Message sent — I\'ll be in touch soon!' : 'Send Message →'}
+            <button type="submit" className={`btn-submit${submitted?' success':''}`} disabled={submitting || submitted}>
+              {submitted ? '✓ Message sent — I\'ll be in touch soon!' : submitting ? 'Sending…' : 'Send Message →'}
             </button>
+            {error && <p className="form-error">{error}</p>}
           </form>
         </div>
       </div>

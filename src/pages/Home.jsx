@@ -25,7 +25,7 @@ export default function Home({ setPage }) {
             No bias. No pressure. Just honest guidance.
           </p>
           <div className="hero-btns">
-            <button className="btn-primary" onClick={() => setPage('contact')}>Book a Complimentary Consultation</button>
+            <button className="btn-primary" onClick={() => setPage('contact')}>Get Your Complimentary Medicare Review</button>
             <button className="btn-ghost" onClick={() => setPage('basics')}>Learn Medicare Basics</button>
           </div>
         </div>
