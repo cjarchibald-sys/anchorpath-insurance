@@ -1,4 +1,5 @@
 const U = 'https://images.unsplash.com'
+const P = 'https://images.pexels.com/photos'
 
 function Img({ id, w, h, alt, style = {} }) {
   return (
@@ -15,15 +16,18 @@ function Img({ id, w, h, alt, style = {} }) {
 
 export function HeroIllo() {
   return (
-    <Img
-      id="photo-CsLVXU-QI8E"
-      w={600} h={460}
-      alt="Happy senior couple walking in nature at sunset"
+    <img
+      src={`${P}/4148984/pexels-photo-4148984.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop`}
+      alt="Happy senior couple in nature"
+      loading="lazy"
       style={{
-        borderRadius: '16px',
-        boxShadow: '0 8px 40px rgba(46,109,164,0.18)',
+        display: 'block',
+        width: '100%',
         height: 'auto',
         maxWidth: '480px',
+        objectFit: 'cover',
+        borderRadius: '16px',
+        boxShadow: '0 8px 40px rgba(46,109,164,0.18)',
       }}
     />
   )
