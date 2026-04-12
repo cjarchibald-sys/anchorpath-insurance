@@ -7,6 +7,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
+  // Temporary diagnostic log — remove after debugging
+  console.log('RESEND_API_KEY present:', !!process.env.RESEND_API_KEY)
+  console.log('RESEND_API_KEY length:', process.env.RESEND_API_KEY?.length ?? 0)
+
   const { email } = req.body ?? {}
 
   if (!email || typeof email !== 'string' || !email.includes('@')) {
