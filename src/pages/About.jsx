@@ -12,7 +12,8 @@ export default function About({ setPage }) {
           <p>
             We're Chris and Helga Archibald — licensed insurance agents and partners in
             business and in life. We started AnchorPath Insurance Services to help people
-            navigate Medicare and health insurance decisions with clarity, patience, and care.
+            navigate Medicare and health coverage decisions with clarity, patience, and a
+            straightforward approach.
           </p>
         </div>
       </div>
@@ -21,10 +22,10 @@ export default function About({ setPage }) {
       <div className="values-strip">
         <div className="values-inner">
           {[
-            ['🌿', 'Honesty first', 'We tell you what we actually think is best for your situation — not what earns the biggest commission.'],
-            ['🤲', 'Patience always', 'No rushing, no jargon. We move at your pace until you feel completely confident in your decision.'],
-            ['🔍', 'Clear explanations', 'We believe you deserve to understand your coverage, not just have it. Complex terms, explained plainly.'],
-            ['🌅', 'Long-term relationships', "We're building a practice around people, not transactions. We're here before, during, and after enrollment."],
+            ['🌿', 'We tell you the truth', 'We tell you what we actually think makes sense for your situation — not what earns the biggest commission.'],
+            ['🤲', 'We work at your pace', 'No rushing, no pressure. We move as quickly or slowly as you need until you feel completely clear.'],
+            ['🔍', 'We explain things plainly', "Complex coverage terms, explained so they actually make sense. You deserve to understand what you're choosing."],
+            ['🌅', 'We stay with you', "We're here before, during, and after enrollment — not just for the sale."],
           ].map(([icon, h, p]) => (
             <div key={h} className="value-item">
               <div className="value-icon">{icon}</div>
@@ -38,32 +39,32 @@ export default function About({ setPage }) {
       {/* ── Our story ────────────────────────────────────────────── */}
       <div className="about-body">
         <p>
-          The idea behind AnchorPath is simple. Most people making health coverage decisions —
-          whether they're approaching Medicare or shopping for a family health plan — don't have
-          someone in their corner who can explain things clearly. They're sorting through options on their own, often
-          under time pressure, without a clear picture of what they're actually choosing or what
-          it means for their health and their budget.
-        </p>
-        <p className="pullquote">
-          "We know these choices can feel overwhelming — especially when the stakes are high
-          for your health, your family, and your budget."
+          We believe choosing health coverage should feel less confusing and more personal.
         </p>
         <p>
-          That's why we work the way we do. We start by listening. We ask about your situation —
-          your doctors, your medications, your priorities, your budget. Then we walk you through
-          the options that are actually relevant to your circumstances, in plain language, with no
-          pressure and no agenda other than helping you make the right choice.
+          As licensed insurance agents working together, we built AnchorPath Insurance Services
+          to help people navigate Medicare and health coverage decisions with clarity, patience,
+          and a straightforward approach. We know these decisions can feel overwhelming —
+          especially when they affect your health, your family, and your finances.
+        </p>
+        <p className="pullquote">
+          "Our goal is simple: help you understand your options and feel confident in the
+          decision you make."
+        </p>
+        <p>
+          When you work with AnchorPath, you're working directly with us. Not a call center.
+          Not a rotating team of representatives. We'll learn your situation, walk you through
+          what's available, and help you make a decision that actually fits — in plain language,
+          without pressure, and without an agenda beyond getting it right for you.
         </p>
         <p>
           As independent agents, we're not tied to any single carrier. We compare options across
-          the market and recommend what genuinely makes sense for you — whether that's a Medicare
-          plan, a marketplace option, or something else entirely. Our only loyalty is to your
-          coverage needs.
+          the market and recommend what genuinely makes sense for your circumstances — whether
+          that's a Medicare plan, a marketplace option, or something else entirely.
         </p>
         <p>
-          Our consultations are always complimentary. There's no obligation, no script, and no
-          countdown clock — just a real conversation about your needs, your options, and how we
-          can help.
+          Our consultations are always complimentary. No obligation, no countdown clock —
+          just a real conversation about your situation and your options.
         </p>
 
         {/* ── Credentials ──────────────────────────────────────── */}
