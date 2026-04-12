@@ -51,15 +51,18 @@ export function IndependenceIllo() {
 
 export function AboutIllo() {
   return (
-    <Img
-      id="photo-1507003211169-0a1dd7228f2d"
-      w={480} h={580}
-      alt="Chris Archibald — AnchorPath Insurance"
+    <img
+      src="/chris-and-helga.jpg"
+      alt="Chris and Helga Archibald — AnchorPath Insurance Services"
+      loading="lazy"
       style={{
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        maxWidth: '420px',
+        objectFit: 'cover',
         borderRadius: '16px',
         boxShadow: '0 8px 36px rgba(46,109,164,0.16)',
-        height: 'auto',
-        maxWidth: '380px',
       }}
     />
   )

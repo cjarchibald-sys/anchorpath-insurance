@@ -9,11 +9,23 @@ export default function Nav({ page, setPage }) {
         </div>
       </div>
       <div className="nav-links">
-        {[['home','Home'],['about','About'],['basics','Medicare Basics'],['plans','Medicare Plans'],['contact','Contact']].map(([id, label]) => (
-          <button key={id} className={`nav-link${page===id?' active':''}`} onClick={() => setPage(id)}>{label}</button>
+        {[
+          ['home', 'Home'],
+          ['about', 'About'],
+          ['basics', 'Medicare Guide'],
+          ['plans', 'Medicare Plans'],
+          ['contact', 'Contact'],
+        ].map(([id, label]) => (
+          <button
+            key={id}
+            className={`nav-link${page === id ? ' active' : ''}`}
+            onClick={() => setPage(id)}
+          >
+            {label}
+          </button>
         ))}
       </div>
-      <button className="nav-cta" onClick={() => setPage('contact')}>Book a Complimentary Call</button>
+      <button className="nav-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
     </nav>
   )
 }

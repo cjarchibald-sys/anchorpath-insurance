@@ -6,20 +6,20 @@ export default function About({ setPage }) {
       <div className="about-split">
         <div className="about-illo"><AboutIllo /></div>
         <div className="about-content-hero">
-          <div className="about-role">California Licensed Agent · Life &amp; Health</div>
-          <h1>Hi, I'm Chris Archibald — and I started this business because of people I love.</h1>
-          <p>I watched friends and family struggle to navigate Medicare alone — overwhelmed, confused, and sometimes making decisions they later regretted. I decided to do something about it.</p>
+          <div className="about-role">California Licensed Agents · Life &amp; Health</div>
+          <h1>We built AnchorPath because health coverage decisions deserve real guidance — not guesswork.</h1>
+          <p>We're Chris and Helga Archibald — licensed insurance agents and partners in business and in life. We started AnchorPath Insurance Services to help people navigate Medicare and health insurance with clarity, patience, and trust.</p>
         </div>
       </div>
 
       <div className="values-strip">
         <div className="values-inner">
           {[
-            ['🌿','Honesty first','I tell you what I actually think is best for you, not what earns the biggest commission.'],
-            ['🤲','Patience always','No rushing, no jargon. We move at your pace until you feel completely confident.'],
-            ['🔍','Deep expertise','Medicare is all I do. That focus means you get sharper, more current guidance.'],
-            ['🌅','Long-term thinking','I\'m building relationships, not closing transactions. I\'m here for the long haul.'],
-          ].map(([icon,h,p]) => (
+            ['🌿', 'Honesty first', 'We tell you what we actually think is best for your situation — not what earns the biggest commission.'],
+            ['🤲', 'Patience always', 'No rushing, no jargon. We move at your pace until you feel completely confident in your decision.'],
+            ['🔍', 'Clear explanations', 'We believe you deserve to understand your coverage, not just have it. Complex terms, explained plainly.'],
+            ['🌅', 'Long-term relationships', "We're building a practice based on trust, not transactions. We're here for the long haul."],
+          ].map(([icon, h, p]) => (
             <div key={h} className="value-item">
               <div className="value-icon">{icon}</div>
               <h4>{h}</h4>
@@ -31,35 +31,45 @@ export default function About({ setPage }) {
 
       <div className="about-body">
         <p>
-          Medicare decisions are some of the most consequential choices a person makes — and most
-          people are expected to make them alone, in a narrow window, with no real guidance.
-          I've watched people I care about get this wrong. A family member who enrolled in the
-          wrong plan and spent years paying for it. A friend who missed her enrollment window
-          entirely and faced a penalty she never expected. A neighbor who had no idea he qualified
-          for assistance that would have cut his premiums in half.
+          We believe choosing health coverage should feel less confusing and more personal.
+          As licensed insurance agents working together, we built AnchorPath Insurance Services
+          to help people navigate Medicare and health insurance decisions with clarity, patience,
+          and trust.
         </p>
-        <p className="pullquote">"That's what brought me here. I wanted to be the person I wish they'd had."</p>
-        <p>
-          As an independent agent licensed in California for Life &amp; Health insurance, I work with
-          multiple carriers — which means I'm not tied to any one company. I can look across the
-          full market and recommend what genuinely makes sense for you. My only loyalty is to
-          getting you the right coverage.
+        <p className="pullquote">
+          "We know these choices can feel overwhelming — especially when the stakes are high for
+          your health, your family, and your budget."
         </p>
         <p>
-          When you work with me, you get one person. Not a call center. Not a rotating cast of
-          representatives. Me — someone who will learn your situation, remember it, and be there
-          when things change. My consultations are always complimentary. There's no pressure, no
-          countdown clock, and no script. Just a real conversation about your health, your
-          priorities, and your options — at whatever pace works for you.
+          That's exactly why we work the way we do. We start by listening. We ask about your
+          situation — your doctors, your medications, your priorities, your budget. Then we walk
+          you through the options that are actually relevant to you, in plain language, with no
+          pressure and no agenda other than helping you make the right choice.
         </p>
         <p>
-          Whether you're turning 65, stepping away from employer coverage, or simply wondering
-          if your current plan is still the right one — I'd love to talk.
+          As independent agents, we're not tied to any single carrier. We can compare options
+          across the market and recommend what genuinely makes sense for your situation.
+          Whether you're turning 65, navigating Medicare for the first time, or looking for
+          health coverage for yourself or your family — our goal is to make the process simpler,
+          more understandable, and more personal for every client we serve.
+        </p>
+        <p>
+          Our consultations are always complimentary. There's no obligation, no countdown clock,
+          and no script — just a real conversation about your needs, your options, and how we
+          can help.
         </p>
         <div className="creds">
-          {['🏅 CA Life & Health Licensed','📍 Serving the Bay Area & California','🔒 Independent Agent','📞 Complimentary consultations'].map(c => (
+          {[
+            '🏅 CA Life & Health Licensed',
+            '📍 Serving California',
+            '🔒 Independent Agents',
+            '📞 Complimentary consultations',
+          ].map(c => (
             <div key={c} className="cred-badge">{c}</div>
           ))}
+        </div>
+        <div style={{ marginTop: '1.5rem' }}>
+          <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
         </div>
       </div>
     </>
