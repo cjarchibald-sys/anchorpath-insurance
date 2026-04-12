@@ -39,13 +39,14 @@ export default function Home({ setPage }) {
           <h1>A clear path through Medicare and <em>health coverage decisions.</em></h1>
           <p className="hero-sub">
             Whether you're navigating Medicare or choosing a plan for yourself or your family,
-            we help you understand your options and make confident decisions — without pressure
-            or confusion.
+            we help you understand your options, compare what matters, and make confident
+            decisions — without pressure or confusion.
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
             <button className="btn-ghost" onClick={() => setPage('contact')}>Explore Your Options</button>
           </div>
+          <p className="hero-helper">Work directly with Chris and Helga — clear, personal guidance from two people who genuinely care about getting it right for you.</p>
         </div>
         <div className="hero-visual"><HeroIllo /></div>
       </div>
@@ -260,13 +261,21 @@ export default function Home({ setPage }) {
         </div>
       </div>
 
+      {/* ── Empathy ──────────────────────────────────────────────── */}
+      <div className="empathy-section">
+        <div className="empathy-inner">
+          <p className="empathy-lead">Most people we talk to aren't sure what the right option is — they just know they don't want to get it wrong.</p>
+          <p className="empathy-sub">We help make the process clearer, simpler, and easier to navigate.</p>
+        </div>
+      </div>
+
       {/* ── Micro-conversion ─────────────────────────────────────── */}
       <div className="micro-cta-section">
         <div className="micro-cta-inner">
           <h2>Not sure where to start?</h2>
           <p>
-            That's completely normal. Most people we talk to aren't sure what the right option
-            is — they just know they need help figuring it out.
+            That's completely normal. Many people come to us because they want help
+            understanding their options before making a decision.
           </p>
           <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
         </div>

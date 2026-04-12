@@ -44,26 +44,29 @@ export default function About({ setPage }) {
         <p>
           As licensed insurance agents working together, we built AnchorPath Insurance Services
           to help people navigate Medicare and health coverage decisions with clarity, patience,
-          and a straightforward approach. We know these decisions can feel overwhelming —
-          especially when they affect your health, your family, and your finances.
+          and a straightforward approach.
+        </p>
+        <p>
+          We know these decisions can feel overwhelming — especially when they affect your
+          health, your family, and your finances. That's exactly why we take the time to
+          explain things clearly, without rushing you toward a decision.
         </p>
         <p className="pullquote">
           "Our goal is simple: help you understand your options and feel confident in the
           decision you make."
         </p>
         <p>
-          When you work with AnchorPath, you're working directly with us. Not a call center.
-          Not a rotating team of representatives. We'll learn your situation, walk you through
-          what's available, and help you make a decision that actually fits — in plain language,
-          without pressure, and without an agenda beyond getting it right for you.
+          When you work with AnchorPath, you're working directly with us — not a call center,
+          not a rotating team of representatives. We'll learn your situation, walk you through
+          what's available, and help you find something that actually fits.
         </p>
         <p>
-          As independent agents, we're not tied to any single carrier. We compare options across
-          the market and recommend what genuinely makes sense for your circumstances — whether
-          that's a Medicare plan, a marketplace option, or something else entirely.
+          As independent agents, we're not tied to any single carrier. That means we can look
+          across the market and recommend what genuinely makes sense for your circumstances —
+          whether that's a Medicare plan, a marketplace option, or something else entirely.
         </p>
         <p>
-          Our consultations are always complimentary. No obligation, no countdown clock —
+          Our consultations are always complimentary. No obligation, no pressure —
           just a real conversation about your situation and your options.
         </p>
 
