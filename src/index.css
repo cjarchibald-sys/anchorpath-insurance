@@ -348,10 +348,9 @@ nav {
 
 .path-card {
   border-radius: var(--radius);
-  padding: 2.25rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
   border: 1px solid transparent;
   transition: box-shadow 0.2s, transform 0.2s;
 }
@@ -361,9 +360,22 @@ nav {
 .path-card--blue { background: var(--blue-pale); border-color: var(--blue-light); }
 .path-card--gold { background: var(--gold-pale); border-color: rgba(212, 146, 30, 0.2); }
 
-.path-icon { font-size: 2rem; margin-bottom: 0.25rem; }
-.path-card h3 { margin-bottom: 0.1rem; }
-.path-card p { font-size: 0.925rem; flex: 1; }
+.path-card-img {
+  height: 210px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.path-card-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.path-card-body h3 { margin-bottom: 0.1rem; }
+.path-card-body p { font-size: 0.925rem; flex: 1; }
 
 .btn-path-blue, .btn-path-gold {
   background: none;

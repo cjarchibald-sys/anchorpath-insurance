@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HeroIllo, IndependenceIllo, GuidanceIllo, ExplainIllo } from '../illustrations'
+import { HeroIllo, IndependenceIllo, GuidanceIllo, ExplainIllo, MedicarePathIllo, FamilyPathIllo } from '../illustrations'
 
 export default function Home({ setPage }) {
   const [email, setEmail] = useState('')
@@ -36,16 +36,20 @@ export default function Home({ setPage }) {
           <div className="section-label paths-label">Who are you looking for help with?</div>
           <div className="paths-grid">
             <div className="path-card path-card--blue">
-              <div className="path-icon">🏥</div>
-              <h3>Medicare Coverage</h3>
-              <p>Turning 65? Already on Medicare? Need help understanding your options or reviewing your current plan? We help make Medicare easier to understand and easier to navigate.</p>
-              <button className="btn-path-blue" onClick={() => setPage('contact')}>Get Medicare Guidance →</button>
+              <div className="path-card-img"><MedicarePathIllo /></div>
+              <div className="path-card-body">
+                <h3>Medicare Coverage</h3>
+                <p>Turning 65? Already on Medicare? Need help understanding your options or reviewing your current plan? We help make Medicare easier to understand and easier to navigate.</p>
+                <button className="btn-path-blue" onClick={() => setPage('contact')}>Get Medicare Guidance →</button>
+              </div>
             </div>
             <div className="path-card path-card--gold">
-              <div className="path-icon">👨‍👩‍👧</div>
-              <h3>Individual &amp; Family Health Plans</h3>
-              <p>Need health coverage for yourself or your family? Whether you're self-employed, between jobs, or simply exploring your options, we help you find a plan that fits your needs and budget.</p>
-              <button className="btn-path-gold" onClick={() => setPage('contact')}>Explore Health Plan Options →</button>
+              <div className="path-card-img"><FamilyPathIllo /></div>
+              <div className="path-card-body">
+                <h3>Individual &amp; Family Health Plans</h3>
+                <p>Need health coverage for yourself or your family? Whether you're self-employed, between jobs, or simply exploring your options, we help you find a plan that fits your needs and budget.</p>
+                <button className="btn-path-gold" onClick={() => setPage('contact')}>Explore Health Plan Options →</button>
+              </div>
             </div>
           </div>
         </div>
