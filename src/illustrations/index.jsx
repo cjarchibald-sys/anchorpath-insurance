@@ -47,12 +47,12 @@ export function MedicarePathIllo() {
   )
 }
 
-// Individual & Family path card & service card — family with children
+// Individual & Family path card & service card — diverse adults, mixed ages 30s–50s
 export function FamilyPathIllo() {
   return (
     <img
-      src={`${P}/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop`}
-      alt="Family — individual and family health insurance"
+      src={`${P}/1560932/pexels-photo-1560932.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop`}
+      alt="Diverse adults — individual and family health insurance"
       loading="lazy"
       style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
     />
@@ -156,12 +156,12 @@ export function GuidanceIllo() {
   )
 }
 
-// Individual & Family service card banner — family-focused
+// Individual & Family service card banner — diverse adults, mixed ages 30s–50s
 export function ExplainIllo() {
   return (
     <img
-      src={`${P}/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop`}
-      alt="Family — individual and family health insurance"
+      src={`${P}/1560932/pexels-photo-1560932.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop`}
+      alt="Diverse adults — individual and family health insurance"
       loading="lazy"
       style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
     />
