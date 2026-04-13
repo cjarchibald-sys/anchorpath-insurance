@@ -51,7 +51,7 @@ export function MedicarePathIllo() {
 export function FamilyPathIllo() {
   return (
     <img
-      src={`${P}/1560932/pexels-photo-1560932.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop`}
+      src={`${P}/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop`}
       alt="Diverse adults — individual and family health insurance"
       loading="lazy"
       style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -160,7 +160,7 @@ export function GuidanceIllo() {
 export function ExplainIllo() {
   return (
     <img
-      src={`${P}/1560932/pexels-photo-1560932.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop`}
+      src={`${P}/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop`}
       alt="Diverse adults — individual and family health insurance"
       loading="lazy"
       style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
