@@ -47,26 +47,15 @@ export function MedicarePathIllo() {
   )
 }
 
-// Individual & Family path card — collage of individuals and families
+// Individual & Family path card — family with young children
 export function FamilyPathIllo() {
-  const photos = [
-    { id: '1128316', alt: 'Young family with children' },
-    { id: '3807517', alt: 'Couple reviewing options' },
-    { id: '1648374', alt: 'Individual professional' },
-    { id: '3768914', alt: 'Family with kids outdoors' },
-  ]
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', width: '100%', height: '100%', gap: '2px' }}>
-      {photos.map(({ id, alt }) => (
-        <img
-          key={id}
-          src={`${P}/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=300&h=160&fit=crop&crop=top`}
-          alt={alt}
-          loading="lazy"
-          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
-        />
-      ))}
-    </div>
+    <img
+      src={`${P}/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop&crop=top`}
+      alt="Family with young children — individual and family health insurance"
+      loading="lazy"
+      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+    />
   )
 }
 
@@ -167,26 +156,15 @@ export function GuidanceIllo() {
   )
 }
 
-// Individual & Family service card banner — collage of individuals and families
+// Individual & Family service card banner — family with young children
 export function ExplainIllo() {
-  const photos = [
-    { id: '1128316', alt: 'Young family with children' },
-    { id: '3807517', alt: 'Couple reviewing options' },
-    { id: '1648374', alt: 'Individual professional' },
-    { id: '3768914', alt: 'Family with kids outdoors' },
-  ]
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', width: '100%', height: '100%', gap: '2px' }}>
-      {photos.map(({ id, alt }) => (
-        <img
-          key={id}
-          src={`${P}/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=200&h=120&fit=crop&crop=top`}
-          alt={alt}
-          loading="lazy"
-          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
-        />
-      ))}
-    </div>
+    <img
+      src={`${P}/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop&crop=top`}
+      alt="Family with young children — individual and family health insurance"
+      loading="lazy"
+      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+    />
   )
 }
 
