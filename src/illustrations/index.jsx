@@ -60,10 +60,10 @@ export function FamilyPathIllo() {
       {photos.map(({ id, alt }) => (
         <img
           key={id}
-          src={`${P}/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=300&h=160&fit=crop`}
+          src={`${P}/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=300&h=160&fit=crop&crop=top`}
           alt={alt}
           loading="lazy"
-          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
         />
       ))}
     </div>
@@ -180,10 +180,10 @@ export function ExplainIllo() {
       {photos.map(({ id, alt }) => (
         <img
           key={id}
-          src={`${P}/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=200&h=120&fit=crop`}
+          src={`${P}/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=200&h=120&fit=crop&crop=top`}
           alt={alt}
           loading="lazy"
-          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
         />
       ))}
     </div>
