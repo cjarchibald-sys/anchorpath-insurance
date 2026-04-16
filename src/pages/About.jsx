@@ -7,13 +7,12 @@ export default function About({ setPage }) {
       <div className="about-split">
         <div className="about-illo"><AboutIllo /></div>
         <div className="about-content-hero">
-          <div className="about-role">California Licensed Agents · Life &amp; Health</div>
-          <h1>We built AnchorPath because health coverage decisions deserve real guidance — not guesswork.</h1>
+          <div className="about-role">California Licensed Agents · Medicare Specialists</div>
+          <h1>We built AnchorPath because Medicare decisions deserve real guidance — not guesswork.</h1>
           <p>
             We're Chris and Helga Archibald — licensed insurance agents and partners in
             business and in life. We started AnchorPath Insurance Services to help people
-            navigate Medicare and health coverage decisions with clarity, patience, and a
-            straightforward approach.
+            navigate Medicare with clarity, patience, and a straightforward approach.
           </p>
         </div>
       </div>
@@ -24,7 +23,7 @@ export default function About({ setPage }) {
           {[
             ['🌿', 'We tell you the truth', 'We tell you what we actually think makes sense for your situation — not what earns the biggest commission.'],
             ['🤲', 'We work at your pace', 'No rushing, no pressure. We move as quickly or slowly as you need until you feel completely clear.'],
-            ['🔍', 'We explain things plainly', "Complex coverage terms, explained so they actually make sense. You deserve to understand what you're choosing."],
+            ['🔍', 'We explain things plainly', "Complex Medicare terms, explained so they actually make sense. You deserve to understand what you're choosing."],
             ['🌅', 'We stay with you', "We're here before, during, and after enrollment — not just for the sale."],
           ].map(([icon, h, p]) => (
             <div key={h} className="value-item">
@@ -39,21 +38,19 @@ export default function About({ setPage }) {
       {/* ── Our story ────────────────────────────────────────────── */}
       <div className="about-body">
         <p>
-          We believe choosing health coverage should feel less confusing and more personal.
+          We believe Medicare decisions should feel less confusing and more personal.
         </p>
         <p>
           As licensed insurance agents working together, we built AnchorPath Insurance Services
-          to help people navigate Medicare and health coverage decisions with clarity, patience,
-          and a straightforward approach.
+          to help people navigate Medicare with clarity, patience, and a straightforward approach.
         </p>
         <p>
-          We know these decisions can feel overwhelming — especially when they affect your
-          health, your family, and your finances. That's exactly why we take the time to
-          explain things clearly, without rushing you toward a decision.
+          We know how overwhelming Medicare can feel — especially when the choices impact your
+          health and finances. That's exactly why we take the time to explain things clearly,
+          without rushing you toward a decision.
         </p>
         <p className="pullquote">
-          "Our goal is simple: help you understand your options and feel confident in the
-          decision you make."
+          "Our goal is simple: help you understand your options and feel confident in your decision."
         </p>
         <p>
           When you work with AnchorPath, you're working directly with us — not a call center,
@@ -62,12 +59,11 @@ export default function About({ setPage }) {
         </p>
         <p>
           As independent agents, we're not tied to any single carrier. That means we can look
-          across the market and recommend what genuinely makes sense for your circumstances —
-          whether that's a Medicare plan, a marketplace option, or something else entirely.
+          across the market and recommend what genuinely makes sense for your circumstances.
         </p>
         <p>
           Our consultations are always complimentary. No obligation, no pressure —
-          just a real conversation about your situation and your options.
+          just a real conversation about your situation and your Medicare options.
         </p>
 
         {/* ── Credentials ──────────────────────────────────────── */}

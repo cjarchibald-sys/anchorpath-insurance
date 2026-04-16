@@ -40,7 +40,7 @@ export default function Contact() {
         <div className="contact-banner-text">
           <div className="section-label">Let's connect</div>
           <h1>Schedule a Conversation</h1>
-          <p>No obligation, no sales pressure — just a friendly, complimentary conversation to help you understand your options.</p>
+          <p>No obligation, no sales pressure — just a friendly, complimentary conversation to help you understand your Medicare options.</p>
         </div>
         <div className="contact-banner-illo"><ContactIllo /></div>
       </div>
@@ -50,9 +50,8 @@ export default function Contact() {
         <div className="contact-info">
           <h2>We'd love to hear from you</h2>
           <p>
-            Whether you're exploring Medicare for the first time, reviewing your current coverage,
-            or looking for a health plan for yourself or your family — we're happy to help.
-            Consultations are always complimentary.
+            Whether you're turning 65, reviewing your current Medicare coverage, or just want
+            to understand your options — we're happy to help. Consultations are always complimentary.
           </p>
 
           {[
@@ -76,7 +75,7 @@ export default function Contact() {
             <ul className="expect-list">
               {[
                 'We listen first, recommend second',
-                'Plain language — no insurance jargon',
+                'Plain language — no Medicare jargon',
                 'No obligation after our conversation',
                 'We follow up at whatever pace works for you',
               ].map(item => (
@@ -127,26 +126,18 @@ export default function Contact() {
                 onChange={e => setForm({ ...form, topic: e.target.value })}
               >
                 <option value="">Select a topic…</option>
-                <optgroup label="Medicare">
-                  <option>Turning 65 — first-time Medicare enrollment</option>
-                  <option>Comparing Medicare Advantage plans</option>
-                  <option>Medigap / Supplement options</option>
-                  <option>Prescription drug coverage (Part D)</option>
-                  <option>Annual Medicare plan review</option>
-                </optgroup>
-                <optgroup label="Individual &amp; Family Health Insurance">
-                  <option>Coverage for myself or my family</option>
-                  <option>Self-employed health insurance</option>
-                  <option>Coverage between jobs</option>
-                  <option>Marketplace / ACA plan options</option>
-                </optgroup>
-                <option>Something else</option>
+                <option>Turning 65 — first-time Medicare enrollment</option>
+                <option>Comparing Medicare Advantage plans</option>
+                <option>Medigap / Supplement options</option>
+                <option>Prescription drug coverage (Part D)</option>
+                <option>Annual Medicare plan review</option>
+                <option>I'm not sure — I just have questions</option>
               </select>
             </div>
             <div className="form-group">
               <label>Anything else you'd like us to know?</label>
               <textarea
-                placeholder="Current coverage, medications, timing, budget questions…"
+                placeholder="Current coverage, medications, timing, questions…"
                 value={form.notes}
                 onChange={e => setForm({ ...form, notes: e.target.value })}
               />
