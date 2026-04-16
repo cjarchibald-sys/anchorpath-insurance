@@ -12,15 +12,15 @@ function Img({ id, w, h, alt, style = {} }) {
   )
 }
 
-// ─── Big section illustrations ────────────────────────────────────────────────
+// ─── Primary section illustrations ───────────────────────────────────────────
 
-// Hero: advisory/guidance feel — middle-aged couple reviewing options with a professional;
-// represents both Medicare and individual/family health audiences
+// Hero: older couple (60s-70s) reviewing Medicare documents together at home —
+// calm, natural light, thoughtful — not corporate or staged
 export function HeroIllo() {
   return (
     <img
-      src={`${P}/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop`}
-      alt="Professional health insurance consultation"
+      src={`${P}/7551755/pexels-photo-7551755.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop&crop=top`}
+      alt="Older couple reviewing Medicare documents at home"
       loading="lazy"
       style={{
         display: 'block',
@@ -35,46 +35,28 @@ export function HeroIllo() {
   )
 }
 
-// Medicare path card & service card — senior couple, clearly Medicare audience
-export function MedicarePathIllo() {
-  return (
-    <img
-      src={`${P}/4148984/pexels-photo-4148984.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop`}
-      alt="Senior couple — Medicare coverage guidance"
-      loading="lazy"
-      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
-    />
-  )
-}
-
-// Individual & Family path card — family with young children
-export function FamilyPathIllo() {
-  return (
-    <img
-      src={`${P}/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600&h=280&fit=crop&crop=top`}
-      alt="Family with young children — individual and family health insurance"
-      loading="lazy"
-      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
-    />
-  )
-}
-
+// Why AnchorPath section: calm advisory moment — older adult or couple reviewing
+// options with a trusted person, warm and approachable, not corporate
 export function IndependenceIllo() {
   return (
-    <Img
-      id="photo-1554224155-8d04cb21cd6c"
-      w={500} h={400}
-      alt="Insurance advisor reviewing coverage options with clients"
+    <img
+      src={`${P}/3831847/pexels-photo-3831847.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop&crop=top`}
+      alt="Calm conversation about Medicare options"
+      loading="lazy"
       style={{
-        borderRadius: '14px',
-        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
+        display: 'block',
+        width: '100%',
         height: 'auto',
         maxWidth: '420px',
+        objectFit: 'cover',
+        borderRadius: '14px',
+        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
       }}
     />
   )
 }
 
+// About section: real photo of Chris and Helga — always use this, never replace
 export function AboutIllo() {
   return (
     <img
@@ -94,85 +76,70 @@ export function AboutIllo() {
   )
 }
 
+// Contact section: warm, approachable — a person in a natural setting, not a
+// corporate office or business suit scene
 export function ContactIllo() {
   return (
-    <Img
-      id="photo-1573496359142-b8d87734a5a2"
-      w={500} h={400}
-      alt="Complimentary health insurance consultation"
+    <img
+      src={`${P}/5256816/pexels-photo-5256816.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop&crop=top`}
+      alt="Friendly Medicare guidance conversation"
+      loading="lazy"
       style={{
-        borderRadius: '14px',
-        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
+        display: 'block',
+        width: '100%',
         height: 'auto',
         maxWidth: '420px',
+        objectFit: 'cover',
+        borderRadius: '14px',
+        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
       }}
     />
   )
 }
 
-export function PlansBalanceIllo() {
-  return (
-    <Img
-      id="photo-1450101499163-c8848c66ca85"
-      w={500} h={380}
-      alt="Comparing Medicare plan options"
-      style={{
-        borderRadius: '14px',
-        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
-        height: 'auto',
-        maxWidth: '420px',
-      }}
-    />
-  )
-}
+// ─── Educational page headers ─────────────────────────────────────────────────
 
+// Basics page header: older adult reviewing Medicare information — educational context
 export function MedicareShieldIllo() {
   return (
-    <Img
-      id="photo-1576091160399-112ba8d25d1d"
-      w={500} h={380}
-      alt="Understanding Medicare coverage"
+    <img
+      src={`${P}/4065615/pexels-photo-4065615.jpeg?auto=compress&cs=tinysrgb&w=500&h=380&fit=crop&crop=top`}
+      alt="Understanding Medicare coverage options"
+      loading="lazy"
       style={{
-        borderRadius: '14px',
-        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
+        display: 'block',
+        width: '100%',
         height: 'auto',
         maxWidth: '420px',
+        objectFit: 'cover',
+        borderRadius: '14px',
+        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
       }}
     />
   )
 }
 
-// ─── Value card banners (160px tall, full width) ──────────────────────────────
-
-// Medicare service card banner — senior-focused
-export function GuidanceIllo() {
+// Plans page header: older couple reviewing plan options, calm and thoughtful
+export function PlansBalanceIllo() {
   return (
     <img
-      src={`${P}/4148984/pexels-photo-4148984.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop`}
-      alt="Senior couple — Medicare guidance"
+      src={`${P}/3760262/pexels-photo-3760262.jpeg?auto=compress&cs=tinysrgb&w=500&h=380&fit=crop&crop=top`}
+      alt="Reviewing and comparing Medicare plan options"
       loading="lazy"
-      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+      style={{
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        maxWidth: '420px',
+        objectFit: 'cover',
+        borderRadius: '14px',
+        boxShadow: '0 6px 28px rgba(46,109,164,0.14)',
+      }}
     />
   )
 }
 
-// Individual & Family service card banner — family with young children
-export function ExplainIllo() {
-  return (
-    <img
-      src={`${P}/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop&crop=top`}
-      alt="Family with young children — individual and family health insurance"
-      loading="lazy"
-      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
-    />
-  )
-}
-
-export function SupportIllo() {
-  return <Img id="photo-1559839734-2b71ea197ec2" w={400} h={200} alt="Ongoing insurance support" />
-}
-
-// ─── Plan card banners ────────────────────────────────────────────────────────
+// ─── Plan card banners (Plans page) ──────────────────────────────────────────
 
 export function OriginalMedicareIllo() {
   return <Img id="photo-1521038199265-bc482db0f923" w={500} h={200} alt="Original Medicare" />
@@ -190,7 +157,7 @@ export function PartDIllo() {
   return <Img id="photo-1471864190281-a93a3070b6de" w={500} h={200} alt="Medicare Part D prescription drug coverage" />
 }
 
-// ─── Part card banners ────────────────────────────────────────────────────────
+// ─── Part card banners (Basics page) ─────────────────────────────────────────
 
 export function HospitalIllo() {
   return <Img id="photo-1519494026892-80bbd2d6fd0d" w={400} h={180} alt="Medicare Part A hospital coverage" />
@@ -206,16 +173,4 @@ export function BundleIllo() {
 
 export function PillIllo() {
   return <Img id="photo-1584308666744-24d5c474f2ae" w={400} h={180} alt="Medicare Part D drug coverage" />
-}
-
-// ─── Testimonial avatars (keep as SVG — no real client photos) ────────────────
-
-export function AvatarSVG({ color1, color2 }) {
-  return (
-    <svg viewBox="0 0 36 36" fill="none" style={{ width: '100%', height: '100%' }}>
-      <circle cx="18" cy="18" r="18" fill={color1} />
-      <circle cx="18" cy="14" r="7" fill={color2} />
-      <ellipse cx="18" cy="30" rx="11" ry="8" fill={color2} />
-    </svg>
-  )
 }
