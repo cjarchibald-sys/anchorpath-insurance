@@ -46,7 +46,7 @@ export default function Home({ setPage }) {
             <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
             <button className="btn-ghost" onClick={() => setPage('basics')}>Get Medicare Guidance</button>
           </div>
-          <p className="hero-helper">When you reach out, you'll be working directly with us.</p>
+          <p className="hero-helper">When you reach out, you'll be working directly with us, Chris and Helga.</p>
         </div>
         <div className="hero-visual"><HeroIllo /></div>
       </div>
