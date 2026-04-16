@@ -36,7 +36,7 @@ export default function Home({ setPage }) {
       <div className="hero">
         <div className="hero-content">
           <div className="hero-tag">✦ <span>California Licensed</span> Medicare Specialists</div>
-          <h1>Medicare is complicated. <em>We help you make the right decision—without the confusion.</em></h1>
+          <h1>Medicare is complicated. <em>We help you make the right decision—clearly and confidently.</em></h1>
           <p className="hero-sub">
             Whether you're turning 65, new to Medicare, or reviewing your current coverage,
             we help you understand your options, compare what matters, and choose with
