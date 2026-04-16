@@ -608,6 +608,42 @@ nav {
   line-height: 1.55;
 }
 
+.who-slim {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 680px;
+  margin: 1.5rem auto 0;
+}
+
+.who-slim-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.who-slim-item strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.who-slim-item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.who-slim .who-check {
+  margin-top: 0.35rem;
+}
+
 /* === CONTACT — WHAT TO EXPECT === */
 .contact-expect { margin-top: 0.5rem; }
 

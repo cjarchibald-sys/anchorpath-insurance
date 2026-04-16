@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HeroIllo, IndependenceIllo, GuidanceIllo, MedicarePathIllo } from '../illustrations'
+import { HeroIllo, IndependenceIllo } from '../illustrations'
 
 export default function Home({ setPage }) {
   const [email, setEmail] = useState('')
@@ -36,17 +36,17 @@ export default function Home({ setPage }) {
       <div className="hero">
         <div className="hero-content">
           <div className="hero-tag">✦ <span>California Licensed</span> Medicare Specialists</div>
-          <h1>A clear path through <em>Medicare.</em></h1>
+          <h1>Medicare is complicated. <em>We help you make the right decision.</em></h1>
           <p className="hero-sub">
-            Turning 65 or already on Medicare? We help you understand your options, avoid
-            costly mistakes, and choose the coverage that fits your needs — without pressure
-            or confusion.
+            Whether you're turning 65, new to Medicare, or reviewing your current coverage,
+            we help you understand your options, compare what matters, and choose with
+            confidence — without pressure or confusion.
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
             <button className="btn-ghost" onClick={() => setPage('basics')}>Get Medicare Guidance</button>
           </div>
-          <p className="hero-helper">Work directly with Chris and Helga — clear, personal guidance from two people who genuinely care about getting it right for you.</p>
+          <p className="hero-helper">When you reach out, you'll be working directly with us.</p>
         </div>
         <div className="hero-visual"><HeroIllo /></div>
       </div>
@@ -56,7 +56,7 @@ export default function Home({ setPage }) {
         <div className="scenarios-inner">
           <div className="section-label" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>How we can help</div>
           <div className="section-title" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>Where are you in your Medicare journey?</div>
-          <p style={{ textAlign: 'center', color: 'var(--muted)', marginBottom: '2.5rem', fontSize: '1rem' }}>Choose what best describes your situation.</p>
+          <p style={{ textAlign: 'center', color: 'var(--muted)', marginBottom: '2.5rem', fontSize: '1rem' }}>Tell us where you are and we'll help you figure out the rest.</p>
           <div className="scenarios-grid">
             <div className="scenario-card">
               <div className="scenario-num">65</div>
@@ -209,54 +209,34 @@ export default function Home({ setPage }) {
         </div>
       </div>
 
-      {/* ── Medicare focus ───────────────────────────────────────── */}
-      <div className="section">
-        <div className="section-label">Our focus</div>
-        <div className="section-title">Medicare. Done well.</div>
-        <div className="section-sub">
-          We focus exclusively on Medicare. That means you get our full attention — and someone
-          who genuinely knows the landscape.
-        </div>
-        <div style={{ maxWidth: '680px', margin: '2rem auto 0' }}>
-          <div className="card">
-            <div className="card-illo"><GuidanceIllo /></div>
-            <div className="card-body">
-              <h3>Medicare Plans</h3>
-              <p>We work with people turning 65, newly enrolled in Medicare, and those wondering whether their current plan still makes sense. We explain the differences between Advantage, Medigap, and Part D clearly — so you can choose with confidence.</p>
-              <div style={{ marginTop: '1rem' }}>
-                <button className="btn-plan" onClick={() => setPage('basics')}>Learn About Medicare →</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* ── Who we help ──────────────────────────────────────────── */}
       <div className="who-section">
         <div className="section-label">Who we help</div>
         <div className="section-title">You're in the right place if…</div>
-        <div className="section-sub">If any of these describe your situation, we can help.</div>
-        <div className="who-grid">
+        <div className="who-slim">
           {[
-            "You're turning 65 and don't know where to start with Medicare",
-            "You're already on Medicare and wondering if your current plan still makes sense",
-            "You enrolled in Medicare but feel like you may have made the wrong choice",
-            "You want to understand the difference between Advantage, Medigap, and Part D",
-            "You're approaching Medicare and want to plan ahead — without feeling rushed",
-            "You just want to understand your options with no pressure to decide anything",
-          ].map(item => (
-            <div key={item} className="who-item">
+            ['Turning 65', "Not sure where to start with Medicare? We walk you through it from the beginning."],
+            ['Already on Medicare', "Want a second opinion on your current plan? We help you review your options with fresh eyes."],
+            ['Confused by the options', "Advantage, Medigap, Part D — it's a lot. We explain the differences clearly so you can decide."],
+          ].map(([h, p]) => (
+            <div key={h} className="who-slim-item">
               <span className="who-check">✦</span>
-              <p>{item}</p>
+              <div>
+                <strong>{h}</strong>
+                <p>{p}</p>
+              </div>
             </div>
           ))}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
         </div>
       </div>
 
       {/* ── Empathy ──────────────────────────────────────────────── */}
       <div className="empathy-section">
         <div className="empathy-inner">
-          <p className="empathy-lead">Most people we talk to aren't sure what the right Medicare option is — they just know they don't want to get it wrong.</p>
+          <p className="empathy-lead">Most people we talk to just want to make sure they're not making the wrong decision.</p>
           <p className="empathy-sub">We help make the process clearer, simpler, and easier to navigate.</p>
         </div>
       </div>
@@ -267,9 +247,11 @@ export default function Home({ setPage }) {
           <h2>Not sure where to start?</h2>
           <p>
             That's completely normal. Most people we talk to just want help understanding
-            their Medicare options before making a decision.
+            their Medicare options before making a decision. We're happy to have that
+            conversation — no obligation, no pressure.
           </p>
           <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+          <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--muted)' }}>When you reach out, you'll be working directly with Chris and Helga.</p>
         </div>
       </div>
 
