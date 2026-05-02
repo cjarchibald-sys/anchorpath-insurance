@@ -7,7 +7,7 @@ export default function About({ setPage }) {
       <div className="about-split">
         <div className="about-illo"><AboutIllo /></div>
         <div className="about-content-hero">
-          <div className="about-role">California Licensed Agents · Medicare Specialists</div>
+          <div className="about-role">California-Licensed Insurance Agents · Focused on Medicare</div>
           <h1>We believe Medicare decisions should feel less confusing and more personal.</h1>
           <p>
             We're Chris and Helga Archibald — licensed insurance agents and partners in

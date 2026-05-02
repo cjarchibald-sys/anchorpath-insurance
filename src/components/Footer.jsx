@@ -3,6 +3,12 @@ export default function Footer() {
     <footer>
       <strong>AnchorPath Insurance Services</strong><br />
       Licensed California Life &amp; Health Insurance Agents · Serving California<br />
+      {/* TPMO disclaimer — REQUIRED once appointed with MA/PD carriers.
+          Standard CMS language; verify exact wording with FMO at appointment time:
+          "We do not offer every plan available in your area. Currently we represent
+          [X] organizations which offer [Y] products in your area. Please contact
+          Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance
+          Assistance Program (SHIP) to get information on all of your options." */}
       <span style={{ fontSize: '12px', opacity: 0.7, display: 'block', marginTop: '0.75rem', lineHeight: '1.9', maxWidth: '680px', margin: '0.75rem auto 0' }}>
         We are not affiliated with or endorsed by the U.S. government or the federal Medicare program.
         Information on this website is provided for general educational purposes and should not be

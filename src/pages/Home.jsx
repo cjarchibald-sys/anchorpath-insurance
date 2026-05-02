@@ -35,7 +35,7 @@ export default function Home({ setPage }) {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-tag">✦ <span>California Licensed</span> Medicare Agents</div>
+          <div className="hero-tag">✦ <span>California-Licensed</span> Insurance Agents · Medicare Focus</div>
           <h1>A clear path through <em>Medicare.</em></h1>
           <p className="hero-sub">
             Turning 65 or already on Medicare? We help you understand your options, avoid
@@ -107,7 +107,7 @@ export default function Home({ setPage }) {
         <div className="lead-strip-inner">
           <div className="lead-strip-icon">📋</div>
           <div className="lead-strip-text">
-            <strong>Free Medicare Roadmap</strong>
+            <strong>Complimentary Medicare Roadmap</strong>
             <span>A plain-language guide to help you understand your Medicare options before you enroll.</span>
           </div>
           {!leadSent ? (
