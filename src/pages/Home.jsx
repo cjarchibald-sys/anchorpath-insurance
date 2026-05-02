@@ -35,18 +35,18 @@ export default function Home({ setPage }) {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-tag">✦ <span>California Licensed</span> Medicare Specialists</div>
-          <h1>Medicare is complicated. <em>We help you make the right decision—clearly and confidently.</em></h1>
+          <div className="hero-tag">✦ <span>California Licensed</span> Medicare Agents</div>
+          <h1>A clear path through <em>Medicare.</em></h1>
           <p className="hero-sub">
-            Whether you're turning 65, new to Medicare, or reviewing your current coverage,
-            we help you understand your options, compare what matters, and choose with
-            confidence — without pressure or confusion.
+            Turning 65 or already on Medicare? We help you understand your options, avoid
+            costly mistakes, and choose the coverage that fits your needs—without pressure
+            or confusion.
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
             <button className="btn-ghost" onClick={() => setPage('basics')}>Get Medicare Guidance</button>
           </div>
-          <p className="hero-helper">When you reach out, you'll be working directly with us, Chris and Helga.</p>
+          <p className="hero-helper">Work directly with Chris and Helga for clear, personal guidance.</p>
         </div>
         <div className="hero-visual"><HeroIllo /></div>
       </div>
@@ -138,7 +138,7 @@ export default function Home({ setPage }) {
           'CA Licensed Life & Health Agents',
           'No-cost, no-obligation consultations',
           'Independent — not tied to any single carrier',
-          'Focused exclusively on Medicare',
+          'Medicare guidance, clearly explained',
         ].map(t => (
           <div key={t} className="trust-item"><span className="trust-check">✦</span> {t}</div>
         ))}
@@ -218,6 +218,9 @@ export default function Home({ setPage }) {
             ['Turning 65', "Not sure where to start with Medicare? We walk you through it from the beginning."],
             ['Already on Medicare', "Want a second opinion on your current plan? We help you review your options with fresh eyes."],
             ['Confused by the options', "Advantage, Medigap, Part D — it's a lot. We explain the differences clearly so you can decide."],
+            ['Losing employer coverage', "Transitioning off a work plan? We help you understand your Medicare options and timing."],
+            ['Reviewing your plan', "Your plan changed, or your needs did. We help you evaluate whether your coverage still fits."],
+            ['Managing drug costs', "Trying to keep prescription costs manageable? We help you find a Part D plan that works for your medications."],
           ].map(([h, p]) => (
             <div key={h} className="who-slim-item">
               <span className="who-check">✦</span>
@@ -236,7 +239,7 @@ export default function Home({ setPage }) {
       {/* ── Empathy ──────────────────────────────────────────────── */}
       <div className="empathy-section">
         <div className="empathy-inner">
-          <p className="empathy-lead">Most people we talk to just want to make sure they're not making the wrong decision.</p>
+          <p className="empathy-lead">Most people we talk to aren't sure what the right Medicare option is—they just know they don't want to get it wrong.</p>
           <p className="empathy-sub">We help make the process clearer, simpler, and easier to navigate.</p>
         </div>
       </div>
@@ -257,7 +260,7 @@ export default function Home({ setPage }) {
 
       {/* ── Final CTA ────────────────────────────────────────────── */}
       <div className="cta-band">
-        <h2>Ready to feel confident about Medicare?</h2>
+        <h2>Ready to get clear on Medicare?</h2>
         <p>Start with a conversation — complimentary, and completely on your terms.</p>
         <button className="btn-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
       </div>

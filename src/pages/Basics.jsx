@@ -12,10 +12,11 @@ const parts = [
 ]
 
 const periods = [
-  { code:'IEP', title:'Initial Enrollment Period', text:"A 7-month window around your 65th birthday — 3 months before, the month of, and 3 months after. Your first chance to enroll in Medicare." },
-  { code:'GEP', title:'General Enrollment Period', text:"January 1 – March 31 each year, for those who missed their IEP. Coverage begins July 1. Late enrollment penalties may apply." },
-  { code:'OEP', title:'Open Enrollment Period', text:"October 15 – December 7 each year. Use this time to switch, join, or drop Medicare Advantage or Part D plans for the coming year." },
-  { code:'SEP', title:'Special Enrollment Period', text:"Triggered by life events — losing employer coverage, moving, or qualifying for low-income programs. Timing and eligibility vary by situation." },
+  { code:'IEP', title:'Initial Enrollment Period', text:"A 7-month window around your 65th birthday — 3 months before, the month of, and 3 months after. This is your first opportunity to enroll in Medicare." },
+  { code:'GEP', title:'General Enrollment Period', text:"January 1 – March 31 each year, for people who did not enroll during their Initial Enrollment Period and do not qualify for a Special Enrollment Period. Coverage begins the month after you enroll. Late enrollment penalties may apply." },
+  { code:'OEP', title:'Open Enrollment Period / Annual Election Period', text:"October 15 – December 7 each year. Use this time to join, switch, or drop Medicare Advantage or Part D plans. Changes take effect January 1 of the following year." },
+  { code:'MA OEP', title:'Medicare Advantage Open Enrollment Period', text:"January 1 – March 31 each year. For people already enrolled in a Medicare Advantage plan. During this period, you can switch to another Medicare Advantage plan or return to Original Medicare and, if needed, add a Part D plan." },
+  { code:'SEP', title:'Special Enrollment Period', text:"Triggered by qualifying life events, such as losing employer coverage, moving, or qualifying for certain programs. Timing and eligibility vary by situation." },
 ]
 
 export default function Basics({ setPage }) {

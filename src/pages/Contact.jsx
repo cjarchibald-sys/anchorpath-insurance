@@ -50,8 +50,8 @@ export default function Contact() {
         <div className="contact-info">
           <h2>We'd love to hear from you</h2>
           <p>
-            Whether you're turning 65, reviewing your current Medicare coverage, or just want
-            to understand your options — we're happy to help. Consultations are always complimentary.
+            Whether you're new to Medicare, reviewing your current coverage, or approaching 65
+            and not sure where to begin — we're happy to help. Consultations are always complimentary.
           </p>
 
           {[
