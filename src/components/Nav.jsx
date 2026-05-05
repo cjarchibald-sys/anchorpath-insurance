@@ -4,8 +4,8 @@ export default function Nav({ page, setPage }) {
       <div className="logo" onClick={() => setPage('home')}>
         <div className="logo-icon">⚓</div>
         <div>
-          <div className="logo-text">AnchorPath Insurance</div>
-          <div className="logo-sub">Services</div>
+          <div className="logo-text">AnchorPath Insurance Services</div>
+          <div className="logo-sub">CA Licensed · Medicare Focus</div>
         </div>
       </div>
       <div className="nav-links">

@@ -8,7 +8,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState(null)
-  const [form, setForm] = useState({ name: '', phone: '', email: '', topic: '', notes: '' })
+  const [form, setForm] = useState({ name: '', phone: '', email: '', contactFor: '', topic: '', notes: '' })
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -22,7 +22,7 @@ export default function Contact() {
       })
       if (res.ok) {
         setSubmitted(true)
-        setForm({ name: '', phone: '', email: '', topic: '', notes: '' })
+        setForm({ name: '', phone: '', email: '', contactFor: '', topic: '', notes: '' })
       } else {
         setError('Something went wrong. Please try again or call us directly.')
       }
@@ -39,8 +39,8 @@ export default function Contact() {
       <div className="contact-banner">
         <div className="contact-banner-text">
           <div className="section-label">Let's connect</div>
-          <h1>Schedule a Conversation</h1>
-          <p>No obligation, no sales pressure — just a friendly, complimentary conversation to help you understand your Medicare options.</p>
+          <h1>Get Help From a Licensed Agent</h1>
+          <p>Whether you're new to Medicare, reviewing your current coverage, or approaching 65 and not sure where to begin — complimentary guidance is available.</p>
         </div>
         <div className="contact-banner-illo"><ContactIllo /></div>
       </div>
@@ -48,36 +48,55 @@ export default function Contact() {
       {/* ── Contact content ──────────────────────────────────────── */}
       <div className="contact-wrap">
         <div className="contact-info">
-          <h2>We'd love to hear from you</h2>
-          <p>
-            Whether you're new to Medicare, reviewing your current coverage, or approaching 65
-            and not sure where to begin — we're happy to help. Consultations are always complimentary.
-          </p>
 
-          {[
-            ['📍', 'Serving', 'Bay Area & all of California'],
-            ['📞', 'Phone', '(408) 564-9295'],
-            ['✉️', 'Email', 'chris@anchorpathinsurance.com'],
-            ['🕐', 'Availability', 'Mon–Fri, 9am–5pm PT · Evenings by request'],
-          ].map(([icon, label, val]) => (
-            <div key={label} className="contact-item">
-              <div className="contact-item-icon">{icon}</div>
-              <div className="contact-item-body">
-                <strong>{label}</strong>
-                <span>{val}</span>
-              </div>
+          {/* ── Chris — AnchorPath Insurance Services ── */}
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.05rem', marginBottom: '0.25rem' }}>AnchorPath Insurance Services</h2>
+            <div style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '1rem' }}>
+              Chris Archibald, CA License #XXXXX
             </div>
-          ))}
+            {[
+              ['📍', 'Serving', 'Bay Area & all of California'],
+              ['📞', 'Phone', '(408) 564-9295'],
+              ['✉️', 'Email', 'chris@anchorpathinsurance.com'],
+              ['🕐', 'Availability', 'Mon–Fri, 9am–5pm PT · Evenings by request'],
+            ].map(([icon, label, val]) => (
+              <div key={label} className="contact-item">
+                <div className="contact-item-icon">{icon}</div>
+                <div className="contact-item-body">
+                  <strong>{label}</strong>
+                  <span>{val}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* ── Helga — Independent Licensed Agent ── */}
+          <div style={{
+            paddingTop: '1.5rem',
+            borderTop: '1px solid var(--border)',
+            marginBottom: '2rem',
+          }}>
+            <h2 style={{ fontSize: '1.05rem', marginBottom: '0.25rem' }}>Helga Archibald</h2>
+            <div style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '0.5rem' }}>
+              CA License #XXXXX
+            </div>
+            <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: '1.65', marginBottom: '0' }}>
+              Licensed insurance agent operating independently.<br />
+              Not affiliated with AnchorPath Insurance Services.<br />
+              To reach Helga, select her name in the form.
+            </p>
+          </div>
 
           {/* What to expect */}
           <div className="contact-expect">
-            <div className="section-label" style={{ display: 'block', marginBottom: '0.5rem', marginTop: '2rem' }}>What to expect</div>
+            <div className="section-label" style={{ display: 'block', marginBottom: '0.5rem', marginTop: '0.5rem' }}>What to expect</div>
             <ul className="expect-list">
               {[
-                'We listen first, recommend second',
+                'Licensed guidance, no sales pressure',
                 'Plain language — no Medicare jargon',
-                'No obligation after our conversation',
-                'We follow up at whatever pace works for you',
+                'No obligation after your conversation',
+                'Follow-up at whatever pace works for you',
               ].map(item => (
                 <li key={item}>
                   <span className="expect-check">✦</span>
@@ -90,8 +109,23 @@ export default function Contact() {
 
         {/* ── Form ─────────────────────────────────────────────── */}
         <div className="contact-form">
-          <h3>Send us a message</h3>
+          <h3>Send a Message</h3>
           <form onSubmit={handleSubmit}>
+
+            {/* Who are you contacting */}
+            <div className="form-group">
+              <label>Who would you like to reach?</label>
+              <select
+                value={form.contactFor}
+                onChange={e => setForm({ ...form, contactFor: e.target.value })}
+                required
+              >
+                <option value="">Select…</option>
+                <option value="Chris Archibald — AnchorPath Insurance Services">Chris Archibald — AnchorPath Insurance Services</option>
+                <option value="Helga Archibald — Independent Licensed Agent">Helga Archibald — Independent Licensed Agent</option>
+              </select>
+            </div>
+
             <div className="form-group">
               <label>Your name</label>
               <input
