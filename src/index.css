@@ -73,7 +73,7 @@ nav {
   flex-shrink: 0;
 }
 
-.logo-icon { font-size: 1.5rem; }
+.logo-icon { width: 1.75rem; height: 1.75rem; display: flex; align-items: center; flex-shrink: 0; }
 
 .logo-text {
   font-family: 'Lora', serif;

@@ -2,7 +2,7 @@ export default function Nav({ page, setPage }) {
   return (
     <nav>
       <div className="logo" onClick={() => setPage('home')}>
-        <div className="logo-icon">⚓</div>
+        <div className="logo-icon"><img src="/anchorpath-logo.png" alt="AnchorPath Insurance Services logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
         <div>
           <div className="logo-text">AnchorPath Insurance Services</div>
           <div className="logo-sub">CA Licensed · Medicare Focus</div>
