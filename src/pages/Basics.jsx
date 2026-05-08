@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { MedicareShieldIllo, HospitalIllo, StethoscopeIllo, BundleIllo, PillIllo } from '../illustrations'
 
-const BASE = 'https://anchorpath-insurance.vercel.app'
+const BASE = 'https://anchorpathinsurance.com'
 
 const parts = [
   { cls:'a', color:'#2e6da4', label:'Part A', title:'Hospital Insurance', bg:'#f0f7fc', Illo: HospitalIllo,

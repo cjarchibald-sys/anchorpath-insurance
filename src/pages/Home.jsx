@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { HeroIllo, IndependenceIllo } from '../illustrations'
 
-const BASE = 'https://anchorpath-insurance.vercel.app'
+const BASE = 'https://anchorpathinsurance.com'
 
 const schema = {
   '@context': 'https://schema.org',

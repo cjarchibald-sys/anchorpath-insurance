@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { PlansBalanceIllo, OriginalMedicareIllo, AdvantageIllo, UmbrellaIllo, PartDIllo } from '../illustrations'
 
-const BASE = 'https://anchorpath-insurance.vercel.app'
+const BASE = 'https://anchorpathinsurance.com'
 
 const plans = [
   {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anchorpath-insurance.vercel.app/sitemap.xml
+Sitemap: https://anchorpathinsurance.com/sitemap.xml

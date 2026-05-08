@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ContactIllo } from '../illustrations'
 
-const BASE = 'https://anchorpath-insurance.vercel.app'
+const BASE = 'https://anchorpathinsurance.com'
 
 // Sign up at formspree.io, create a form, and paste your endpoint here:
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgorwrog'
