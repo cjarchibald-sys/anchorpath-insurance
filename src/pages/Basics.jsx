@@ -1,4 +1,8 @@
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { MedicareShieldIllo, HospitalIllo, StethoscopeIllo, BundleIllo, PillIllo } from '../illustrations'
+
+const BASE = 'https://anchorpath-insurance.vercel.app'
 
 const parts = [
   { cls:'a', color:'#2e6da4', label:'Part A', title:'Hospital Insurance', bg:'#f0f7fc', Illo: HospitalIllo,
@@ -19,9 +23,15 @@ const periods = [
   { code:'SEP', title:'Special Enrollment Period', text:"Triggered by qualifying life events, such as losing employer coverage, moving, or qualifying for certain programs. Timing and eligibility vary by situation." },
 ]
 
-export default function Basics({ setPage }) {
+export default function Basics() {
   return (
     <>
+      <Helmet>
+        <title>Medicare Basics: Parts A, B, C, D and Enrollment Periods | AnchorPath</title>
+        <meta name="description" content="A plain-language guide to Medicare Parts A, B, C, and D, plus the enrollment periods that determine when you can sign up. Educational. Independent." />
+        <link rel="canonical" href={`${BASE}/medicare-basics`} />
+      </Helmet>
+
       <div className="page-header">
         <div className="page-header-text">
           <div className="section-label">Medicare 101</div>
@@ -67,7 +77,7 @@ export default function Basics({ setPage }) {
       <div className="cta-band">
         <h2>Still have questions? Let's talk.</h2>
         <p>Every situation is different. We're happy to walk through your specific enrollment window or coverage needs.</p>
-        <button className="btn-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+        <Link to="/contact" className="btn-cta" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
       </div>
 
       <div className="edu-disclaimer">

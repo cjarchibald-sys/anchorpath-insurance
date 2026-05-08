@@ -1,4 +1,8 @@
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { PlansBalanceIllo, OriginalMedicareIllo, AdvantageIllo, UmbrellaIllo, PartDIllo } from '../illustrations'
+
+const BASE = 'https://anchorpath-insurance.vercel.app'
 
 const plans = [
   {
@@ -31,9 +35,15 @@ const plans = [
   },
 ]
 
-export default function Plans({ setPage }) {
+export default function Plans() {
   return (
     <>
+      <Helmet>
+        <title>Medicare Plan Types Compared: Original, Advantage, Medigap, Part D | AnchorPath</title>
+        <meta name="description" content="A neutral, side-by-side overview of Original Medicare, Medicare Advantage, Medigap (Supplement), and Part D prescription drug plans — with the tradeoffs explained." />
+        <link rel="canonical" href={`${BASE}/medicare-plans`} />
+      </Helmet>
+
       <div className="page-header">
         <div className="page-header-text">
           <div className="section-label">Your options</div>
@@ -57,7 +67,7 @@ export default function Plans({ setPage }) {
                   {p.pros.map(t => <li key={t}><span className="check-y">✓</span>{t}</li>)}
                   {p.cons.map(t => <li key={t}><span className="check-n">–</span>{t}</li>)}
                 </ul>
-                <button className={`btn-plan${p.featured?' featured':''}`} onClick={() => setPage('contact')}>Discuss this option →</button>
+                <Link to="/contact" className={`btn-plan${p.featured?' featured':''}`} style={{ textDecoration: 'none' }}>Discuss this option →</Link>
               </div>
             </div>
           ))}
@@ -67,7 +77,7 @@ export default function Plans({ setPage }) {
       <div className="cta-band">
         <h2>Not sure which plan fits you?</h2>
         <p>That's exactly what we're here for. Let's compare your real options together.</p>
-        <button className="btn-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+        <Link to="/contact" className="btn-cta" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
       </div>
 
       <div className="edu-disclaimer">

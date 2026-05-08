@@ -5,7 +5,6 @@ export default function Footer() {
 
       <span style={{ fontSize: '12px', opacity: 0.75, display: 'block', marginTop: '0.75rem', lineHeight: '1.9', maxWidth: '680px', margin: '0.75rem auto 0' }}>
         AnchorPath Insurance Services is a licensed insurance agency in California, operated by Chris Archibald, CA License #XXXXX.
-        Chris Archibald, CA License #XXXXX.
         Helga Archibald, CA License #XXXXX, is a licensed insurance agent operating independently and is not affiliated with AnchorPath Insurance Services.
       </span>
 

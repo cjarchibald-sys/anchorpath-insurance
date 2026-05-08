@@ -1,31 +1,37 @@
-export default function Nav({ page, setPage }) {
+import { NavLink, Link } from 'react-router-dom'
+
+export default function Nav() {
   return (
     <nav>
-      <div className="logo" onClick={() => setPage('home')}>
+      <Link to="/" className="logo" style={{ textDecoration: 'none' }}>
         <div className="logo-icon">⚓</div>
         <div>
           <div className="logo-text">AnchorPath Insurance Services</div>
           <div className="logo-sub">CA Licensed · Medicare Focus</div>
         </div>
-      </div>
+      </Link>
       <div className="nav-links">
         {[
-          ['home', 'Home'],
-          ['about', 'About'],
-          ['basics', 'Medicare Guide'],
-          ['plans', 'Medicare Plans'],
-          ['contact', 'Contact'],
-        ].map(([id, label]) => (
-          <button
-            key={id}
-            className={`nav-link${page === id ? ' active' : ''}`}
-            onClick={() => setPage(id)}
+          ['/', 'Home'],
+          ['/about', 'About'],
+          ['/medicare-basics', 'Medicare Guide'],
+          ['/medicare-plans', 'Medicare Plans'],
+          ['/contact', 'Contact'],
+        ].map(([to, label]) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={to === '/'}
+            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+            style={{ textDecoration: 'none' }}
           >
             {label}
-          </button>
+          </NavLink>
         ))}
       </div>
-      <button className="nav-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+      <Link to="/contact" className="nav-cta" style={{ textDecoration: 'none' }}>
+        Schedule a Conversation
+      </Link>
     </nav>
   )
 }

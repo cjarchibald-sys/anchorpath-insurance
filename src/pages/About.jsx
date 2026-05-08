@@ -1,8 +1,18 @@
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { AboutIllo } from '../illustrations'
 
-export default function About({ setPage }) {
+const BASE = 'https://anchorpath-insurance.vercel.app'
+
+export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About AnchorPath Insurance Services | Chris Archibald, CA Licensed Insurance Agent</title>
+        <meta name="description" content="AnchorPath Insurance Services is operated by Chris Archibald, a California-licensed independent insurance agent focused on Medicare. Learn how we work and who we serve." />
+        <link rel="canonical" href={`${BASE}/about`} />
+      </Helmet>
+
       {/* ── Hero split ───────────────────────────────────────────── */}
       <div className="about-split">
         <div className="about-illo"><AboutIllo /></div>
@@ -46,8 +56,7 @@ export default function About({ setPage }) {
           genuinely complicated.
         </p>
         <p>
-          That's why AnchorPath Insurance Services focuses entirely on Medicare. Not general
-          health insurance, not life insurance — Medicare. Chris has gone deep on the details
+          That's why AnchorPath Insurance Services focuses entirely on Medicare. Chris has gone deep on the details
           to explain them clearly to people who need to make real decisions about their coverage.
         </p>
         <p>
@@ -80,7 +89,7 @@ export default function About({ setPage }) {
         {/* ── Credentials ──────────────────────────────────────── */}
         <div className="creds">
           {[
-            '🏅 CA Life & Health Licensed',
+            '🏅 California Licensed Insurance Agent',
             '📍 Serving California',
             '🔒 Independent Agency',
             '📞 Complimentary consultations',
@@ -90,7 +99,7 @@ export default function About({ setPage }) {
         </div>
 
         <div style={{ marginTop: '1.5rem' }}>
-          <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+          <Link to="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
         </div>
       </div>
 

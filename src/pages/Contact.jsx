@@ -1,5 +1,8 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { ContactIllo } from '../illustrations'
+
+const BASE = 'https://anchorpath-insurance.vercel.app'
 
 // Sign up at formspree.io, create a form, and paste your endpoint here:
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgorwrog'
@@ -35,6 +38,12 @@ export default function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact AnchorPath Insurance Services | Schedule a Medicare Conversation</title>
+        <meta name="description" content="Reach out to Chris Archibald at AnchorPath Insurance Services for a no-cost, no-obligation Medicare conversation. Helga Archibald is also available as an independent agent." />
+        <link rel="canonical" href={`${BASE}/contact`} />
+      </Helmet>
+
       {/* ── Banner ───────────────────────────────────────────────── */}
       <div className="contact-banner">
         <div className="contact-banner-text">

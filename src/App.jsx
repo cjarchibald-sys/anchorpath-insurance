@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -8,22 +9,28 @@ import Plans from './pages/Plans'
 import Contact from './pages/Contact'
 import './index.css'
 
-export default function App() {
-  const [page, setPage] = useState('home')
-
-  function navigateTo(p) {
-    setPage(p)
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
     window.scrollTo(0, 0)
-  }
+  }, [pathname])
+  return null
+}
 
-  const pages = { home: Home, about: About, basics: Basics, plans: Plans, contact: Contact }
-  const PageComponent = pages[page] || Home
-
+export default function App() {
   return (
     <>
-      <Nav page={page} setPage={navigateTo} />
+      <ScrollToTop />
+      <Nav />
       <main>
-        <PageComponent setPage={navigateTo} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/medicare-basics" element={<Basics />} />
+          <Route path="/medicare-plans" element={<Plans />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
       <Footer />
     </>

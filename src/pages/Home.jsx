@@ -1,7 +1,21 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { HeroIllo, IndependenceIllo } from '../illustrations'
 
-export default function Home({ setPage }) {
+const BASE = 'https://anchorpath-insurance.vercel.app'
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'InsuranceAgency',
+  name: 'AnchorPath Insurance Services',
+  url: `${BASE}/`,
+  description: 'California-licensed independent Medicare guidance.',
+  areaServed: { '@type': 'State', name: 'California' },
+  founder: { '@type': 'Person', name: 'Chris Archibald' },
+}
+
+export default function Home() {
   const [email, setEmail] = useState('')
   const [leadSent, setLeadSent] = useState(false)
   const [leadSending, setLeadSending] = useState(false)
@@ -32,20 +46,26 @@ export default function Home({ setPage }) {
 
   return (
     <>
+      <Helmet>
+        <title>AnchorPath Insurance Services | California Medicare Guidance</title>
+        <meta name="description" content="California-licensed independent Medicare guidance. Compare plans honestly, understand the tradeoffs, and choose coverage that fits your life. Serving the Bay Area and all of California." />
+        <link rel="canonical" href={`${BASE}/`} />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Helmet>
+
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-tag">✦ <span>California-Licensed</span> Insurance Agency · Medicare Focus</div>
-          <h1>AnchorPath Insurance Services</h1>
+          <div className="hero-tag">✦ <span>California Licensed</span> · Medicare Focus</div>
+          <h1>Medicare is complicated. Choosing the right coverage doesn't have to be.</h1>
           <p className="hero-sub">
-            Personalized insurance guidance to help you make confident decisions about
-            Medicare, health, and life insurance.
+            We walk through your situation, compare the plans available to you side by side,
+            and help you understand the tradeoffs — so you can choose the coverage that actually fits.
           </p>
           <div className="hero-btns">
-            <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
-            <button className="btn-ghost" onClick={() => setPage('basics')}>Get Medicare Guidance</button>
+            <Link to="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
+            <Link to="/medicare-basics" className="btn-ghost" style={{ textDecoration: 'none' }}>Get Medicare Guidance</Link>
           </div>
-          <p className="hero-helper">Led by Chris Archibald, a licensed California insurance agent.</p>
         </div>
         <div className="hero-visual"><HeroIllo /></div>
       </div>
@@ -61,19 +81,19 @@ export default function Home({ setPage }) {
               <div className="scenario-num">65</div>
               <h3>Turning 65</h3>
               <p>Not sure how Medicare works or what to do first? AnchorPath Insurance Services walks you through the process step by step to help you make the right decision from the start.</p>
-              <button className="btn-path-blue" onClick={() => setPage('contact')}>Start Here →</button>
+              <Link to="/contact" className="btn-path-blue" style={{ textDecoration: 'none' }}>Start Here →</Link>
             </div>
             <div className="scenario-card scenario-card--featured">
               <div className="scenario-num">New</div>
               <h3>New to Medicare</h3>
               <p>Already enrolled but not sure if you chose the right plan? Get personalized guidance on your options and what matters most for your situation.</p>
-              <button className="btn-path-blue" onClick={() => setPage('contact')}>Review Your Options →</button>
+              <Link to="/contact" className="btn-path-blue" style={{ textDecoration: 'none' }}>Review Your Options →</Link>
             </div>
             <div className="scenario-card">
               <div className="scenario-num">↺</div>
               <h3>Reviewing Your Coverage</h3>
               <p>Plans change, and your needs change. A coverage review can help you evaluate whether your current plan still fits.</p>
-              <button className="btn-path-blue" onClick={() => setPage('contact')}>Request a Review →</button>
+              <Link to="/contact" className="btn-path-blue" style={{ textDecoration: 'none' }}>Request a Review →</Link>
             </div>
           </div>
         </div>
@@ -201,7 +221,7 @@ export default function Home({ setPage }) {
               ))}
             </div>
             <div style={{ marginTop: '2rem' }}>
-              <button className="btn-primary" onClick={() => setPage('about')}>Meet the Team</button>
+              <Link to="/about" className="btn-primary" style={{ textDecoration: 'none' }}>Meet the Team</Link>
             </div>
           </div>
           <div className="why-illo"><IndependenceIllo /></div>
@@ -231,7 +251,7 @@ export default function Home({ setPage }) {
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+          <Link to="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
         </div>
       </div>
 
@@ -252,7 +272,7 @@ export default function Home({ setPage }) {
             their Medicare options before making a decision. AnchorPath Insurance Services
             is happy to have that conversation — no obligation, no pressure.
           </p>
-          <button className="btn-primary" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+          <Link to="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
           <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--muted)' }}>When you reach out, you'll work directly with Chris Archibald through AnchorPath Insurance Services.</p>
         </div>
       </div>
@@ -261,7 +281,7 @@ export default function Home({ setPage }) {
       <div className="cta-band">
         <h2>Ready to get clear on Medicare?</h2>
         <p>Start with a conversation — complimentary, and completely on your terms.</p>
-        <button className="btn-cta" onClick={() => setPage('contact')}>Schedule a Conversation</button>
+        <Link to="/contact" className="btn-cta" style={{ textDecoration: 'none' }}>Schedule a Conversation</Link>
       </div>
     </>
   )
