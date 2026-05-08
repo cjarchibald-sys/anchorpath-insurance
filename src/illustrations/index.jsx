@@ -19,8 +19,8 @@ function Img({ id, w, h, alt, style = {} }) {
 export function HeroIllo() {
   return (
     <img
-      src={`${P}/7551755/pexels-photo-7551755.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop&crop=top`}
-      alt="Older couple reviewing Medicare documents at home"
+      src="/images/hero-couple.jpeg"
+      alt="Older couple enjoying time outdoors together"
       loading="lazy"
       style={{
         display: 'block',
