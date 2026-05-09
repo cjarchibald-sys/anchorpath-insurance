@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://anchorpathinsurance.com/sitemap.xml
+Disallow: /
