@@ -86,6 +86,16 @@ export default function About() {
           your Medicare options.
         </p>
 
+        <aside className="about-name-callout">
+          <h3>About the name</h3>
+          <p>
+            Medicare tends to arrive at a moment when a lot is already shifting — retirement, health, the rhythm of daily life. People need two things from this stretch: <strong>something steady to hold onto</strong>, and <strong>a clear way forward</strong>.
+          </p>
+          <p>
+            That's the name. That's the work.
+          </p>
+        </aside>
+
         {/* ── Credentials ──────────────────────────────────────── */}
         <div className="creds">
           {[
