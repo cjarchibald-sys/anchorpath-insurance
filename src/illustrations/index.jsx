@@ -142,7 +142,14 @@ export function PlansBalanceIllo() {
 // ─── Plan card banners (Plans page) ──────────────────────────────────────────
 
 export function OriginalMedicareIllo() {
-  return <Img id="photo-1521038199265-bc482db0f923" w={500} h={200} alt="Original Medicare" />
+  return (
+    <img
+      src="/images/medicare%20part%20a%20and%20b.png"
+      alt="Original Medicare Part A and Part B"
+      loading="lazy"
+      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+    />
+  )
 }
 
 export function AdvantageIllo() {
