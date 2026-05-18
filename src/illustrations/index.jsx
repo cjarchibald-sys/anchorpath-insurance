@@ -119,12 +119,12 @@ export function MedicareShieldIllo() {
   )
 }
 
-// Plans page header: older couple reviewing plan options, calm and thoughtful
+// Plans page header: Medicare plan options illustration
 export function PlansBalanceIllo() {
   return (
     <img
-      src={`${P}/3760262/pexels-photo-3760262.jpeg?auto=compress&cs=tinysrgb&w=500&h=380&fit=crop&crop=top`}
-      alt="Reviewing and comparing Medicare plan options"
+      src="/images/medicare%20options.png"
+      alt="Medicare plan options overview"
       loading="lazy"
       style={{
         display: 'block',
