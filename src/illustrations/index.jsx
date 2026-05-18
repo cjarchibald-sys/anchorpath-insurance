@@ -99,11 +99,11 @@ export function ContactIllo() {
 
 // ─── Educational page headers ─────────────────────────────────────────────────
 
-// Basics page header: older adult reviewing Medicare information — educational context
+// Basics page header: Understanding Medicare illustration
 export function MedicareShieldIllo() {
   return (
     <img
-      src={`${P}/4065615/pexels-photo-4065615.jpeg?auto=compress&cs=tinysrgb&w=500&h=380&fit=crop&crop=top`}
+      src="/images/understanding-medicare.png"
       alt="Understanding Medicare coverage options"
       loading="lazy"
       style={{
