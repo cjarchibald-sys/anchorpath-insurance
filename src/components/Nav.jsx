@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <nav>
       <Link to="/" className="logo" style={{ textDecoration: 'none' }}>
-        <div className="logo-icon">⚓</div>
+        <img src="/images/anchortpath%20logo.png" alt="AnchorPath Insurance Services" className="logo-icon" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
         <div>
           <div className="logo-text">AnchorPath Insurance Services</div>
           <div className="logo-sub">CA Licensed · Medicare Focus</div>
