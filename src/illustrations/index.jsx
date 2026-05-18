@@ -76,12 +76,11 @@ export function AboutIllo() {
   )
 }
 
-// Contact section: warm, approachable — a person in a natural setting, not a
-// corporate office or business suit scene
+// Contact section illustration
 export function ContactIllo() {
   return (
     <img
-      src={`${P}/5256816/pexels-photo-5256816.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop&crop=top`}
+      src="/images/understanding-medicare.png"
       alt="Friendly Medicare guidance conversation"
       loading="lazy"
       style={{
