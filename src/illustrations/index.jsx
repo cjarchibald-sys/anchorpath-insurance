@@ -144,7 +144,7 @@ export function PlansBalanceIllo() {
 export function OriginalMedicareIllo() {
   return (
     <img
-      src="/images/medicare%20part%20a%20and%20b.png"
+      src="/images/original-medicare.jpeg"
       alt="Original Medicare Part A and Part B"
       loading="lazy"
       style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
