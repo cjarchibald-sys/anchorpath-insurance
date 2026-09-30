@@ -14,7 +14,7 @@ const live = launching || process.env.VERCEL_ENV !== 'production'
 // requirements document (Section 20, Appendix B.9) are unresolved.
 function launchBlockers() {
   const blockers = []
-  if (!site.principalPlaceOfBusiness) blockers.push('site.principalPlaceOfBusiness (exact CDI-filed address)')
+  if (!site.principalPlaceOfBusiness) blockers.push('site.principalPlaceOfBusiness (city and state)')
   if (!site.privacy.effectiveDate) blockers.push('site.privacy.effectiveDate')
   if (!site.privacy.leadRetention) blockers.push('site.privacy.leadRetention')
   if (!site.accessibilityReviewed) blockers.push('site.accessibilityReviewed')

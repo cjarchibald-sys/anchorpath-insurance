@@ -16,7 +16,7 @@ export function LegalIdentity() {
       California Insurance License #{helga.license}. State of domicile: {site.stateOfDomicile}. Principal place of
       business:{' '}
       {site.principalPlaceOfBusiness ?? (
-        <mark className="placeholder">[exact address on file with CDI — required before launch]</mark>
+        <mark className="placeholder">[principal place of business (city, state) required before launch]</mark>
       )}
       . Independent insurance agents. Not affiliated with or endorsed by the U.S. government or the federal Medicare
       program.

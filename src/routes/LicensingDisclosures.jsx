@@ -27,7 +27,7 @@ export default function LicensingDisclosures() {
         <dt>State of domicile</dt>
         <dd>{site.stateOfDomicile}</dd>
         <dt>Principal place of business</dt>
-        <dd>{site.principalPlaceOfBusiness ?? <mark className="placeholder">[exact address on file with CDI — required before launch]</mark>}</dd>
+        <dd>{site.principalPlaceOfBusiness ?? <mark className="placeholder">[principal place of business (city, state) required before launch]</mark>}</dd>
         <dt>Licensed agents</dt>
         <dd>
           {chris.legalName}, California Insurance License #{chris.license}

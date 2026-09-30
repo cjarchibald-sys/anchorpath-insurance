@@ -28,10 +28,9 @@ export const site = {
 
   // Cal. Ins. Code §1726 internet disclosure.
   stateOfDomicile: 'California',
-  // REQUIRED before launch: the exact principal place of business on file with
-  // CDI. Do not substitute a mailbox or virtual address unless CDI/counsel has
-  // confirmed it and CDI records are updated first.
-  principalPlaceOfBusiness: null,
+  // Owner decision (2026-09-30): disclose city and state only. The street
+  // address is never published on the site or in documents linked from it.
+  principalPlaceOfBusiness: 'San Jose, California',
 
   // Carried over from the previous site. Verify each is monitored before launch.
   phone: { display: '(408) 564-9295', tel: '+14085649295' },

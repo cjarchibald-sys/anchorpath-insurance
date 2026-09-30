@@ -26,8 +26,8 @@ npm run build
 Production (`VERCEL_ENV=production`) shows a "Coming soon" page until `VITE_PUBLIC_LAUNCH=true` is set.
 Local dev and Vercel preview deployments always show the full site for review.
 
-A launch build fails until the required placeholders are resolved: the CDI-filed principal place of
-business, privacy effective date and retention period, accessibility review date, a fact-check date for
+A launch build fails until the required placeholders are resolved: the principal place of business
+(city and state only; the street address is never published), privacy effective date and retention period, accessibility review date, a fact-check date for
 every page in `src/content/pages.js`, and `public/robots.txt` no longer blocking crawlers.
 
 ## Compliance switches
