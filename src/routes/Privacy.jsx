@@ -97,9 +97,15 @@ export default function Privacy() {
 
       <h2>Retention</h2>
       <p>
-        We keep form submissions and consent records{' '}
-        {site.privacy.leadRetention ?? <Pending>retention period required before launch</Pending>}, or longer if the law
-        requires. Then we delete them.
+        We keep form submissions and the consent records that go with them for{' '}
+        {site.privacy.leadRetention ?? <Pending>retention period required before launch</Pending>}. Medicare rules
+        require records related to Medicare plan marketing and enrollment to be kept for 10 years, and we apply the
+        same period to the requests you send us so we can show when and how you asked to be contacted.
+      </p>
+      <p>
+        We keep information longer only when a law, regulation, government audit, or legal claim requires it, and only
+        for as long as that requirement lasts. When the retention period ends, we securely delete the information or
+        de-identify it so it can no longer be linked to you.
       </p>
 
       <h2>Your choices</h2>

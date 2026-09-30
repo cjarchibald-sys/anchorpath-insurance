@@ -54,7 +54,7 @@ export const site = {
   // Privacy-policy facts that must come from the real data map (Section 9.13).
   privacy: {
     effectiveDate: '2026-10-01',
-    leadRetention: 'for at least 10 years',
+    leadRetention: '10 years after our last contact with you',
   },
 
   accessibilityReviewed: null, // date of the last manual accessibility review
