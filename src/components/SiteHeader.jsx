@@ -4,11 +4,22 @@ import { site } from '../site.config'
 import { navGroups, meetUs } from './navigation'
 import { CtaLink, TelLink } from './ui'
 
-export function Wordmark() {
+// Logo mark plus wordmark. `reverse` is the light version for dark backgrounds.
+// The mark is decorative here: the surrounding link or heading names the business.
+export function Wordmark({ reverse = false }) {
   return (
     <span className="wordmark">
-      <span className="wordmark-name">AnchorPath</span>
-      <span className="wordmark-sub">Insurance Services</span>
+      <img
+        className="wordmark-mark"
+        src={reverse ? '/logo/logo-mark-reverse.svg' : '/logo/logo-mark.svg'}
+        alt=""
+        width="38"
+        height="45"
+      />
+      <span className="wordmark-text">
+        <span className="wordmark-name">AnchorPath</span>
+        <span className="wordmark-sub">Insurance Services</span>
+      </span>
     </span>
   )
 }

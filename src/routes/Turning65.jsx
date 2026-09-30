@@ -35,7 +35,7 @@ export default function Turning65() {
         generally starts the first day of the month after you sign up. If your birthday falls on the first of a month,
         your window starts and ends one month earlier.
       </p>
-      <Callout tone="coral" title="Missing your window can be costly">
+      <Callout tone="gold" title="Missing your window can be costly">
         <p>
           If you do not sign up for Part B when first eligible and do not qualify for a Special Enrollment Period, you
           may have to wait for the General Enrollment Period and pay a late enrollment penalty for as long as you have

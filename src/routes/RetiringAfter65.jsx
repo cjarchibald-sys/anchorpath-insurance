@@ -64,7 +64,7 @@ export default function RetiringAfter65() {
       </p>
 
       <h2 id="cobra">A caution about COBRA</h2>
-      <Callout tone="coral" title="COBRA is not coverage from current employment">
+      <Callout tone="gold" title="COBRA is not coverage from current employment">
         <p>
           COBRA and retiree coverage do not count as coverage based on current employment. Waiting until COBRA ends to
           sign up for Part B can mean a late enrollment penalty and a gap in coverage. If you are considering COBRA,

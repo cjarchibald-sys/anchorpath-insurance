@@ -17,8 +17,11 @@ export default function Prelaunch() {
           <Wordmark />
           <h1>Coming soon</h1>
           <p className="lede">{site.serviceArea}</p>
-          {site.principalPlaceOfBusiness && <LegalIdentity />}
-          <p className="small">Not affiliated with or endorsed by the U.S. government or the federal Medicare program.</p>
+          {site.principalPlaceOfBusiness ? (
+            <LegalIdentity />
+          ) : (
+            <p className="small">Not affiliated with or endorsed by the U.S. government or the federal Medicare program.</p>
+          )}
         </div>
       </main>
     </>

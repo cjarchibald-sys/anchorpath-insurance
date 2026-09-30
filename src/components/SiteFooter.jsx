@@ -42,7 +42,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Wordmark />
+          <Wordmark reverse />
           <p>{site.tagline}</p>
           <p>
             <TelLink tel={site.phone.tel} cta="footer">{site.phone.display}</TelLink>

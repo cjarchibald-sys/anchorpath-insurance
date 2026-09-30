@@ -236,7 +236,7 @@ export default function Schedule() {
                 )}
               </Field>
 
-              <Callout tone="coral" title="Please do not include sensitive information">
+              <Callout tone="gold" title="Please do not include sensitive information">
                 <p id="notes-warning">{SENSITIVE_WARNING}</p>
               </Callout>
               <Field id="notes" label="Anything else we should know?" error={errors.notes}
