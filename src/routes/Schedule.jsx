@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { Callout, PageHero, TelLink } from '../components/ui'
+import { AgentEmails, Callout, PageHero, TelLink } from '../components/ui'
 import { site } from '../site.config'
 import {
   CONSENT_TEXT, CONSENT_VERSION, NOTES_MAX, OPTIONS, SENSITIVE_WARNING, SOLICITATION_NOTICE,
@@ -111,7 +111,7 @@ export default function Schedule() {
       <Seo
         path={path}
         title="Schedule a Conversation"
-        description="Request a Medicare Basics Conversation or a Coverage Options Review with Chris or Helga, independent, California-licensed insurance agents. We respond within 24 hours."
+        description="Request a Medicare Basics Conversation or a Coverage Options Review with Chris or Helga, independent, California-licensed insurance agents. We respond within one business day."
         breadcrumbs={crumbs}
       />
       <Breadcrumbs items={crumbs} />
@@ -178,7 +178,7 @@ export default function Schedule() {
                   <p>
                     <strong>Your request could not be sent.</strong> Nothing was lost; please try again, or call us at{' '}
                     <TelLink tel={site.phone.tel} cta="form-failure">{site.phone.display}</TelLink> ({site.phoneHours})
-                    or email <a href={`mailto:${site.email}`}>{site.email}</a>.
+                    or email <AgentEmails />.
                   </p>
                 </div>
               )}
@@ -283,7 +283,7 @@ export default function Schedule() {
           </p>
           <p>{site.phoneHours}. If we miss your call, we will return it {site.responseStandard}.</p>
           <p>
-            Or email <a href={`mailto:${site.email}`}>{site.email}</a>. Please do not send sensitive information by
+            Or email <AgentEmails />. Please do not send sensitive information by
             email.
           </p>
           <h3>Who will respond</h3>

@@ -17,12 +17,14 @@ export const site = {
       publicName: 'Chris',
       legalName: 'Christopher Archibald',
       license: '4543885',
+      email: 'chris@anchorpathinsurance.com',
     },
     {
       key: 'helga',
       publicName: 'Helga',
       legalName: 'Helga Saito-Archibald',
       license: '4549646',
+      email: 'helga@anchorpathinsurance.com',
     },
   ],
 
@@ -32,12 +34,12 @@ export const site = {
   // address is never published on the site or in documents linked from it.
   principalPlaceOfBusiness: 'San Jose, California',
 
-  // Phone and hours confirmed by owner 2026-09-30. Email carried over from the
-  // previous site; confirm it is monitored before launch.
+  // Phone, hours, emails, and response standard confirmed by owner 2026-09-30.
+  // `email` is the single contact for privacy and accessibility requests.
   phone: { display: '(408) 365-4412', tel: '+14083654412' },
   email: 'chris@anchorpathinsurance.com',
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
-  responseStandard: 'within 24 hours',
+  responseStandard: 'within one business day',
 
   // CMS TPMO standardized disclaimer. Leave null until the FMO supplies
   // documented, service-area- and plan-year-specific counts. Never guess.

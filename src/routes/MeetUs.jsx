@@ -68,6 +68,8 @@ export default function MeetUs() {
               </p>
               <p className="license-line">
                 {chris.legalName}, California Insurance License #{chris.license}
+                <br />
+                <a href={`mailto:${chris.email}`}>{chris.email}</a>
               </p>
             </article>
             <article className="profile">
@@ -92,6 +94,8 @@ export default function MeetUs() {
               </p>
               <p className="license-line">
                 {helga.legalName}, California Insurance License #{helga.license}
+                <br />
+                <a href={`mailto:${helga.email}`}>{helga.email}</a>
               </p>
             </article>
           </div>

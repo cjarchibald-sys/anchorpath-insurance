@@ -49,8 +49,12 @@ export default function SiteFooter() {
             <br />
             {site.phoneHours}
             <br />
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-            <br />
+            {site.agents.map((a) => (
+              <span key={a.key}>
+                <a href={`mailto:${a.email}`}>{a.email}</a>
+                <br />
+              </span>
+            ))}
             New requests receive a response from Chris or Helga {site.responseStandard}.
           </p>
         </div>

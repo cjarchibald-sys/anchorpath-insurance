@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import EduPage from '../components/EduPage'
-import { ExtLink, TelLink } from '../components/ui'
+import { AgentEmails, ExtLink, TelLink } from '../components/ui'
 import { LegalIdentity, TpmoDisclaimer } from '../components/SiteFooter'
 import { links } from '../content/links'
 import { site } from '../site.config'
@@ -84,7 +84,7 @@ export default function LicensingDisclosures() {
       <p>
         Phone: <TelLink tel={site.phone.tel}>{site.phone.display}</TelLink> ({site.phoneHours})
         <br />
-        Email: <a href={`mailto:${site.email}`}>{site.email}</a>
+        Email: <AgentEmails />
       </p>
       <p>
         To file a complaint about an insurance agent, contact the California Department of Insurance Consumer Hotline at

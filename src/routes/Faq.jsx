@@ -207,7 +207,7 @@ export default function Faq() {
       toc={groups.map((g) => [g.id, g.title])}
       cta={{
         title: 'Still have a question?',
-        body: 'Ask us. Chris or Helga will respond within 24 hours.',
+        body: `Ask us. Chris or Helga will respond ${site.responseStandard}.`,
         primary: { to: '/schedule/', label: 'Request a Conversation' },
         secondary: { to: '/california-medicare-resources/', label: 'Find official resources' },
       }}

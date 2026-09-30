@@ -24,6 +24,16 @@ export function TelLink({ tel, children, cta, className }) {
   )
 }
 
+// Both agents' email addresses, e.g. "chris@… or helga@…".
+export function AgentEmails() {
+  const [chris, helga] = site.agents
+  return (
+    <>
+      <a href={`mailto:${chris.email}`}>{chris.email}</a> or <a href={`mailto:${helga.email}`}>{helga.email}</a>
+    </>
+  )
+}
+
 export function CtaLink({ to, children, variant = 'primary', label }) {
   return (
     <Link

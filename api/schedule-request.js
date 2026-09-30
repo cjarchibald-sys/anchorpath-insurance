@@ -89,7 +89,7 @@ export default async function handler(req, res) {
       to: LEAD_TO_EMAIL.split(',').map((s) => s.trim()).filter(Boolean),
       subject: `New conversation request: ${label('meetingType', lead.meetingType)}`,
       html: `<h2 style="font-family:Arial,sans-serif">New conversation request</h2>${table(rows)}
-        <p style="font:14px Arial,sans-serif">Respond within 24 hours. Do not reply with sensitive information by ordinary email.</p>
+        <p style="font:14px Arial,sans-serif">Respond within one business day. Do not reply with sensitive information by ordinary email.</p>
         <h3 style="font-family:Arial,sans-serif">Consent evidence (retain)</h3>${table(evidence)}`,
       text: [...rows, ['---', ''], ...evidence].map(([k, v]) => `${k}: ${v}`).join('\n'),
     })
