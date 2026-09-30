@@ -99,13 +99,13 @@ export default function Privacy() {
       <p>
         <strong>In Short:</strong>{' '}
         <em>
-          We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice
+          We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Policy
           unless otherwise required by law.
         </em>
       </p>
       <p>
         We will only keep your personal information for as long as it is necessary for the purposes set out in this
-        Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or
+        Privacy Policy, unless a longer retention period is required or permitted by law (such as tax, accounting, or
         other legal requirements).
       </p>
       <p>
