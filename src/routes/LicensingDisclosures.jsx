@@ -55,16 +55,7 @@ export default function LicensingDisclosures() {
       </p>
 
       <h2>Organizations represented</h2>
-      {site.tpmoCounts ? (
-        <TpmoDisclaimer />
-      ) : (
-        <p>
-          This website provides general Medicare education and does not market specific Medicare plans. If that
-          changes, the organizations we represent and the disclaimer required by the Centers for Medicare &amp; Medicaid
-          Services will appear here and wherever plan information is shown. For information on all of your options,
-          contact <ExtLink href={links.medicare}>Medicare.gov</ExtLink> or 1-800-MEDICARE.
-        </p>
-      )}
+      <TpmoDisclaimer />
 
       {site.advertisesMedigap && (
         <>

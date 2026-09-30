@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
 import { AgentEmails, Callout, PageHero, TelLink } from '../components/ui'
+import { TpmoDisclaimer } from '../components/SiteFooter'
 import { site } from '../site.config'
 import {
   CONSENT_TEXT, CONSENT_VERSION, NOTES_MAX, OPTIONS, SENSITIVE_WARNING, SOLICITATION_NOTICE,
@@ -274,18 +275,15 @@ export default function Schedule() {
           </p>
           <h3>Who will respond</h3>
           <p>
-            Chris or Helga, personally. Both are independent, California-licensed insurance agents. We are not
-            Medicare, and we do not offer every plan available in your area.
+            Chris or Helga, personally. Both are independent, California-licensed insurance agents, not Medicare.
           </p>
+          <TpmoDisclaimer />
           <h3>What happens next</h3>
           <ol>
             <li>We confirm your location and meeting options.</li>
             <li>We confirm whether you want a general conversation or a plan-specific review.</li>
             <li>For plan-specific reviews, we complete the required steps before we meet.</li>
           </ol>
-          <p>
-            For official information on all your options: Medicare.gov or 1-800-MEDICARE (TTY 1-877-486-2048).
-          </p>
         </aside>
       </div>
     </>

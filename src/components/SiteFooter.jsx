@@ -24,17 +24,9 @@ export function LegalIdentity() {
   )
 }
 
-// CMS TPMO standardized disclaimer. Exact wording; do not paraphrase.
+// CMS TPMO disclaimer. Exact wording from site.config.js; never paraphrase.
 export function TpmoDisclaimer() {
-  if (!site.tpmoCounts) return null
-  const { organizations, plans } = site.tpmoCounts
-  return (
-    <p className="tpmo">
-      We do not offer every plan available in your area. Currently we represent {organizations} organizations which
-      offer {plans} products in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of
-      your options.
-    </p>
-  )
+  return <p className="tpmo">{site.tpmoDisclaimer}</p>
 }
 
 export default function SiteFooter() {

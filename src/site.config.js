@@ -41,10 +41,11 @@ export const site = {
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
   responseStandard: 'within one business day',
 
-  // CMS TPMO standardized disclaimer. Leave null until the FMO supplies
-  // documented, service-area- and plan-year-specific counts. Never guess.
-  // Shape: { organizations: number, plans: number }
-  tpmoCounts: null,
+  // CMS TPMO disclaimer, exact text supplied by the owner (2026-09-30). Shown in
+  // the footer of every page, on Licensing & Disclosures, on Schedule, and in the
+  // FAQ. Do not paraphrase; replace only with FMO/compliance-approved wording.
+  tpmoDisclaimer:
+    'We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options.',
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.

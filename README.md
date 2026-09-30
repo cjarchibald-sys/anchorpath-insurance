@@ -32,8 +32,9 @@ every page in `src/content/pages.js`, and `public/robots.txt` no longer blocking
 
 ## Compliance switches
 
-- **TPMO disclaimer**: set `tpmoCounts: { organizations, plans }` in `src/site.config.js` only with
-  FMO-documented counts. The exact CMS wording then renders in the footer and on Licensing & Disclosures.
+- **TPMO disclaimer**: the exact text lives in `tpmoDisclaimer` in `src/site.config.js` and renders in the
+  footer, on Licensing & Disclosures, on Schedule, and in the FAQ. Never paraphrase it; change it only to
+  FMO/compliance-approved wording.
 - **Medigap notice**: set `advertisesMedigap: true` only when Medicare Supplement advertising is approved.
 - **Consent wording**: any change to `CONSENT_TEXT` must bump `CONSENT_VERSION`. The API rejects
   submissions made against an older version.

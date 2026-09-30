@@ -3,6 +3,7 @@ import EduPage from '../components/EduPage'
 import { ExtLink } from '../components/ui'
 import { links } from '../content/links'
 import { site } from '../site.config'
+import { TpmoDisclaimer } from '../components/SiteFooter'
 
 const groups = [
   {
@@ -36,11 +37,13 @@ const groups = [
       {
         q: 'Which plans or companies do you represent?',
         a: (
-          <p>
-            We represent only the organizations we are appointed with, and we do not offer every plan available in
-            your area. Before any plan discussion, we will tell you which organizations we represent. For information
-            on all of your options, contact <ExtLink href={links.medicare}>Medicare.gov</ExtLink> or 1-800-MEDICARE.
-          </p>
+          <>
+            <p>
+              We represent only the organizations we are appointed with. Before any plan discussion, we will tell you
+              which organizations those are.
+            </p>
+            <TpmoDisclaimer />
+          </>
         ),
       },
       {
