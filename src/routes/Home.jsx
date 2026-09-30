@@ -126,18 +126,10 @@ export default function Home() {
           <div>
             <h2 id="meet-title" className="section-title">Meet Chris and Helga</h2>
             <p>
-              After more than 30 years working in technology, Chris decided he wanted his next chapter to center on
-              something he had always cared about: education. He enjoys turning complex subjects into clear, practical
-              next steps.
-            </p>
-            <p>
-              Helga spent more than 30 years as a hairstylist, building trust one conversation at a time and helping
-              people look and feel their best. Her work has always started with listening.
-            </p>
-            <p>
-              Together, we bring patience, curiosity, and personal service to Medicare conversations. Medicare is
-              becoming personal for our own family, too, and we want every client to have the time and clarity we
-              would want for the people we love.
+              Chris spent more than 30 years in technology and loves turning complex subjects into clear next steps.
+              Helga spent more than 30 years as a hairstylist, where her work always started with listening. Together,
+              we bring patience, curiosity, and personal service to Medicare conversations, with the time and clarity
+              we would want for the people we love.
             </p>
             <CtaLink to="/meet-chris-and-helga/" variant="secondary">Meet Chris and Helga</CtaLink>
           </div>
@@ -148,42 +140,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-teal" aria-labelledby="paths-title">
+      <section className="cta-band" aria-labelledby="final-cta">
         <div className="container">
-          <h2 id="paths-title" className="section-title">What kind of conversation do you need?</h2>
-          <div className="meeting-grid">
-            <article className="meeting-card">
+          <h2 id="final-cta">You do not have to figure out Medicare all at once.</h2>
+          <p>
+            Tell us where you are in the process, and choose the kind of conversation that fits. Chris or Helga will
+            respond {site.responseStandard}.
+          </p>
+          <div className="cta-options">
+            <div className="cta-option">
               <h3>Medicare Basics Conversation</h3>
-              <p>
-                A general, educational conversation about timing, terminology, and the questions worth asking. A good
-                place to start if Medicare is new or you are not sure what comes next.
-              </p>
+              <p>A general, educational conversation about timing, terminology, and the questions worth asking.</p>
               <CtaLink to="/schedule/?type=basics" label="Start with the Basics">Start with the Basics</CtaLink>
-            </article>
-            <article className="meeting-card">
+            </div>
+            <div className="cta-option">
               <h3>Coverage Options Review</h3>
               <p>
-                A personal review of your needs and coverage options through organizations we are authorized to
-                represent. Required disclosures, permissions, and appointment steps apply.
+                A personal review of your needs and options through organizations we are authorized to represent.
+                Required disclosures and appointment steps apply.
               </p>
               <CtaLink to="/schedule/?type=review" label="Request a Coverage Review">Request a Coverage Review</CtaLink>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta-band" aria-labelledby="final-cta">
-        <div className="container narrow">
-          <h2 id="final-cta">You do not have to figure out Medicare all at once.</h2>
-          <p>Tell us where you are in the process. Chris or Helga will respond {site.responseStandard}.</p>
-          <div className="btn-row">
-            <CtaLink to="/schedule/" label="Schedule a Conversation (footer band)">Schedule a Conversation</CtaLink>
-            <TelLink tel={site.phone.tel} cta="home-final" className="btn btn-secondary">
-              Call us: {site.phone.display}
-            </TelLink>
+            </div>
           </div>
           <p className="cta-band-alt">
-            Phone hours: {site.phoneHours}. Looking for official information? Visit Medicare.gov or call 1-800-MEDICARE.
+            Prefer to call? <TelLink tel={site.phone.tel} cta="home-final">{site.phone.display}</TelLink> ·{' '}
+            {site.phoneHours}. For official information, visit Medicare.gov or call 1-800-MEDICARE.
           </p>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import SiteHeader from './SiteHeader'
 import SiteFooter from './SiteFooter'
+import BackToTop from './BackToTop'
 
 // On navigation: scroll to the #hash target if there is one, otherwise to the
 // top, and move focus to the page heading so screen readers announce the page.
@@ -37,6 +38,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <SiteFooter />
+      <BackToTop />
     </>
   )
 }

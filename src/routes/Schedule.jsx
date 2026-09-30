@@ -30,7 +30,7 @@ function Field({ id, label, error, hint, required, children }) {
   )
 }
 
-function RadioGroup({ name, legend, options, value, onChange, error, required }) {
+function RadioGroup({ name, legend, options, descriptions, value, onChange, error, required }) {
   return (
     <fieldset id={name} tabIndex={-1} className={`field${error ? ' has-error' : ''}`} aria-describedby={error ? `${name}-error` : undefined}>
       <legend>
@@ -41,12 +41,25 @@ function RadioGroup({ name, legend, options, value, onChange, error, required })
         {options.map(([val, label]) => (
           <label key={val} className="radio">
             <input type="radio" name={name} value={val} checked={value === val} onChange={() => onChange(val)} />
-            <span>{label}</span>
+            <span>
+              {label}
+              {descriptions?.[val] && <span className="radio-desc">{descriptions[val]}</span>}
+            </span>
           </label>
         ))}
       </div>
     </fieldset>
   )
+}
+
+// Shown under each conversation type in the form, so the choice and its
+// explanation (including the recording and Scope of Appointment notice) sit together.
+const meetingTypeDescriptions = {
+  basics:
+    'A general, educational conversation about timing, terminology, and what information matters. If the conversation turns to specific plans, we will pause and complete the required steps first.',
+  review:
+    'A personal review of your needs and coverage options through organizations we are authorized to represent. Before the appointment, we complete required disclosures and a Scope of Appointment, and calls may be recorded as Medicare rules require.',
+  'not-sure': 'We will help you decide when we talk.',
 }
 
 export default function Schedule() {
@@ -123,27 +136,6 @@ export default function Schedule() {
 
       <div className="container schedule-grid">
         <div className="schedule-main">
-          <section aria-labelledby="types-title">
-            <h2 id="types-title">Two kinds of conversations</h2>
-            <div className="meeting-grid compact">
-              <div className="meeting-card">
-                <h3>Medicare Basics Conversation</h3>
-                <p>
-                  A general, educational conversation about timing, terminology, and what information matters. If the
-                  conversation turns to specific plans, we will pause and complete the required steps first.
-                </p>
-              </div>
-              <div className="meeting-card">
-                <h3>Coverage Options Review</h3>
-                <p>
-                  A personal review of your needs and coverage options through organizations we are authorized to
-                  represent. Before the appointment, we complete required disclosures and a Scope of Appointment, and
-                  calls may be recorded as Medicare rules require.
-                </p>
-              </div>
-            </div>
-          </section>
-
           {status === 'success' ? (
             <div className="form-result success" role="status" tabIndex={-1} ref={resultRef}>
               <h2>Thank you. Your request was sent.</h2>
@@ -183,6 +175,10 @@ export default function Schedule() {
                 </div>
               )}
 
+              <RadioGroup name="meetingType" legend="What kind of conversation would you like?" required options={OPTIONS.meetingType}
+                descriptions={meetingTypeDescriptions}
+                value={form.meetingType} onChange={(v) => set('meetingType', v)} error={errors.meetingType} />
+
               <div className="field-row">
                 <Field id="firstName" label="First name" required error={errors.firstName}>
                   {(a) => <input {...a} type="text" autoComplete="given-name" value={form.firstName} onChange={(e) => set('firstName', e.target.value)} />}
@@ -218,9 +214,6 @@ export default function Schedule() {
                   to help, but you are welcome to send your request.
                 </p>
               )}
-
-              <RadioGroup name="meetingType" legend="What kind of conversation would you like?" required options={OPTIONS.meetingType}
-                value={form.meetingType} onChange={(v) => set('meetingType', v)} error={errors.meetingType} />
 
               <RadioGroup name="meetingPreference" legend="How would you like to meet?" required options={OPTIONS.meetingPreference}
                 value={form.meetingPreference} onChange={(v) => set('meetingPreference', v)} error={errors.meetingPreference} />

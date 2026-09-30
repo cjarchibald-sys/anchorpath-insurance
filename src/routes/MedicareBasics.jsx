@@ -136,14 +136,17 @@ export default function MedicareBasics() {
       </p>
 
       <h2 id="glossary">Glossary</h2>
-      <dl className="term-list glossary">
+      <p>Select a term to see its definition.</p>
+      <div className="glossary">
         {glossary.map(([term, def]) => (
-          <div key={term}>
-            <dt>{term}</dt>
-            <dd>{def}</dd>
-          </div>
+          <details key={term} className="faq">
+            <summary>{term}</summary>
+            <div className="faq-answer">
+              <p>{def}</p>
+            </div>
+          </details>
         ))}
-      </dl>
+      </div>
     </EduPage>
   )
 }

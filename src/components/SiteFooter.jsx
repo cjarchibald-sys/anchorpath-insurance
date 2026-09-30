@@ -43,7 +43,7 @@ export default function SiteFooter() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <Wordmark reverse />
-          <p>{site.tagline}</p>
+          <p className="footer-tagline">{site.tagline}</p>
           <p>
             <TelLink tel={site.phone.tel} cta="footer">{site.phone.display}</TelLink>
             <br />
@@ -83,6 +83,18 @@ export default function SiteFooter() {
           </ul>
         </nav>
       </div>
+
+      {/* Phones only: one compact row instead of the three link columns above. */}
+      <nav aria-label="Quick links" className="container footer-quick">
+        <ul>
+          <li><Link to="/medicare-basics/">Medicare Basics</Link></li>
+          <li><Link to="/medicare-coverage-choices/">Coverage Choices</Link></li>
+          <li><Link to="/faq/">FAQ</Link></li>
+          <li><Link to="/meet-chris-and-helga/">Meet Chris &amp; Helga</Link></li>
+          <li><Link to="/schedule/">Schedule a Conversation</Link></li>
+          <li><ExtLink href={links.medicare}>Medicare.gov</ExtLink></li>
+        </ul>
+      </nav>
 
       <div className="container footer-legal">
         <LegalIdentity />

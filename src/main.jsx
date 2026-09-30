@@ -8,6 +8,11 @@ import '@fontsource/source-serif-4/600.css'
 import './styles.css'
 import App from './App.jsx'
 
+// Printed pages include the answers in collapsed FAQ and glossary entries (FR-14).
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('details:not([open])').forEach((d) => d.setAttribute('open', ''))
+})
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
