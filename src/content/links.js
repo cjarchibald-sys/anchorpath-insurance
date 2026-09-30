@@ -1,0 +1,20 @@
+// Official, non-AnchorPath resources. Check quarterly (FR-13).
+export const links = {
+  medicare: 'https://www.medicare.gov/',
+  medicareTalk: 'https://www.medicare.gov/talk-to-someone',
+  medicareYou: 'https://www.medicare.gov/medicare-and-you',
+  planFinder: 'https://www.medicare.gov/plan-compare/',
+  medicareSavings: 'https://www.medicare.gov/basics/costs/help/medicare-savings-programs',
+  medicareFraud: 'https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse',
+  ssaMedicare: 'https://www.ssa.gov/medicare/',
+  ssaSignUp: 'https://www.ssa.gov/medicare/sign-up',
+  extraHelp: 'https://www.ssa.gov/medicare/part-d-extra-help',
+  hicap: 'https://aging.ca.gov/Programs_and_Services/Medicare_Counseling/',
+  mediCal: 'https://www.dhcs.ca.gov/services/medi-cal',
+  benefitsCal: 'https://benefitscal.com/',
+  cdi: 'https://www.insurance.ca.gov/',
+  cdiConsumers: 'https://www.insurance.ca.gov/01-consumers/101-help/',
+  cdiLicense: 'https://cdicloud.insurance.ca.gov/cal/',
+  va: 'https://www.va.gov/health-care/',
+  tricareForLife: 'https://www.tricare.mil/tfl',
+}

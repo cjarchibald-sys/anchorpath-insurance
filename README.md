@@ -1,16 +1,46 @@
-# React + Vite
+# AnchorPath Insurance Services website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Education-first Medicare website for Chris Archibald and Helga Saito-Archibald, built from the
+*Website Strategy & Requirements Document* (v1.4). React + Vite, deployed on Vercel.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev      # full site at http://localhost:5173
+npm run lint
+npm run build
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Where things live
 
-## React Compiler
+| What | File |
+| --- | --- |
+| Identity, licenses, address, phone, TPMO counts, Medigap flag | `src/site.config.js` |
+| Page content records (classification, review dates) | `src/content/pages.js` |
+| Form consent text/version, sensitive-data warning, options | `src/content/consent.js` |
+| Official resource links (check quarterly) | `src/content/links.js` |
+| Pages | `src/routes/*.jsx` |
+| Form endpoint (interim lead routing) | `api/schedule-request.js` |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Launch gating
 
-## Expanding the ESLint configuration
+Production (`VERCEL_ENV=production`) shows a "Coming soon" page until `VITE_PUBLIC_LAUNCH=true` is set.
+Local dev and Vercel preview deployments always show the full site for review.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A launch build fails until the required placeholders are resolved: the CDI-filed principal place of
+business, privacy effective date and retention period, accessibility review date, a fact-check date for
+every page in `src/content/pages.js`, and `public/robots.txt` no longer blocking crawlers.
+
+## Compliance switches
+
+- **TPMO disclaimer**: set `tpmoCounts: { organizations, plans }` in `src/site.config.js` only with
+  FMO-documented counts. The exact CMS wording then renders in the footer and on Licensing & Disclosures.
+- **Medigap notice**: set `advertisesMedigap: true` only when Medicare Supplement advertising is approved.
+- **Consent wording**: any change to `CONSENT_TEXT` must bump `CONSENT_VERSION`. The API rejects
+  submissions made against an older version.
+
+## Form routing (interim)
+
+`/api/schedule-request` validates server-side (shared rules in `src/content/validateLead.js`), filters spam
+with a honeypot and a minimum fill time, and emails the request plus consent evidence to the agents'
+own mailboxes through Resend. Set `RESEND_API_KEY`, `LEAD_TO_EMAIL` and `FROM_EMAIL` in Vercel. Replace
+this with the FMO-approved CRM once it is selected (FR-05).
