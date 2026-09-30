@@ -65,10 +65,10 @@ export default function Home() {
           <div className="hero-photo">
             <img
               src="/images/CandH-640.jpg"
-              srcSet="/images/CandH-640.jpg 640w, /images/CandH-1200.jpg 1200w"
+              srcSet="/images/CandH-640.jpg 640w, /images/CandH-1126.jpg 1126w"
               sizes="(min-width: 900px) 40vw, 100vw"
               width="640"
-              height="633"
+              height="707"
               alt="Chris Archibald and Helga Saito-Archibald smiling together in front of green leafy plants."
               fetchPriority="high"
             />

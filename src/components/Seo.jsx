@@ -29,7 +29,7 @@ export default function Seo({ path, title, description, noindex, breadcrumbs, js
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={`${site.url}/images/CandH-1200.jpg`} />
+      <meta property="og:image" content={`${site.url}/images/CandH-1126.jpg`} />
       {structured.map((data, i) => (
         <script key={i} type="application/ld+json">{JSON.stringify(data)}</script>
       ))}
