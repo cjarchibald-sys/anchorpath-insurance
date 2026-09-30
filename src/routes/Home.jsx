@@ -64,12 +64,12 @@ export default function Home() {
           </div>
           <div className="hero-photo">
             <img
-              src="/images/chris-and-helga-720.jpg"
-              srcSet="/images/chris-and-helga-720.jpg 720w, /images/chris-and-helga-1200.jpg 1200w"
+              src="/images/CandH-640.jpg"
+              srcSet="/images/CandH-640.jpg 640w, /images/CandH-1200.jpg 1200w"
               sizes="(min-width: 900px) 40vw, 100vw"
-              width="720"
-              height="576"
-              alt="Chris Archibald and Helga Saito-Archibald smiling together outdoors in a garden."
+              width="640"
+              height="633"
+              alt="Chris Archibald and Helga Saito-Archibald smiling together in front of green leafy plants."
               fetchPriority="high"
             />
           </div>
