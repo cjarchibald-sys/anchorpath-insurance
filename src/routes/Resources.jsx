@@ -90,9 +90,6 @@ export default function Resources() {
           <ExtLink href={links.medicareYou}>“Medicare &amp; You” handbook</ExtLink> from Medicare
         </li>
         <li>
-          <ExtLink href={links.planFinder}>Medicare Plan Finder</ExtLink> to compare all plans in your area
-        </li>
-        <li>
           <ExtLink href={links.ssaSignUp}>Sign up for Medicare</ExtLink> through Social Security
         </li>
         <li>

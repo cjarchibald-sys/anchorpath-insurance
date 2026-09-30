@@ -1,7 +1,6 @@
 import EduPage from '../components/EduPage'
 import { TwoPathsDiagram } from '../components/Diagrams'
-import { Callout, Checklist, ExtLink } from '../components/ui'
-import { links } from '../content/links'
+import { Callout, Checklist } from '../components/ui'
 import { site } from '../site.config'
 
 // Rows are written to equal depth for both paths (Sections 9.4 and 10.3).
@@ -116,11 +115,6 @@ export default function CoverageChoices() {
           'How would I feel about referrals or approvals before some care?',
         ]}
       />
-      <p>
-        To see every plan available in your area, use the <ExtLink href={links.planFinder}>Medicare Plan Finder</ExtLink>{' '}
-        or call 1-800-MEDICARE. California’s <ExtLink href={links.hicap}>HICAP program</ExtLink> also offers
-        one-on-one Medicare counseling at no charge.
-      </p>
     </EduPage>
   )
 }
