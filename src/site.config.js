@@ -32,7 +32,8 @@ export const site = {
   // address is never published on the site or in documents linked from it.
   principalPlaceOfBusiness: 'San Jose, California',
 
-  // Carried over from the previous site. Verify each is monitored before launch.
+  // Phone and hours confirmed by owner 2026-09-30. Email carried over from the
+  // previous site; confirm it is monitored before launch.
   phone: { display: '(408) 365-4412', tel: '+14083654412' },
   email: 'chris@anchorpathinsurance.com',
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
