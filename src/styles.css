@@ -208,9 +208,9 @@ h1:focus, h2:focus, main:focus, [tabindex='-1']:focus:not(:focus-visible) { outl
 .steps h3 { margin-top: 0; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
-.split-photo { align-items: center; padding-top: 1rem; }
-.split-photo .prose h2 { margin-top: 0; }
-.portrait { border-radius: 20px; box-shadow: var(--shadow); }
+.prose.story { padding-top: 0.5rem; padding-bottom: 0; }
+.story h2 { margin-top: 0; }
+.story + .section { padding-top: 1.5rem; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
 
 .brand-quote { margin: 0; align-self: center; padding: 2rem; background: var(--navy); color: var(--white); border-radius: 20px; }

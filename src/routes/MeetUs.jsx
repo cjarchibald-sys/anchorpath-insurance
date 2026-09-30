@@ -27,33 +27,20 @@ export default function MeetUs() {
         lede="Two independent, California-licensed insurance agents who believe good Medicare decisions start with time, clear explanations, and careful listening."
       />
 
-      <div className="container">
-        <div className="split split-photo">
-          <img
-            className="portrait"
-            src="/images/chris-and-helga-720.jpg"
-            srcSet="/images/chris-and-helga-720.jpg 720w, /images/chris-and-helga-1200.jpg 1200w"
-            sizes="(min-width: 900px) 45vw, 100vw"
-            width="720"
-            height="576"
-            alt="Helga and Chris standing together in front of a home garden."
-          />
-          <div className="prose">
-            <h2>Our story</h2>
-            <p>
-              After more than 30 years working in technology, Chris decided he wanted his next chapter to center on
-              something he had always cared about: education. He enjoys turning complex subjects into clear, practical
-              next steps. Helga spent more than 30 years as a hairstylist, building trust one conversation at a time
-              and helping people feel their best. Together, they bring patience, curiosity, and personal service to
-              Medicare conversations.
-            </p>
-            <p>
-              Medicare is becoming personal for their own family, too. That perspective reinforces the way they want
-              every client to be treated: with time to ask questions, clear explanations, and respect for the decision
-              being made.
-            </p>
-          </div>
-        </div>
+      <div className="container narrow prose story">
+        <h2>Our story</h2>
+        <p>
+          After more than 30 years working in technology, Chris decided he wanted his next chapter to center on
+          something he had always cared about: education. He enjoys turning complex subjects into clear, practical
+          next steps. Helga spent more than 30 years as a hairstylist, building trust one conversation at a time
+          and helping people feel their best. Together, they bring patience, curiosity, and personal service to
+          Medicare conversations.
+        </p>
+        <p>
+          Medicare is becoming personal for their own family, too. That perspective reinforces the way they want
+          every client to be treated: with time to ask questions, clear explanations, and respect for the decision
+          being made.
+        </p>
       </div>
 
       <section className="section" aria-labelledby="profiles-title">
