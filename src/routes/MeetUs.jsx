@@ -61,6 +61,14 @@ export default function MeetUs() {
           <h2 id="profiles-title" className="section-title">Who you will talk with</h2>
           <div className="profile-grid">
             <article className="profile">
+              <img
+                className="profile-photo"
+                src="/images/chris-560.jpg"
+                width="560"
+                height="700"
+                loading="lazy"
+                alt="Chris Archibald, smiling, wearing a dark sweater over a collared shirt."
+              />
               <h3>Chris</h3>
               <p className="profile-role">Independent insurance agent · Educator at heart</p>
               <p>
@@ -76,6 +84,14 @@ export default function MeetUs() {
               </p>
             </article>
             <article className="profile">
+              <img
+                className="profile-photo"
+                src="/images/helga-560.jpg"
+                width="560"
+                height="700"
+                loading="lazy"
+                alt="Helga Saito-Archibald, smiling, with long dark hair and a light knit sweater."
+              />
               <h3>Helga</h3>
               <p className="profile-role">Independent insurance agent · Listener first</p>
               <p>

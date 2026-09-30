@@ -227,6 +227,7 @@ h1:focus, h2:focus, main:focus, [tabindex='-1']:focus:not(:focus-visible) { outl
 .profile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1.5rem; }
 .profile { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; }
 .profile h3 { margin-top: 0; font-size: 1.6rem; }
+.profile-photo { width: 100%; max-width: 280px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; margin-bottom: 1.25rem; }
 .profile-role { color: var(--teal-dark); font-weight: 700; }
 .license-line { margin: 1.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 1rem; color: var(--muted); }
 
