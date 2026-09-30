@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import EduPage from '../components/EduPage'
-import { Callout, Checklist, ExtLink } from '../components/ui'
-import { links } from '../content/links'
+import { Checklist } from '../components/ui'
 
 export default function AlreadyOnMedicare() {
   return (
@@ -64,13 +63,6 @@ export default function AlreadyOnMedicare() {
         or budget changed, or you moved. Switching also has tradeoffs, such as new networks, new rules, and new
         paperwork, so it deserves the same care as your first decision.
       </p>
-      <Callout title="Compare every option yourself">
-        <p>
-          You can compare all plans available in your area with the{' '}
-          <ExtLink href={links.planFinder}>Medicare Plan Finder</ExtLink> or by calling 1-800-MEDICARE.
-        </p>
-      </Callout>
-
       <h2 id="moving">Moving to or within California</h2>
       <p>
         Moving can affect your coverage. Medicare Advantage and Part D plans have service areas, so a move out of your
