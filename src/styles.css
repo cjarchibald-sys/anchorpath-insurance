@@ -176,6 +176,7 @@ h1:focus, h2:focus, main:focus, [tabindex='-1']:focus:not(:focus-visible) { outl
 
 .hero { background: linear-gradient(180deg, var(--sand) 0%, var(--paper) 100%); padding: clamp(1.5rem, 4vw, 3.5rem) 0; }
 .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+.hero-meet { margin: 0.75rem 0 0; font-weight: 700; }
 .hero-photo img { border-radius: 24px; box-shadow: var(--shadow); aspect-ratio: 1 / 1; object-fit: cover; object-position: center 35%; }
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; }
@@ -210,14 +211,8 @@ h1:focus, h2:focus, main:focus, [tabindex='-1']:focus:not(:focus-visible) { outl
 .steps h3 { margin-top: 0; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
-.prose.story { padding-top: 0.5rem; padding-bottom: 0; }
-.story h2 { margin-top: 0; }
-.story + .section { padding-top: 1.5rem; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
 
-.brand-quote { margin: 0; align-self: center; padding: 2rem; background: var(--navy); color: var(--white); border-radius: 20px; }
-.brand-quote p { font-family: var(--font-head); font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem); line-height: 1.25; margin: 0 0 0.75rem; }
-.brand-quote footer { color: #c9d6e2; font-size: 1rem; }
 .brand-line { font-family: var(--font-head); font-size: 1.5rem; color: var(--navy); border-left: 4px solid var(--gold); padding-left: 1rem; }
 
 .meeting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
@@ -429,8 +424,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { border-color
   .card h3 { font-size: 1.1rem; }
   .card p { display: none; }
   .card-link { font-size: 1rem; margin-top: auto; }
-  .brand-quote { display: none; }
-  /* How we help: number beside the heading instead of above it. */
+    /* How we help: number beside the heading instead of above it. */
   .steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 0.85rem; }
   .steps li::before { grid-row: 1 / span 2; margin-bottom: 0; }
   .steps h3 { margin: 0.45rem 0 0.25rem; }

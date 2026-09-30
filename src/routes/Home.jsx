@@ -61,6 +61,11 @@ export default function Home() {
                 Start with Medicare Basics
               </CtaLink>
             </div>
+            <p className="hero-meet">
+              <Link to="/meet-chris-and-helga/">
+                Meet Chris &amp; Helga<span aria-hidden="true"> →</span>
+              </Link>
+            </p>
           </div>
           <div className="hero-photo">
             <img
@@ -114,29 +119,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <p className="section-note">
-            Annual reviews are part of how we work. Each year, we can help you look at what changed in your coverage
-            and your life, and whether your current coverage still fits.
-          </p>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="meet-title">
-        <div className="container split">
-          <div>
-            <h2 id="meet-title" className="section-title">Meet Chris and Helga</h2>
-            <p>
-              Chris spent more than 30 years in technology and loves turning complex subjects into clear next steps.
-              Helga spent more than 30 years as a hairstylist, where her work always started with listening. Together,
-              we bring patience, curiosity, and personal service to Medicare conversations, with the time and clarity
-              we would want for the people we love.
-            </p>
-            <CtaLink to="/meet-chris-and-helga/" variant="secondary">Meet Chris and Helga</CtaLink>
-          </div>
-          <blockquote className="brand-quote">
-            <p>Be the anchor. Help find the path.</p>
-            <footer>The idea behind AnchorPath</footer>
-          </blockquote>
         </div>
       </section>
 

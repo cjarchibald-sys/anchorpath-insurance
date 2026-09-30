@@ -27,22 +27,6 @@ export default function MeetUs() {
         lede="Two independent, California-licensed insurance agents who believe good Medicare decisions start with time, clear explanations, and careful listening."
       />
 
-      <div className="container narrow prose story">
-        <h2>Our story</h2>
-        <p>
-          After more than 30 years working in technology, Chris decided he wanted his next chapter to center on
-          something he had always cared about: education. He enjoys turning complex subjects into clear, practical
-          next steps. Helga spent more than 30 years as a hairstylist, building trust one conversation at a time
-          and helping people feel their best. Together, they bring patience, curiosity, and personal service to
-          Medicare conversations.
-        </p>
-        <p>
-          Medicare is becoming personal for their own family, too. That perspective reinforces the way they want
-          every client to be treated: with time to ask questions, clear explanations, and respect for the decision
-          being made.
-        </p>
-      </div>
-
       <section className="section" aria-labelledby="profiles-title">
         <div className="container">
           <h2 id="profiles-title" className="section-title">Who you will talk with</h2>
@@ -114,6 +98,10 @@ export default function MeetUs() {
               Chris brings an educator’s mindset; Helga brings decades of personal service. Some clients like to meet
               with both of us, especially couples making decisions together. Either way, you will always know which
               licensed agent you are talking with.
+            </p>
+            <p>
+              Medicare is becoming personal for our own family, too. That perspective shapes how we want every client
+              to be treated: with time to ask questions, clear explanations, and respect for the decision being made.
             </p>
           </div>
           <div>
