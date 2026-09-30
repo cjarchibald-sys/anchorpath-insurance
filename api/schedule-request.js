@@ -31,6 +31,7 @@ export default async function handler(req, res) {
   // Spam controls: a hidden honeypot field and a minimum time to complete the
   // form. Bots get a success response so they do not retry.
   if (body.website || Number(body.elapsedMs) < MIN_FILL_MS) {
+    console.info('schedule-request: filtered as spam')
     return res.status(200).json({ ok: true })
   }
 
@@ -84,7 +85,7 @@ export default async function handler(req, res) {
 
   try {
     const resend = new Resend(RESEND_API_KEY)
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: LEAD_TO_EMAIL.split(',').map((s) => s.trim()).filter(Boolean),
       subject: `New conversation request: ${label('meetingType', lead.meetingType)}`,
@@ -94,6 +95,8 @@ export default async function handler(req, res) {
       text: [...rows, ['---', ''], ...evidence].map(([k, v]) => `${k}: ${v}`).join('\n'),
     })
     if (error) throw new Error(error.message)
+    // Log only the provider's message id, never the visitor's details.
+    console.info('schedule-request: delivered', data?.id ?? '')
     return res.status(200).json({ ok: true })
   } catch (err) {
     console.error('schedule-request: delivery failed', err?.message)
