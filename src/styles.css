@@ -213,6 +213,8 @@ main > .page-hero:first-child { padding-top: 2rem; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
 
+.story .prose { padding-bottom: 0; }
+.story .prose h2 { margin-top: 0; }
 .brand-line { font-family: var(--font-head); font-size: 1.5rem; color: var(--navy); border-left: 4px solid var(--gold); padding-left: 1rem; }
 
 .meeting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }

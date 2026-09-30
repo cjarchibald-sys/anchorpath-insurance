@@ -66,6 +66,7 @@ export default function SiteFooter() {
           <p className="footer-heading">Talk With Us</p>
           <ul>
             <li><Link to={meetUs.to}>Meet Chris &amp; Helga</Link></li>
+            <li><Link to={`${meetUs.to}#our-story`}>Our story</Link></li>
             <li><Link to="/schedule/">Schedule a Conversation</Link></li>
           </ul>
           <p className="footer-heading">Official Medicare help</p>
@@ -83,6 +84,7 @@ export default function SiteFooter() {
           <li><Link to="/medicare-coverage-choices/">Coverage Choices</Link></li>
           <li><Link to="/faq/">FAQ</Link></li>
           <li><Link to="/meet-chris-and-helga/">Meet Chris &amp; Helga</Link></li>
+          <li><Link to="/meet-chris-and-helga/#our-story">Our story</Link></li>
           <li><Link to="/schedule/">Schedule a Conversation</Link></li>
           <li><ExtLink href={links.medicare}>Medicare.gov</ExtLink></li>
         </ul>

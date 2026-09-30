@@ -20,6 +20,26 @@ export default function MeetUs() {
         lede="Two independent, California-licensed insurance agents who believe good Medicare decisions start with time, clear explanations, and careful listening."
       />
 
+      <section className="section section-sand story" aria-labelledby="our-story">
+        <div className="container narrow prose">
+          <h2 id="our-story">Our story</h2>
+          <p>
+            Insurance can feel uncertain: the language is unfamiliar, the choices seem overwhelming, and the decision
+            you make today may shape your protection for years. We chose our name for how we want to help.
+          </p>
+          <p>
+            <strong>Anchor</strong> speaks to steadiness and trust when life changes: being present, listening
+            carefully, and answering questions honestly.
+          </p>
+          <p>
+            <strong>Path</strong> reflects that everyone’s situation is different. There is no single plan that is
+            right for everyone, and finding the right coverage should begin with understanding your life, not pushing
+            you toward a predetermined answer.
+          </p>
+          <p className="brand-line">Be the anchor. Help find the path.</p>
+        </div>
+      </section>
+
       <section className="section" aria-labelledby="profiles-title">
         <div className="container">
           <h2 id="profiles-title" className="section-title">Who you will talk with</h2>
@@ -108,33 +128,6 @@ export default function MeetUs() {
               <li>Availability after enrollment, including annual reviews</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="name-title">
-        <div className="container narrow prose">
-          <h2 id="name-title">The story behind AnchorPath</h2>
-          <p>
-            There are seasons in life when the way forward feels clear, and others when it doesn’t. Insurance can be one
-            of those uncertain places. The language may feel unfamiliar, the choices can seem overwhelming, and the
-            decision you make today may shape your protection for years to come.
-          </p>
-          <p>
-            <strong>Anchor</strong> speaks to steadiness, trust, and having something dependable to hold onto when life
-            changes. For us, it means being present, listening carefully, answering questions honestly, and helping you
-            feel more confident about the choices in front of you.
-          </p>
-          <p>
-            <strong>Path</strong> reflects something equally important: everyone’s situation is different. Your health,
-            finances, family, priorities, and hopes for the future are uniquely yours. There is no single plan that is
-            right for everyone, and finding the right coverage should begin with understanding your life, not pushing
-            you toward a predetermined answer.
-          </p>
-          <p className="brand-line">Be the anchor. Help find the path.</p>
-          <p>
-            Before any decision is made, there should be room for a real conversation: for questions, honest guidance,
-            and the confidence that comes from understanding your choices.
-          </p>
         </div>
       </section>
 
