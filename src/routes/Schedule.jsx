@@ -123,7 +123,6 @@ export default function Schedule() {
         description="Request a Medicare Basics Conversation or a Coverage Options Review with Chris or Helga, independent, California-licensed insurance agents. We respond within one business day."
       />
       <PageHero
-        eyebrow="Talk With Us"
         title="Schedule a Conversation"
         lede={`Tell us a little about where you are in the process. Chris or Helga will respond ${site.responseStandard} to find a time that works.`}
       />

@@ -15,7 +15,6 @@ export default function MeetUs() {
         description="Meet Chris Archibald and Helga Saito-Archibald, independent, California-licensed insurance agents who bring patience, clear explanations, and personal service to Medicare conversations."
       />
       <PageHero
-        eyebrow="Meet Us"
         title="Meet Chris & Helga"
         lede="Two independent, California-licensed insurance agents who believe good Medicare decisions start with time, clear explanations, and careful listening."
       />
@@ -42,7 +41,7 @@ export default function MeetUs() {
 
       <section className="section" aria-labelledby="profiles-title">
         <div className="container">
-          <h2 id="profiles-title" className="section-title">Who you will talk with</h2>
+          <h2 id="profiles-title" className="visually-hidden">Who you will talk with</h2>
           <div className="profile-grid">
             <article className="profile">
               <img
