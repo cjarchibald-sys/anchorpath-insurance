@@ -95,17 +95,30 @@ export default function Privacy() {
         completely secure, which is one reason we ask you not to send sensitive information through the website.
       </p>
 
-      <h2>Retention</h2>
+      <h2>How Long Do We Keep Your Information?</h2>
       <p>
-        We keep form submissions and the consent records that go with them for{' '}
+        <strong>In Short:</strong>{' '}
+        <em>
+          We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice
+          unless otherwise required by law.
+        </em>
+      </p>
+      <p>
+        We will only keep your personal information for as long as it is necessary for the purposes set out in this
+        Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or
+        other legal requirements).
+      </p>
+      <p>
+        Specifically, we keep form submissions and the consent records that go with them for{' '}
         {site.privacy.leadRetention ?? <Pending>retention period required before launch</Pending>}. Medicare rules
         require records related to Medicare plan marketing and enrollment to be kept for 10 years, and we apply the
         same period to the requests you send us so we can show when and how you asked to be contacted.
       </p>
       <p>
-        We keep information longer only when a law, regulation, government audit, or legal claim requires it, and only
-        for as long as that requirement lasts. When the retention period ends, we securely delete the information or
-        de-identify it so it can no longer be linked to you.
+        When we have no ongoing legitimate business need to process your personal information, we will either delete
+        or anonymize such information, or, if this is not possible (for example, because your personal information has
+        been stored in backup archives), then we will securely store your personal information and isolate it from any
+        further processing until deletion is possible.
       </p>
 
       <h2>Your choices</h2>
