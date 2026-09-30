@@ -121,6 +121,11 @@ export default function SiteHeader() {
 
         <nav id="primary-nav" aria-label="Primary" className={`primary-nav${mobileOpen ? ' is-open' : ''}`}>
           <ul className="nav-list">
+            <li className="nav-item">
+              <NavLink to="/" end className="nav-trigger">
+                Home
+              </NavLink>
+            </li>
             {navGroups.map((group) => (
               <Dropdown
                 key={group.label}

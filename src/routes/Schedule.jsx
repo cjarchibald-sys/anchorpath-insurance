@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
-import Breadcrumbs from '../components/Breadcrumbs'
 import { AgentEmails, Callout, PageHero, TelLink } from '../components/ui'
 import { site } from '../site.config'
 import {
@@ -113,10 +112,6 @@ export default function Schedule() {
     requestAnimationFrame(() => resultRef.current?.focus())
   }
 
-  const crumbs = [
-    { to: '/', label: 'Home' },
-    { to: path, label: 'Schedule a Conversation' },
-  ]
   const errorList = Object.entries(errors)
 
   return (
@@ -125,9 +120,7 @@ export default function Schedule() {
         path={path}
         title="Schedule a Conversation"
         description="Request a Medicare Basics Conversation or a Coverage Options Review with Chris or Helga, independent, California-licensed insurance agents. We respond within one business day."
-        breadcrumbs={crumbs}
       />
-      <Breadcrumbs items={crumbs} />
       <PageHero
         eyebrow="Talk With Us"
         title="Schedule a Conversation"

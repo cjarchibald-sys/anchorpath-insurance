@@ -1,5 +1,4 @@
 import Seo from '../components/Seo'
-import Breadcrumbs from '../components/Breadcrumbs'
 import { CtaBand, ExtLink, PageHero } from '../components/ui'
 import { links } from '../content/links'
 import { site } from '../site.config'
@@ -8,19 +7,13 @@ const path = '/meet-chris-and-helga/'
 const [chris, helga] = site.agents
 
 export default function MeetUs() {
-  const crumbs = [
-    { to: '/', label: 'Home' },
-    { to: path, label: 'Meet Chris & Helga' },
-  ]
   return (
     <>
       <Seo
         path={path}
         title="Meet Chris & Helga"
         description="Meet Chris Archibald and Helga Saito-Archibald, independent, California-licensed insurance agents who bring patience, clear explanations, and personal service to Medicare conversations."
-        breadcrumbs={crumbs}
       />
-      <Breadcrumbs items={crumbs} />
       <PageHero
         eyebrow="Meet Us"
         title="Meet Chris & Helga"

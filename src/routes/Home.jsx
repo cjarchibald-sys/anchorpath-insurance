@@ -61,11 +61,6 @@ export default function Home() {
                 Start with Medicare Basics
               </CtaLink>
             </div>
-            <p className="hero-meet">
-              <Link to="/meet-chris-and-helga/">
-                Meet Chris &amp; Helga<span aria-hidden="true"> →</span>
-              </Link>
-            </p>
           </div>
           <div className="hero-photo">
             <img
