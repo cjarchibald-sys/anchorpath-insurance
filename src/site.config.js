@@ -58,7 +58,9 @@ export const site = {
     leadRetention: '10 years after our last contact with you',
   },
 
-  accessibilityReviewed: null, // date of the last manual accessibility review
+  // Internal record only (not shown on the site, owner decision 2026-10-01).
+  // Date of the last manual keyboard and screen-reader review; gates launch.
+  accessibilityReviewed: null,
 }
 
 export const officialContacts = {

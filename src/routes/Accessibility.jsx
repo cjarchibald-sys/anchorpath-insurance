@@ -1,6 +1,5 @@
 import EduPage from '../components/EduPage'
 import { TelLink } from '../components/ui'
-import { formatDate } from '../content/pages'
 import { site } from '../site.config'
 
 export default function Accessibility() {
@@ -42,11 +41,6 @@ export default function Accessibility() {
         <a href={`mailto:${site.email}`}>{site.email}</a>. Please tell us the page and what went wrong. We will respond{' '}
         {site.responseStandard} and can share information another way while we work on a fix. You never need to use
         the website form to reach us.
-      </p>
-
-      <p>
-        <strong>Last accessibility review:</strong>{' '}
-        {site.accessibilityReviewed ? formatDate(site.accessibilityReviewed) : <mark className="placeholder">[date of manual review required before launch]</mark>}
       </p>
     </EduPage>
   )
