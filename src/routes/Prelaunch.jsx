@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { Wordmark } from '../components/SiteHeader'
-import { LegalIdentity } from '../components/SiteFooter'
+import { LegalIdentity, TpmoDisclaimer } from '../components/SiteFooter'
 import { site } from '../site.config'
 
 // Shown on production until VITE_PUBLIC_LAUNCH=true (Section 18.1: stage the
@@ -22,6 +22,7 @@ export default function Prelaunch() {
           ) : (
             <p className="small">Not affiliated with or endorsed by the U.S. government or the federal Medicare program.</p>
           )}
+          <TpmoDisclaimer />
         </div>
       </main>
     </>

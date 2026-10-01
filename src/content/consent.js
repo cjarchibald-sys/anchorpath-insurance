@@ -2,10 +2,10 @@
 // evidence always matches the words the visitor saw. Bump the version whenever
 // the wording changes. Draft pending FMO/counsel approval (Section 11.4).
 
-export const CONSENT_VERSION = '2026-09-30-draft-1'
+export const CONSENT_VERSION = '2026-10-01-1'
 
 export const CONSENT_TEXT =
-  'By submitting this form, I request that a licensed insurance agent contact me using the phone number or email address I provided to discuss Medicare insurance information and options. I understand that this is a solicitation for insurance, that my consent is not a condition of purchasing any product or service, and that I may ask not to be contacted again.'
+  'By submitting this form, I request that a licensed insurance agent with AnchorPath Insurance Services contact me using the phone number or email address I provided to discuss Medicare insurance information and options. I understand that this is a solicitation for insurance, that my consent is not a condition of purchasing any product or service, and that I may ask not to be contacted again.'
 
 export const SOLICITATION_NOTICE =
   'The purpose of this form is to request information or contact about insurance. By submitting it, you are asking a licensed insurance agent to contact you using the information you provide.'
