@@ -41,11 +41,12 @@ export const site = {
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
   responseStandard: 'within one business day',
 
-  // CMS TPMO disclaimer, exact text supplied by the owner (2026-09-30). Shown in
-  // the footer of every page, on Licensing & Disclosures, on Schedule, and in the
-  // FAQ. Do not paraphrase; replace only with FMO/compliance-approved wording.
-  tpmoDisclaimer:
-    'We do not offer every plan available in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.',
+  // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)). Shown in the footer of every
+  // page, on Licensing & Disclosures, on Schedule, in the FAQ, and on the Coming
+  // Soon page. TODO: paste the exact CY2027 wording from Spark Advisors (FMO).
+  // While null, a visible placeholder renders and a launch build is blocked.
+  // Do not paraphrase.
+  tpmoDisclaimer: null,
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.

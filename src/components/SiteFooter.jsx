@@ -26,7 +26,13 @@ export function LegalIdentity() {
 
 // CMS TPMO disclaimer. Exact wording from site.config.js; never paraphrase.
 export function TpmoDisclaimer() {
-  return <p className="tpmo">{site.tpmoDisclaimer}</p>
+  return (
+    <p className="tpmo">
+      {site.tpmoDisclaimer ?? (
+        <mark className="placeholder">[CMS TPMO disclaimer — exact wording pending from Spark Advisors; required before launch]</mark>
+      )}
+    </p>
+  )
 }
 
 export default function SiteFooter() {
