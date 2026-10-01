@@ -187,7 +187,7 @@ const groups = [
         q: 'How can I reach Medicare directly?',
         a: (
           <p>
-            Visit <ExtLink href={links.medicare}>Medicare.gov</ExtLink> or call 1-800-MEDICARE (1-800-633-4227), TTY
+            Visit Medicare.gov or call 1-800-MEDICARE (1-800-633-4227), TTY
             1-877-486-2048. For other official programs, see{' '}
             <Link to="/california-medicare-resources/">California Medicare Resources</Link>.
           </p>

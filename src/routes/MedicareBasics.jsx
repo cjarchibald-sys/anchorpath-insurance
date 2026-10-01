@@ -30,7 +30,7 @@ export default function MedicareBasics() {
       <Callout title="We are not Medicare">
         <p>
           AnchorPath Insurance Services is not affiliated with or endorsed by the U.S. government or the federal
-          Medicare program. For official information, visit <ExtLink href={links.medicare}>Medicare.gov</ExtLink> or{' '}
+          Medicare program. For official information, visit Medicare.gov or{' '}
           <ExtLink href={links.ssaMedicare}>Social Security</ExtLink>.
         </p>
       </Callout>
@@ -117,7 +117,7 @@ export default function MedicareBasics() {
       </dl>
       <p>
         Your own dates depend on your circumstances. For an official determination, contact{' '}
-        <ExtLink href={links.ssaMedicare}>Social Security</ExtLink> or <ExtLink href={links.medicare}>Medicare.gov</ExtLink>.
+        <ExtLink href={links.ssaMedicare}>Social Security</ExtLink> or Medicare.gov.
       </p>
 
       <h2 id="not-covered">What Medicare generally does not cover</h2>

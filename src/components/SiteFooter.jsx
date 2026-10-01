@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import { site } from '../site.config'
-import { links } from '../content/links'
 import { navGroups, meetUs, legalLinks } from './navigation'
-import { ExtLink, TelLink } from './ui'
+import { TelLink } from './ui'
 import { Wordmark } from './SiteHeader'
 
 // Cal. Ins. Code §1726: filed name, state of domicile and principal place of
@@ -75,11 +74,6 @@ export default function SiteFooter() {
             <li><Link to={`${meetUs.to}#our-story`}>Our story</Link></li>
             <li><Link to="/schedule/">Schedule a Conversation</Link></li>
           </ul>
-          <p className="footer-heading">Official Medicare help</p>
-          <ul>
-            <li><ExtLink href={links.medicare}>Medicare.gov</ExtLink></li>
-            <li>1-800-MEDICARE (TTY 1-877-486-2048)</li>
-          </ul>
         </nav>
       </div>
 
@@ -92,7 +86,6 @@ export default function SiteFooter() {
           <li><Link to="/meet-chris-and-helga/">Meet Chris &amp; Helga</Link></li>
           <li><Link to="/meet-chris-and-helga/#our-story">Our story</Link></li>
           <li><Link to="/schedule/">Schedule a Conversation</Link></li>
-          <li><ExtLink href={links.medicare}>Medicare.gov</ExtLink></li>
         </ul>
       </nav>
 

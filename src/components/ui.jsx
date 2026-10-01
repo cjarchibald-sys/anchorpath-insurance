@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import { site } from '../site.config'
-import { links } from '../content/links'
 import { pages, formatDate } from '../content/pages'
 
 export function ExtLink({ href, children, ...rest }) {
@@ -87,7 +86,7 @@ export function ReviewNote({ path }) {
         <strong>{reviewed ? `Last reviewed: ${reviewed}.` : 'Review date pending: draft content awaiting fact-check.'}</strong>{' '}
         The information on this website is general educational information and is not a determination of
         eligibility, coverage, benefits, or costs. Medicare rules and plan details can change. Visit{' '}
-        <ExtLink href={links.medicare}>Medicare.gov</ExtLink> or call 1-800-MEDICARE (TTY 1-877-486-2048) for
+        Medicare.gov or call 1-800-MEDICARE (TTY 1-877-486-2048) for
         official Medicare information.
       </p>
       <p className="print-only">Printed from {site.url}{path}</p>
