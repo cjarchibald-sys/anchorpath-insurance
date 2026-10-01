@@ -7,7 +7,7 @@ const checklists = [
   {
     id: 'conversation-checklist',
     title: 'Medicare conversation checklist',
-    intro: 'Bring these to any Medicare conversation, with us, HICAP, or Medicare. Share details during the appointment, not through a website form.',
+    intro: 'Bring these to your conversation with us. Share details during the appointment, not through a website form.',
     items: [
       'Your date of birth and when you plan to stop working (if you are working)',
       'Whether you already receive Social Security benefits',
