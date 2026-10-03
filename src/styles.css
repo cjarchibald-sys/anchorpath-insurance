@@ -66,6 +66,8 @@ a:hover { color: var(--navy); text-decoration-thickness: 2px; }
   border-radius: 4px;
 }
 h1:focus, h2:focus, main:focus, [tabindex='-1']:focus:not(:focus-visible) { outline: none; }
+/* Dark backgrounds: gold outline keeps 3:1+ contrast (WCAG 1.4.11; blue is 2.81:1 on navy). */
+.utility-bar :focus-visible, .cta-band :focus-visible, .site-footer :focus-visible { outline-color: var(--gold); }
 
 .visually-hidden {
   position: absolute !important;
