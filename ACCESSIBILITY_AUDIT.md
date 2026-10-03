@@ -3,7 +3,7 @@
 **Standard:** WCAG 2.1 Level AA
 **Date:** October 3, 2026
 **What was tested:** the new site on branch `compliance-cy2027` (the version planned for the October 5 launch), plus the "Coming Soon" page that is live at anchorpathinsurance.com today (branch `main`).
-**Status:** findings only. No site files have been changed. Fixes wait for your approval.
+**Status:** audit delivered October 3, 2026. You approved four fixes (F1, F2, F3, F13), which are now done; see **Post-fix results** at the end.
 
 ---
 
@@ -289,3 +289,23 @@ Two decisions are needed before this replaces the current Accessibility page:
 ---
 
 *Stopped here as requested. No fixes have been made. Tell me which fixes to implement, for example "all of (a) plus F7 and F10". I'll then work on a new branch, commit in logical groups, re-run the axe tests, and add a "Post-fix results" section to this report.*
+
+---
+
+## Post-fix results (October 3, 2026)
+
+You approved four fixes: **F1, F2, F3 and F13**. They're on branch `a11y-audit`, one commit each. None of them touches the TPMO disclaimer, license language, the "California-licensed independent insurance agent" wording, or any carrier notice.
+
+| ID | What changed | Commit | Verified |
+|---|---|---|---|
+| F1 | On dark backgrounds (navy band, footer, top phone bar), the keyboard focus outline is now your logo's gold instead of blue. Light backgrounds keep the blue outline. | `c5f9c51` | Measured on screen: gold on navy band **8.21:1**, in footer **9.20:1**, on the home page's option boxes **6.77:1** (all need 3:1). Blue on light backgrounds is unchanged at 5.00–5.80:1. |
+| F2 | Pressing Escape in a drop-down or the phone menu now returns the cursor to the button that opened it. Escape does nothing when no menu is open. | `0a35c61` | Desktop: Escape from inside "Learn Medicare" returns to the "Learn Medicare" button. Phone: Escape returns to the "Menu" button. |
+| F3 | Email and Phone are grouped under the heading **"How can we reach you? (email, phone, or both; at least one is required)"**. The individual fields no longer say "(optional)". This replaces the old separate sentence "Please give us an email address, a phone number, or both." | `c9b4b1e` | Screen readers now announce the requirement with the group. Error links still jump to the right field. No axe errors in the form's error state at 320px or 1280px. |
+| F13 | The Accessibility page's closing band no longer sends people to the Schedule form. It now reads "Email chris@anchorpathinsurance.com. We will respond within one business day." with your tappable phone number below. The page has no link to the Schedule form at all. | `0669fec` | Checked on the built page. A small supporting change: the call-to-action band no longer leaves an empty gap when it has no buttons. |
+
+**Re-test**
+- **axe-core** (wcag2a, wcag2aa, wcag21a, wcag21aa), all 16 pages at 320px, 768px and 1280px, run once as the page loads and once with every expandable item open: **0 violations** (48 page-and-width combinations).
+- Lint and production build pass.
+- The keyboard, route-change, form-error, zoom and reflow checks behave as before, apart from the improvements above.
+
+**Still open (not approved this round):** F4–F12 and F14. All are Minor or advisory except F7 (the iPhone table check, which needs a VoiceOver test) and F14 (the live Coming Soon page, which is replaced at launch). The draft accessibility statement in section 6 hasn't been applied to the site yet.
