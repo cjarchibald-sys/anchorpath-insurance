@@ -16,12 +16,14 @@ const blank = {
   meetingPreference: '', meetingType: '', timing: '', bestTime: '', notes: '', consent: false, website: '',
 }
 
-function Field({ id, label, error, hint, required, children }) {
+// `marker={false}` hides "(required)/(optional)" when a surrounding group states it.
+function Field({ id, label, error, hint, required, marker = true, children }) {
   const describedBy = [hint && `${id}-hint`, error && `${id}-error`].filter(Boolean).join(' ') || undefined
   return (
     <div className={`field${error ? ' has-error' : ''}`}>
       <label htmlFor={id}>
-        {label} {required ? <span className="req">(required)</span> : <span className="opt">(optional)</span>}
+        {label}{' '}
+        {marker && (required ? <span className="req">(required)</span> : <span className="opt">(optional)</span>)}
       </label>
       {hint && <p id={`${id}-hint`} className="hint">{hint}</p>}
       {error && <p id={`${id}-error`} className="error-text">{error}</p>}
@@ -181,15 +183,20 @@ export default function Schedule() {
                 </Field>
               </div>
 
-              <p className="hint">Please give us an email address, a phone number, or both.</p>
-              <div className="field-row">
-                <Field id="email" label="Email" error={errors.email}>
-                  {(a) => <input {...a} type="email" autoComplete="email" value={form.email} onChange={(e) => set('email', e.target.value)} />}
-                </Field>
-                <Field id="phone" label="Phone" error={errors.phone}>
-                  {(a) => <input {...a} type="tel" autoComplete="tel" value={form.phone} onChange={(e) => set('phone', e.target.value)} />}
-                </Field>
-              </div>
+              {/* One group so screen readers hear that at least one of the two is required (WCAG 3.3.2). */}
+              <fieldset className="field">
+                <legend>
+                  How can we reach you? <span className="req">(email, phone, or both; at least one is required)</span>
+                </legend>
+                <div className="field-row">
+                  <Field id="email" label="Email" marker={false} error={errors.email}>
+                    {(a) => <input {...a} type="email" autoComplete="email" value={form.email} onChange={(e) => set('email', e.target.value)} />}
+                  </Field>
+                  <Field id="phone" label="Phone" marker={false} error={errors.phone}>
+                    {(a) => <input {...a} type="tel" autoComplete="tel" value={form.phone} onChange={(e) => set('phone', e.target.value)} />}
+                  </Field>
+                </div>
+              </fieldset>
 
               <RadioGroup name="preferredContact" legend="How should we contact you?" required options={OPTIONS.preferredContact}
                 value={form.preferredContact} onChange={(v) => set('preferredContact', v)} error={errors.preferredContact} />
