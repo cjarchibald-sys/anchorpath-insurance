@@ -43,12 +43,10 @@ export const site = {
 
   // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)). Shown in the footer of every
   // page, on Licensing & Disclosures, on Schedule, in the FAQ, and on the Coming
-  // Soon page. Regulation template with owner-supplied counts (2026-10-03):
-  // 8 organizations, 706 products. TODO: Spark Advisors (FMO) to confirm the
-  // wording and counts before launch. Update the counts whenever they change.
-  // Do not paraphrase.
+  // Soon page. Owner-supplied wording, confirmed by owner as acceptable
+  // (2026-10-03). Use verbatim; do not paraphrase.
   tpmoDisclaimer:
-    'We do not offer every plan available in your area. Currently we represent 8 organizations which offer 706 products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.',
+    'We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options.',
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.
