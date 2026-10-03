@@ -71,6 +71,18 @@ export default function SiteHeader() {
   useEffect(() => {
     function onKey(e) {
       if (e.key === 'Escape') {
+        // Put focus back on the button that opened the menu, so keyboard users
+        // keep their place instead of landing at the top of the page.
+        const nav = navRef.current
+        const active = document.activeElement
+        const mobileMenuOpen = nav?.querySelector('.primary-nav.is-open')
+        const dropdownOpen = nav?.querySelector('.dropdown:not([hidden])')
+        if (nav?.contains(active) && (mobileMenuOpen || dropdownOpen)) {
+          const target = mobileMenuOpen
+            ? nav.querySelector('.menu-toggle')
+            : active.closest('.nav-item')?.querySelector('button.nav-trigger')
+          target?.focus()
+        }
         setOpenMenu(null)
         setMobileOpen(false)
       }
