@@ -97,14 +97,16 @@ export function CtaBand({ title, body, primary, secondary }) {
       <div className="container narrow">
         <h2 id="cta-band-title">{title}</h2>
         {body && <p>{body}</p>}
-        <div className="btn-row">
-          {primary && <CtaLink to={primary.to}>{primary.label}</CtaLink>}
-          {secondary && (
-            <CtaLink to={secondary.to} variant="secondary">
-              {secondary.label}
-            </CtaLink>
-          )}
-        </div>
+        {(primary || secondary) && (
+          <div className="btn-row">
+            {primary && <CtaLink to={primary.to}>{primary.label}</CtaLink>}
+            {secondary && (
+              <CtaLink to={secondary.to} variant="secondary">
+                {secondary.label}
+              </CtaLink>
+            )}
+          </div>
+        )}
         <p className="cta-band-alt">
           Prefer to call? <TelLink tel={site.phone.tel} cta="cta-band">{site.phone.display}</TelLink> ·{' '}
           {site.phoneHours}

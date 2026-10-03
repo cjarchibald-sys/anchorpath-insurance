@@ -9,10 +9,15 @@ export default function Accessibility() {
       title="Accessibility"
       description="AnchorPath Insurance Services is committed to an accessible website. Our target is WCAG 2.2 Level AA. Learn how to report a problem or get information another way."
       lede="Everyone should be able to learn about Medicare and reach us easily."
+      // No link to the Schedule form here: reporting a problem should never
+      // require requesting an insurance contact.
       cta={{
         title: 'Report an accessibility issue.',
-        body: `Call ${site.phone.display} or email ${site.email}. We will respond ${site.responseStandard}.`,
-        primary: { to: '/schedule/', label: 'Contact us' },
+        body: (
+          <>
+            Email <a href={`mailto:${site.email}`}>{site.email}</a>. We will respond {site.responseStandard}.
+          </>
+        ),
       }}
     >
       <h2>Our commitment</h2>
