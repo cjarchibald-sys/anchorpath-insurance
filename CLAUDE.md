@@ -62,6 +62,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 - **`__SITE_LIVE__`** is true locally and on Vercel previews. In production (`VERCEL_ENV=production`) it is false unless `VITE_PUBLIC_LAUNCH=true`. When it's false, the app renders only `Prelaunch`.
 - **The launch guard** (in `vite.config.js`) makes a build with `VITE_PUBLIC_LAUNCH=true` fail while any of these is unresolved:
   - `principalPlaceOfBusiness` or `tpmoDisclaimer` in `site.config.js`;
+  - `phoneRecordsCalls` in `site.config.js` is false (the published number must record calls);
   - `privacy.effectiveDate` or `privacy.leadRetention`;
   - `accessibilityReviewed`;
   - any page's `reviewed` date in `pages.js`;
@@ -102,6 +103,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 | 2026-10-01 | **Medicare.gov is plain text, not a link** (CMS doesn't require a link). The footer has no "Official Medicare help" column. The only Medicare.gov links kept are the authorization-form link in the FAQ and the California Medicare Resources page. |
 | 2026-10-01 | **No visible "Last reviewed" dates** on pages, and no "Last accessibility review" line. The dates are still recorded internally in `pages.js` and `site.accessibilityReviewed` and still gate the launch. |
 | 2026-10-03 | **TPMO disclaimer, confirmed by the owner:** "We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options." Claude flagged that this matches the pre-2024 CMS wording; the owner is getting written confirmation from Spark Advisors for CY2027. |
+| 2026-10-05 | **Call recording:** (408) 365-4412 and Helga's (408) 596-3508 are direct lines that don't record calls. CMS requires recording MA/Part D marketing, sales and enrollment calls (42 CFR 422.2274(g)), and California requires all-party notice (Penal Code §632). Don't publish any non-recording number. Replace `site.phone` with a recorded business line (owner is asking Spark Advisors), then set `phoneRecordsCalls: true`. Launch is blocked until then. |
 | 2026-10-05 | **Schedule page sidebar:** removed the second copy of the TPMO disclaimer and the sentence "Both are independent, California-licensed insurance agents, not Medicare." The disclaimer still appears in the footer on the Schedule page. |
 | 2026-10-03 | **Accessibility:** fixed audit items F1 (gold focus outline on dark backgrounds), F2 (Escape returns focus to the menu button), F3 (Email/Phone grouped with "at least one is required") and F13 (accessibility reports go to email or phone, never the Schedule form). Items F4–F12 are deferred. CMS doesn't require WCAG; the motivation is California's Unruh Act, the ADA, possible Section 504/1557 obligations via carrier contracts, and the audience. |
 
@@ -126,6 +128,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 
 ## Still open before launch
 
+- A recorded business phone number to replace (408) 365-4412 (`site.phone`, then `phoneRecordsCalls: true`).
 - Written confirmation from Spark Advisors of the TPMO wording for CY2027.
 - Page fact-check dates (`pages.js`) and the manual accessibility review date (`site.accessibilityReviewed`).
 - The owner's go-ahead, then the launch steps above.

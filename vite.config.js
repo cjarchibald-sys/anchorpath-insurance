@@ -15,6 +15,7 @@ const live = launching || process.env.VERCEL_ENV !== 'production'
 function launchBlockers() {
   const blockers = []
   if (!site.principalPlaceOfBusiness) blockers.push('site.principalPlaceOfBusiness (city and state)')
+  if (!site.phoneRecordsCalls) blockers.push('site.phone must be a call-recording line (42 CFR 422.2274(g)); then set site.phoneRecordsCalls = true')
   if (!site.tpmoDisclaimer) blockers.push('site.tpmoDisclaimer (exact CY2027 wording from Spark Advisors)')
   if (!site.privacy.effectiveDate) blockers.push('site.privacy.effectiveDate')
   if (!site.privacy.leadRetention) blockers.push('site.privacy.leadRetention')

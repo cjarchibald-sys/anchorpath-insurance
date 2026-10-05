@@ -37,6 +37,12 @@ export const site = {
   // Phone, hours, emails, and response standard confirmed by owner 2026-09-30.
   // `email` is the single contact for privacy and accessibility requests.
   phone: { display: '(408) 365-4412', tel: '+14083654412' },
+  // 42 CFR 422.2274(g): MA and Part D marketing, sales, and enrollment calls
+  // must be recorded in full. The current number is a direct line that does not
+  // record (owner, 2026-10-05). TODO: replace `phone` with a recorded business
+  // line (recommended by Spark Advisors), then set this to true. Launch is
+  // blocked while false.
+  phoneRecordsCalls: false,
   email: 'chris@anchorpathinsurance.com',
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
   responseStandard: 'within one business day',
