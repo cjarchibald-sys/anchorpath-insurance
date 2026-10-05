@@ -42,8 +42,8 @@ export const site = {
   responseStandard: 'within one business day',
 
   // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)). Shown in the footer of every
-  // page, on Licensing & Disclosures, on Schedule, in the FAQ, and on the Coming
-  // Soon page. Owner-supplied wording, confirmed by owner as acceptable
+  // page (including Schedule), on Licensing & Disclosures, in the FAQ, and on the
+  // Coming Soon page. Owner-supplied wording, confirmed by owner as acceptable
   // (2026-10-03). Use verbatim; do not paraphrase.
   tpmoDisclaimer:
     'We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options.',

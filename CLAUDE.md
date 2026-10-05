@@ -86,7 +86,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 
 - **Minimal footprint for compliance work.** Don't refactor, restyle, rename or "improve" anything that wasn't asked for. Cite the requirement behind every compliance change (for example 42 CFR 422.2267(e)(41) or Cal. Ins. Code §1726).
 - **Never invent** license numbers, phone numbers, carrier names, plan counts or legal text. Use a visible `TODO` placeholder and tell the owner.
-- **TPMO disclaimer** (`site.tpmoDisclaimer`): use the owner-confirmed wording **verbatim**; never paraphrase it. It appears in the footer, on Licensing & Disclosures, on Schedule, in the FAQ and on Prelaunch.
+- **TPMO disclaimer** (`site.tpmoDisclaimer`): use the owner-confirmed wording **verbatim**; never paraphrase it. It appears in the footer of every page (including Schedule), on Licensing & Disclosures, in the FAQ and on Prelaunch.
 - **§1726 identity block** (`LegalIdentity`): name, license numbers, state of domicile and principal place of business, all in **one font size**.
 - **Never alter** compliance copy without the owner's sign-off: the TPMO disclaimer, license language, the "California-licensed independent insurance agent" wording, consent text, or carrier-provided notices. If a fix would touch them, flag it instead.
 - **Deploy to Vercel previews only. Never merge to `main` or touch production without the owner's explicit approval.**
@@ -102,6 +102,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 | 2026-10-01 | **Medicare.gov is plain text, not a link** (CMS doesn't require a link). The footer has no "Official Medicare help" column. The only Medicare.gov links kept are the authorization-form link in the FAQ and the California Medicare Resources page. |
 | 2026-10-01 | **No visible "Last reviewed" dates** on pages, and no "Last accessibility review" line. The dates are still recorded internally in `pages.js` and `site.accessibilityReviewed` and still gate the launch. |
 | 2026-10-03 | **TPMO disclaimer, confirmed by the owner:** "We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options." Claude flagged that this matches the pre-2024 CMS wording; the owner is getting written confirmation from Spark Advisors for CY2027. |
+| 2026-10-05 | **Schedule page sidebar:** removed the second copy of the TPMO disclaimer and the sentence "Both are independent, California-licensed insurance agents, not Medicare." The disclaimer still appears in the footer on the Schedule page. |
 | 2026-10-03 | **Accessibility:** fixed audit items F1 (gold focus outline on dark backgrounds), F2 (Escape returns focus to the menu button), F3 (Email/Phone grouped with "at least one is required") and F13 (accessibility reports go to email or phone, never the Schedule form). Items F4–F12 are deferred. CMS doesn't require WCAG; the motivation is California's Unruh Act, the ADA, possible Section 504/1557 obligations via carrier contracts, and the audience. |
 
 ## Branches (as of 2026-10-03)

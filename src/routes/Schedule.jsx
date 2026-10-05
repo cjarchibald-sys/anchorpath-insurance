@@ -3,7 +3,6 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
 import { AgentEmails, Callout, PageHero, TelLink } from '../components/ui'
-import { TpmoDisclaimer } from '../components/SiteFooter'
 import { site } from '../site.config'
 import {
   CONSENT_TEXT, CONSENT_VERSION, NOTES_MAX, OPTIONS, SENSITIVE_WARNING, SOLICITATION_NOTICE,
@@ -280,10 +279,7 @@ export default function Schedule() {
             email.
           </p>
           <h3>Who will respond</h3>
-          <p>
-            Chris or Helga, personally. Both are independent, California-licensed insurance agents, not Medicare.
-          </p>
-          <TpmoDisclaimer />
+          <p>Chris or Helga, personally.</p>
           <h3>What happens next</h3>
           <ol>
             <li>We confirm your location and meeting options.</li>
