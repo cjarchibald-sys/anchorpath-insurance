@@ -67,6 +67,7 @@ export default function MeetUs() {
                 <br />
                 <a href={`mailto:${chris.email}`}>{chris.email}</a>
                 <br />
+                Licensed insurance agent:{' '}
                 <TelLink tel={chris.phone.tel} className="agent-phone" cta="meet-us-chris">{chris.phone.display}</TelLink>
               </p>
             </article>
@@ -95,6 +96,7 @@ export default function MeetUs() {
                 <br />
                 <a href={`mailto:${helga.email}`}>{helga.email}</a>
                 <br />
+                Licensed insurance agent:{' '}
                 <TelLink tel={helga.phone.tel} className="agent-phone" cta="meet-us-helga">{helga.phone.display}</TelLink>
               </p>
             </article>

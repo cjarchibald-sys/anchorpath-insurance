@@ -105,6 +105,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 | 2026-10-03 | **TPMO disclaimer, confirmed by the owner:** "We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options." Claude flagged that this matches the pre-2024 CMS wording; the owner is getting written confirmation from Spark Advisors for CY2027. |
 | 2026-10-05 | **Call recording:** (408) 365-4412 and Helga's (408) 596-3508 are direct lines that don't record calls. CMS requires recording MA/Part D marketing, sales and enrollment calls (42 CFR 422.2274(g)), and California requires all-party notice (Penal Code §632). Don't publish any non-recording number. |
 | 2026-10-07 | **Recorded phone lines published:** Chris (408) 650-8107 and Helga (408) 694-5404, confirmed by the owner as CMS-compliant recording lines. Both appear wherever the site offers a phone number (`AgentPhones` in `ui.jsx`); the old single `site.phone` is gone. `phoneRecordsCalls: true`. |
+| 2026-10-07 | **Spark guide fixes (Spark Advisors Marketing Material Requirements Guide, June 2026):** "licensed insurance agent" label beside every agent phone number (§4.21); SEP disclaimer in the footer (§4.8); benefits-across-plans (§4.6) and verbatim out-of-network (§4.23) disclaimers on Medicare Basics and Your Coverage Choices; Medicare Advantage Open Enrollment Period (Jan 1–Mar 31) references removed from Medicare Basics and Already on Medicare (§6.2). Disclaimer text lives in `src/content/disclaimers.js`. Still open: TPMO wording with counts (§4.1), Federal Contracting Statement (§4.4), product scope in the consent (§4.15), required form fields (§4.15), SMID (§3), and Spark/carrier/CMS approval before launch (§2). Full review: https://claude.ai/code/artifact/0c889651-b17b-463c-8d3b-2a45ea7ccab8 |
 | 2026-10-05 | **Schedule page sidebar:** removed the second copy of the TPMO disclaimer and the sentence "Both are independent, California-licensed insurance agents, not Medicare." The disclaimer still appears in the footer on the Schedule page. |
 | 2026-10-03 | **Accessibility:** fixed audit items F1 (gold focus outline on dark backgrounds), F2 (Escape returns focus to the menu button), F3 (Email/Phone grouped with "at least one is required") and F13 (accessibility reports go to email or phone, never the Schedule form). Items F4–F12 are deferred. CMS doesn't require WCAG; the motivation is California's Unruh Act, the ADA, possible Section 504/1557 obligations via carrier contracts, and the audience. |
 
@@ -129,6 +130,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 
 ## Still open before launch
 
+- Spark review, carrier review and CMS filing of the website before launch (Spark guide §2), plus the open Spark-guide items listed in the 2026-10-07 decision.
 - Written confirmation from Spark Advisors of the TPMO wording for CY2027.
 - Page fact-check dates (`pages.js`) and the manual accessibility review date (`site.accessibilityReviewed`).
 - The owner's go-ahead, then the launch steps above.

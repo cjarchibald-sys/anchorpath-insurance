@@ -104,7 +104,7 @@ export default function SiteHeader() {
         <div className="container utility-inner">
           <span>{site.serviceArea}</span>
           <span>
-            Call <AgentPhones cta="utility-bar" />
+            Call a licensed insurance agent: <AgentPhones cta="utility-bar" />
             <span className="utility-hours"> · {site.phoneHours}</span>
           </span>
         </div>

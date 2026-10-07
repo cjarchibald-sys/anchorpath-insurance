@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { site } from '../site.config'
 import { navGroups, meetUs, legalLinks } from './navigation'
 import { TelLink } from './ui'
+import { SEP_DISCLAIMER } from '../content/disclaimers'
 import { Wordmark } from './SiteHeader'
 
 // Cal. Ins. Code §1726: filed name, state of domicile and principal place of
@@ -42,6 +43,8 @@ export default function SiteFooter() {
           <Wordmark reverse />
           <p className="footer-tagline">{site.tagline}</p>
           <p>
+            Call a licensed insurance agent:
+            <br />
             {site.agents.map((a) => (
               <span key={a.key}>
                 {a.publicName}: <TelLink tel={a.phone.tel} className="agent-phone" cta={`footer-${a.key}`}>{a.phone.display}</TelLink>
@@ -101,6 +104,7 @@ export default function SiteFooter() {
           eligibility, coverage, benefits, or costs. Chris and Helga can discuss only the products and plans they are
           licensed, certified, appointed, and authorized to offer.
         </p>
+        <p>{SEP_DISCLAIMER}</p>
         <nav aria-label="Legal">
           <ul className="legal-links">
             {legalLinks.map((l) => (

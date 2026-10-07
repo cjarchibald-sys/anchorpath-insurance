@@ -266,6 +266,7 @@ main > .page-hero:first-child { padding-top: 2rem; }
 .term-list dd { margin: 0.2rem 0 0; }
 .glossary > div { padding: 0.25rem 0 0.75rem; border-bottom: 1px solid var(--line); }
 
+.plan-disclaimer { font-size: 1rem; color: var(--muted); }
 .review-note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 1rem; color: var(--muted); }
 .print-only { display: none; }
 

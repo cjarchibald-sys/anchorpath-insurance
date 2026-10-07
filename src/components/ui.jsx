@@ -124,7 +124,7 @@ export function CtaBand({ title, body, primary, secondary }) {
           </div>
         )}
         <p className="cta-band-alt">
-          Prefer to call? <AgentPhones cta="cta-band" /> ·{' '}
+          Prefer to call? Reach a licensed insurance agent: <AgentPhones cta="cta-band" /> ·{' '}
           {site.phoneHours}
         </p>
       </div>

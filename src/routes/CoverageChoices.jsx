@@ -2,6 +2,7 @@ import EduPage from '../components/EduPage'
 import { TwoPathsDiagram } from '../components/Diagrams'
 import { Callout, Checklist } from '../components/ui'
 import { site } from '../site.config'
+import { BENEFITS_DISCLAIMER, OUT_OF_NETWORK_DISCLAIMER } from '../content/disclaimers'
 
 // Rows are written to equal depth for both paths (Sections 9.4 and 10.3).
 const factors = [
@@ -92,6 +93,8 @@ export default function CoverageChoices() {
           </tbody>
         </table>
       </div>
+      <p className="plan-disclaimer">{BENEFITS_DISCLAIMER}</p>
+      <p className="plan-disclaimer">{OUT_OF_NETWORK_DISCLAIMER}</p>
 
       {site.advertisesMedigap && <p className="medigap-notice">AN OUTLINE OF COVERAGE IS AVAILABLE UPON REQUEST.</p>}
 

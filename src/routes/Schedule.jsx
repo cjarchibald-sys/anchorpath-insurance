@@ -135,7 +135,7 @@ export default function Schedule() {
               <h2>Thank you. Your request was sent.</h2>
               <p>
                 Chris or Helga will contact you {site.responseStandard} using your preferred contact method. If you
-                need to reach us sooner, call <AgentPhones cta="form-success" />{' '}
+                need to reach us sooner, call a licensed insurance agent: <AgentPhones cta="form-success" />{' '}
                 ({site.phoneHours}).
               </p>
               <p>
@@ -162,7 +162,7 @@ export default function Schedule() {
               {status === 'failure' && (
                 <div className="form-result failure" role="alert" tabIndex={-1} ref={resultRef}>
                   <p>
-                    <strong>Your request could not be sent.</strong> Nothing was lost; please try again, or call us at{' '}
+                    <strong>Your request could not be sent.</strong> Nothing was lost; please try again, or call a licensed insurance agent:{' '}
                     <AgentPhones cta="form-failure" /> ({site.phoneHours})
                     or email <AgentEmails />.
                   </p>
@@ -270,6 +270,7 @@ export default function Schedule() {
 
         <aside className="schedule-aside" aria-labelledby="aside-title">
           <h2 id="aside-title">Prefer to call?</h2>
+          <p>Reach a licensed insurance agent directly:</p>
           {site.agents.map((a) => (
             <p key={a.key} className="big-phone">
               {a.publicName}:{' '}

@@ -73,7 +73,7 @@ export default function LicensingDisclosures() {
 
       <h2>Contact</h2>
       <p>
-        Phone: <AgentPhones /> ({site.phoneHours})
+        Phone (licensed insurance agents): <AgentPhones /> ({site.phoneHours})
         <br />
         Email: <AgentEmails />
       </p>

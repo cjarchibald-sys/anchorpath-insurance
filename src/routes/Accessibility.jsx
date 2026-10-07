@@ -42,7 +42,7 @@ export default function Accessibility() {
 
       <h2>Get help or report a problem</h2>
       <p>
-        Call <AgentPhones /> ({site.phoneHours}) or email{' '}
+        Call a licensed insurance agent: <AgentPhones /> ({site.phoneHours}) or email{' '}
         <a href={`mailto:${site.email}`}>{site.email}</a>. Please tell us the page and what went wrong. We will respond{' '}
         {site.responseStandard} and can share information another way while we work on a fix. You never need to use
         the website form to reach us.

@@ -46,8 +46,6 @@ export default function AlreadyOnMedicare() {
       <dl className="term-list">
         <dt>Open Enrollment Period: October 15–December 7</dt>
         <dd>Join, switch, or drop a Medicare Advantage or Part D plan. Changes take effect January 1.</dd>
-        <dt>Medicare Advantage Open Enrollment Period: January 1–March 31</dt>
-        <dd>If you are in a Medicare Advantage plan, you can make one change to another Medicare Advantage plan or to Original Medicare.</dd>
         <dt>Special Enrollment Periods</dt>
         <dd>Certain life events, such as moving, losing other coverage, or qualifying for Extra Help, can let you change coverage at other times.</dd>
       </dl>

@@ -3,6 +3,7 @@ import EduPage from '../components/EduPage'
 import { Callout, ExtLink } from '../components/ui'
 import { links } from '../content/links'
 import { glossary } from '../content/glossary'
+import { BENEFITS_DISCLAIMER, OUT_OF_NETWORK_DISCLAIMER } from '../content/disclaimers'
 
 
 export default function MedicareBasics() {
@@ -109,11 +110,6 @@ export default function MedicareBasics() {
           October 15–December 7 each year. People with Medicare can join, switch, or drop a Medicare Advantage or Part D
           plan, with changes taking effect January 1.
         </dd>
-        <dt>Medicare Advantage Open Enrollment Period</dt>
-        <dd>
-          January 1–March 31 each year. People already in a Medicare Advantage plan can make one change: switch to a
-          different Medicare Advantage plan or return to Original Medicare (and join a drug plan).
-        </dd>
       </dl>
       <p>
         Your own dates depend on your circumstances. For an official determination, contact{' '}
@@ -134,6 +130,7 @@ export default function MedicareBasics() {
         Some Medicare Advantage plans offer limited coverage for some of these services, and separate dental, vision,
         and hearing coverage is available. Whether any of those make sense depends on your needs.
       </p>
+      <p className="plan-disclaimer">{BENEFITS_DISCLAIMER}</p>
 
       <h2 id="glossary">Glossary</h2>
       <p>Select a term to see its definition.</p>
@@ -147,6 +144,7 @@ export default function MedicareBasics() {
           </details>
         ))}
       </div>
+      <p className="plan-disclaimer">{OUT_OF_NETWORK_DISCLAIMER}</p>
     </EduPage>
   )
 }
