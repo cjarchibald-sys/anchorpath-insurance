@@ -1,4 +1,5 @@
 import EduPage from '../components/EduPage'
+import { AgentPhones } from '../components/ui'
 import { formatDate } from '../content/pages'
 import { site } from '../site.config'
 
@@ -18,7 +19,7 @@ export default function Privacy() {
       lede="We collect as little information as we can, use it only to respond to you, and never sell it."
       cta={{
         title: 'Have a privacy question?',
-        body: `Email ${site.email} or call ${site.phone.display}.`,
+        body: `Email ${site.email} or call Chris at ${site.agents[0].phone.display} or Helga at ${site.agents[1].phone.display}.`,
         primary: { to: '/schedule/', label: 'Contact us' },
       }}
     >
@@ -127,7 +128,7 @@ export default function Privacy() {
         <li>You can ask to see, correct, or delete the information you submitted through this website.</li>
       </ul>
       <p>
-        To make a request, email <a href={`mailto:${site.email}`}>{site.email}</a> or call {site.phone.display}.
+        To make a request, email <a href={`mailto:${site.email}`}>{site.email}</a> or call <AgentPhones />.
       </p>
 
       <h2>Children</h2>

@@ -22,6 +22,22 @@ export function TelLink({ tel, children, cta, className }) {
   )
 }
 
+// Both agents' recorded phone lines, e.g. "Chris (408) … or Helga (408) …".
+export function AgentPhones({ cta }) {
+  const [chris, helga] = site.agents
+  const link = (a) => (
+    <>
+      {a.publicName}{' '}
+      <TelLink tel={a.phone.tel} className="agent-phone" cta={cta && `${cta}-${a.key}`}>{a.phone.display}</TelLink>
+    </>
+  )
+  return (
+    <>
+      {link(chris)} or {link(helga)}
+    </>
+  )
+}
+
 // Both agents' email addresses, e.g. "chris@… or helga@…".
 export function AgentEmails() {
   const [chris, helga] = site.agents
@@ -108,7 +124,7 @@ export function CtaBand({ title, body, primary, secondary }) {
           </div>
         )}
         <p className="cta-band-alt">
-          Prefer to call? <TelLink tel={site.phone.tel} cta="cta-band">{site.phone.display}</TelLink> ·{' '}
+          Prefer to call? <AgentPhones cta="cta-band" /> ·{' '}
           {site.phoneHours}
         </p>
       </div>

@@ -1,5 +1,5 @@
 import EduPage from '../components/EduPage'
-import { TelLink } from '../components/ui'
+import { AgentPhones } from '../components/ui'
 import { site } from '../site.config'
 
 export default function Accessibility() {
@@ -42,7 +42,7 @@ export default function Accessibility() {
 
       <h2>Get help or report a problem</h2>
       <p>
-        Call <TelLink tel={site.phone.tel}>{site.phone.display}</TelLink> ({site.phoneHours}) or email{' '}
+        Call <AgentPhones /> ({site.phoneHours}) or email{' '}
         <a href={`mailto:${site.email}`}>{site.email}</a>. Please tell us the page and what went wrong. We will respond{' '}
         {site.responseStandard} and can share information another way while we work on a fix. You never need to use
         the website form to reach us.

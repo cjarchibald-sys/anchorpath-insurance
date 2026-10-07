@@ -1,5 +1,5 @@
 import Seo from '../components/Seo'
-import { CtaBand, ExtLink, PageHero } from '../components/ui'
+import { CtaBand, ExtLink, PageHero, TelLink } from '../components/ui'
 import { links } from '../content/links'
 import { site } from '../site.config'
 
@@ -66,6 +66,8 @@ export default function MeetUs() {
                 {chris.legalName}, California Insurance License #{chris.license}
                 <br />
                 <a href={`mailto:${chris.email}`}>{chris.email}</a>
+                <br />
+                <TelLink tel={chris.phone.tel} className="agent-phone" cta="meet-us-chris">{chris.phone.display}</TelLink>
               </p>
             </article>
             <article className="profile">
@@ -92,6 +94,8 @@ export default function MeetUs() {
                 {helga.legalName}, California Insurance License #{helga.license}
                 <br />
                 <a href={`mailto:${helga.email}`}>{helga.email}</a>
+                <br />
+                <TelLink tel={helga.phone.tel} className="agent-phone" cta="meet-us-helga">{helga.phone.display}</TelLink>
               </p>
             </article>
           </div>

@@ -59,6 +59,7 @@ li { margin-bottom: 0.35rem; }
 
 a { color: var(--teal-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--navy); text-decoration-thickness: 2px; }
+.agent-phone { white-space: nowrap; } /* never split an agent's number across lines */
 
 :focus-visible {
   outline: 3px solid var(--focus);

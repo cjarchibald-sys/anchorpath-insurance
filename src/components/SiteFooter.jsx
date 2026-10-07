@@ -42,8 +42,12 @@ export default function SiteFooter() {
           <Wordmark reverse />
           <p className="footer-tagline">{site.tagline}</p>
           <p>
-            <TelLink tel={site.phone.tel} cta="footer">{site.phone.display}</TelLink>
-            <br />
+            {site.agents.map((a) => (
+              <span key={a.key}>
+                {a.publicName}: <TelLink tel={a.phone.tel} className="agent-phone" cta={`footer-${a.key}`}>{a.phone.display}</TelLink>
+                <br />
+              </span>
+            ))}
             {site.phoneHours}
             <br />
             {site.agents.map((a) => (

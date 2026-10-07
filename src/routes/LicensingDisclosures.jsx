@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import EduPage from '../components/EduPage'
-import { AgentEmails, ExtLink, TelLink } from '../components/ui'
+import { AgentEmails, AgentPhones, ExtLink } from '../components/ui'
 import { LegalIdentity, TpmoDisclaimer } from '../components/SiteFooter'
 import { links } from '../content/links'
 import { site } from '../site.config'
@@ -73,7 +73,7 @@ export default function LicensingDisclosures() {
 
       <h2>Contact</h2>
       <p>
-        Phone: <TelLink tel={site.phone.tel}>{site.phone.display}</TelLink> ({site.phoneHours})
+        Phone: <AgentPhones /> ({site.phoneHours})
         <br />
         Email: <AgentEmails />
       </p>

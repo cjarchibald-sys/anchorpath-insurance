@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
-import { AgentEmails, Callout, PageHero, TelLink } from '../components/ui'
+import { AgentEmails, AgentPhones, Callout, PageHero, TelLink } from '../components/ui'
 import { site } from '../site.config'
 import {
   CONSENT_TEXT, CONSENT_VERSION, NOTES_MAX, OPTIONS, SENSITIVE_WARNING, SOLICITATION_NOTICE,
@@ -135,7 +135,7 @@ export default function Schedule() {
               <h2>Thank you. Your request was sent.</h2>
               <p>
                 Chris or Helga will contact you {site.responseStandard} using your preferred contact method. If you
-                need to reach us sooner, call <TelLink tel={site.phone.tel} cta="form-success">{site.phone.display}</TelLink>{' '}
+                need to reach us sooner, call <AgentPhones cta="form-success" />{' '}
                 ({site.phoneHours}).
               </p>
               <p>
@@ -163,7 +163,7 @@ export default function Schedule() {
                 <div className="form-result failure" role="alert" tabIndex={-1} ref={resultRef}>
                   <p>
                     <strong>Your request could not be sent.</strong> Nothing was lost; please try again, or call us at{' '}
-                    <TelLink tel={site.phone.tel} cta="form-failure">{site.phone.display}</TelLink> ({site.phoneHours})
+                    <AgentPhones cta="form-failure" /> ({site.phoneHours})
                     or email <AgentEmails />.
                   </p>
                 </div>
@@ -270,9 +270,12 @@ export default function Schedule() {
 
         <aside className="schedule-aside" aria-labelledby="aside-title">
           <h2 id="aside-title">Prefer to call?</h2>
-          <p className="big-phone">
-            <TelLink tel={site.phone.tel} cta="schedule-aside">{site.phone.display}</TelLink>
-          </p>
+          {site.agents.map((a) => (
+            <p key={a.key} className="big-phone">
+              {a.publicName}:{' '}
+              <TelLink tel={a.phone.tel} className="agent-phone" cta={`schedule-aside-${a.key}`}>{a.phone.display}</TelLink>
+            </p>
+          ))}
           <p>{site.phoneHours}. If we miss your call, we will return it {site.responseStandard}.</p>
           <p>
             Or email <AgentEmails />. Please do not send sensitive information by

@@ -18,6 +18,7 @@ export const site = {
       legalName: 'Christopher Archibald',
       license: '4543885',
       email: 'chris@anchorpathinsurance.com',
+      phone: { display: '(408) 650-8107', tel: '+14086508107' },
     },
     {
       key: 'helga',
@@ -25,6 +26,7 @@ export const site = {
       legalName: 'Helga Saito-Archibald',
       license: '4549646',
       email: 'helga@anchorpathinsurance.com',
+      phone: { display: '(408) 694-5404', tel: '+14086945404' },
     },
   ],
 
@@ -34,15 +36,13 @@ export const site = {
   // address is never published on the site or in documents linked from it.
   principalPlaceOfBusiness: 'San Jose, California',
 
-  // Phone, hours, emails, and response standard confirmed by owner 2026-09-30.
+  // Hours, emails, and response standard confirmed by owner 2026-09-30.
   // `email` is the single contact for privacy and accessibility requests.
-  phone: { display: '(408) 365-4412', tel: '+14083654412' },
-  // 42 CFR 422.2274(g): MA and Part D marketing, sales, and enrollment calls
-  // must be recorded in full. The current number is a direct line that does not
-  // record (owner, 2026-10-05). TODO: replace `phone` with a recorded business
-  // line (recommended by Spark Advisors), then set this to true. Launch is
-  // blocked while false.
-  phoneRecordsCalls: false,
+  // Each agent's `phone` (above) is a call-recording line, per the owner
+  // 2026-10-07 (42 CFR 422.2274(g): MA and Part D marketing, sales, and
+  // enrollment calls must be recorded). Never publish a line that does not
+  // record; if one changes, set this to false until the new line records.
+  phoneRecordsCalls: true,
   email: 'chris@anchorpathinsurance.com',
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
   responseStandard: 'within one business day',

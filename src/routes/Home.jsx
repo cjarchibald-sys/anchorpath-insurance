@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Seo from '../components/Seo'
-import { CtaLink, TelLink } from '../components/ui'
+import { AgentPhones, CtaLink } from '../components/ui'
 import { site } from '../site.config'
 
 const startingPoints = [
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
           </div>
           <p className="cta-band-alt">
-            Prefer to call? <TelLink tel={site.phone.tel} cta="home-final">{site.phone.display}</TelLink> ·{' '}
+            Prefer to call? <AgentPhones cta="home-final" /> ·{' '}
             {site.phoneHours}. For official information, visit Medicare.gov or call 1-800-MEDICARE.
           </p>
         </div>

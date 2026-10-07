@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { site } from '../site.config'
 import { navGroups, meetUs } from './navigation'
-import { CtaLink, TelLink } from './ui'
+import { AgentPhones, CtaLink } from './ui'
 
 // Logo mark plus wordmark. `reverse` is the light version for dark backgrounds.
 // The mark is decorative here: the surrounding link or heading names the business.
@@ -104,7 +104,7 @@ export default function SiteHeader() {
         <div className="container utility-inner">
           <span>{site.serviceArea}</span>
           <span>
-            Call <TelLink tel={site.phone.tel} cta="utility-bar">{site.phone.display}</TelLink>
+            Call <AgentPhones cta="utility-bar" />
             <span className="utility-hours"> · {site.phoneHours}</span>
           </span>
         </div>

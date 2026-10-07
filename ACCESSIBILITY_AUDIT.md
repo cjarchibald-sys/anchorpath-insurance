@@ -277,7 +277,7 @@ Two decisions are needed before this replaces the current Accessibility page:
 > - *[Add any audit items not yet fixed at launch, for example: "On some iPhones, the comparison table on Your Coverage Choices may be read without its column headings. The same information appears in the text above and below it."]*
 >
 > **Get help or tell us about a problem**
-> Call **(408) 365-4412** (Monday–Friday, 9 a.m.–5 p.m. Pacific). If you are deaf, hard of hearing, or have a speech disability, dial **711** for the California Relay Service and ask for (408) 365-4412.
+> Call Chris at **(408) 650-8107** or Helga at **(408) 694-5404** (Monday–Friday, 9 a.m.–5 p.m. Pacific). If you are deaf, hard of hearing, or have a speech disability, dial **711** for the California Relay Service and ask for either number.
 > Email **chris@anchorpathinsurance.com**.
 > Please tell us the page and what went wrong. We will respond within one business day and can give you the information another way while we work on a fix. Reporting a problem never requires you to request an insurance appointment or agree to be contacted about insurance.
 >
