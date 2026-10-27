@@ -31,9 +31,8 @@ export default function MeetUs() {
             carefully, and answering questions honestly.
           </p>
           <p>
-            <strong>Path</strong> reflects that everyone’s situation is different. There is no single plan that is
-            right for everyone, and finding the right coverage should begin with understanding your life, not pushing
-            you toward a predetermined answer.
+            <strong>Path</strong> reflects that everyone’s situation is different. Good decisions begin with
+            understanding your life, not pushing you toward a predetermined answer.
           </p>
           <p className="brand-line">Be the anchor. Help find the path.</p>
         </div>
@@ -88,8 +87,8 @@ export default function MeetUs() {
                 with listening.
               </p>
               <p>
-                She brings that same care to Medicare conversations and to the long-term relationship afterward: annual
-                check-ins, questions that come up during the year, and help understanding what comes next.
+                She brings that same care to Medicare conversations and to the long-term relationship: questions that
+                come up during the year and help understanding what comes next.
               </p>
               <p className="license-line">
                 {helga.legalName}, California Insurance License #{helga.license}
@@ -130,17 +129,16 @@ export default function MeetUs() {
               <li>Honesty about what we can and cannot help with</li>
               <li>No pressure to decide, and respect for the decision you make</li>
               <li>Meetings by phone, by video, or in person where available, in English</li>
-              <li>Availability after enrollment, including annual reviews</li>
+              <li>Availability for your questions over time</li>
             </ul>
           </div>
         </div>
       </section>
 
       <CtaBand
-        title="Request a Conversation."
-        body="Tell us where you are in the process, and Chris or Helga will be in touch."
-        primary={{ to: '/schedule/', label: 'Request a Conversation' }}
-        secondary={{ to: '/medicare-basics/', label: 'Start with Medicare Basics' }}
+        title="Get in touch."
+        body={`Call or email Chris or Helga. We respond ${site.responseStandard}.`}
+        primary={{ to: '/contact/', label: 'Contact Us' }}
       />
     </>
   )

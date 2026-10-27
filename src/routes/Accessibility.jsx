@@ -30,7 +30,7 @@ export default function Accessibility() {
 
       <h2>Formats</h2>
       <p>
-        Our educational content and checklists are provided as web pages that you can read, enlarge, or print. We do not
+        Our information is provided as web pages that you can read, enlarge, or print. We do not
         rely on PDFs for essential information. If you need information in another format, let us know.
       </p>
 
@@ -44,8 +44,7 @@ export default function Accessibility() {
       <p>
         Call a licensed insurance agent: <AgentPhones /> ({site.phoneHours}) or email{' '}
         <a href={`mailto:${site.email}`}>{site.email}</a>. Please tell us the page and what went wrong. We will respond{' '}
-        {site.responseStandard} and can share information another way while we work on a fix. You never need to use
-        the website form to reach us.
+        {site.responseStandard} and can share information another way while we work on a fix.
       </p>
     </EduPage>
   )

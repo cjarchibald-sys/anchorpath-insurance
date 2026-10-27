@@ -151,10 +151,11 @@ export default function SiteHeader() {
                 {meetUs.label}
               </NavLink>
             </li>
+
           </ul>
           <div className="nav-cta">
-            <CtaLink to="/schedule/" label="Schedule a Conversation (header)">
-              Schedule a Conversation
+            <CtaLink to="/contact/" label="Contact Us (header)">
+              Contact Us
             </CtaLink>
           </div>
         </nav>

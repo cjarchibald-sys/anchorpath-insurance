@@ -11,7 +11,7 @@ export default function Terms() {
       lede="Please read this notice before relying on information from this website."
       cta={{
         title: 'Questions about something you read here?',
-        primary: { to: '/schedule/', label: 'Schedule a Conversation' },
+        primary: { to: '/contact/', label: 'Contact Us' },
         secondary: { to: '/licensing-disclosures/', label: 'Licensing & Disclosures' },
       }}
     >
@@ -25,7 +25,7 @@ export default function Terms() {
 
       <h2>No agent relationship from browsing</h2>
       <p>
-        Visiting this website or submitting our form does not create an agent–client relationship or enroll you in any
+        Visiting this website does not create an agent–client relationship or enroll you in any
         coverage. Any plan-specific discussion happens only through the required appointment process, and enrollment
         happens only through approved, secure systems.
       </p>
@@ -38,20 +38,20 @@ export default function Terms() {
 
       <h2>Links to other websites</h2>
       <p>
-        We link to official and nonprofit resources for your convenience. We do not control those websites and are not
+        We link to official resources for your convenience. We do not control those websites and are not
         responsible for their content or availability.
       </p>
 
       <h2>Use of this website</h2>
       <p>
-        Please use this website lawfully and do not attempt to disrupt it or submit false information through it. The
+        Please use this website lawfully and do not attempt to disrupt it. The
         text and design of this website belong to {site.name}; you may print or share pages for personal,
         non-commercial use.
       </p>
 
       <h2>Accuracy and changes</h2>
       <p>
-        We review our content regularly and date each page, but we cannot guarantee that everything is complete or
+        We review our content regularly, but we cannot guarantee that everything is complete or
         current at every moment. We may update this website and this notice at any time.
       </p>
 

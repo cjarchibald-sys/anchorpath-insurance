@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { site } from '../site.config'
 import { navGroups, meetUs, legalLinks } from './navigation'
 import { TelLink } from './ui'
-import { SEP_DISCLAIMER } from '../content/disclaimers'
 import { Wordmark } from './SiteHeader'
 
 // Cal. Ins. Code §1726: filed name, state of domicile and principal place of
@@ -79,7 +78,7 @@ export default function SiteFooter() {
           <ul>
             <li><Link to={meetUs.to}>Meet Chris &amp; Helga</Link></li>
             <li><Link to={`${meetUs.to}#our-story`}>Our story</Link></li>
-            <li><Link to="/schedule/">Schedule a Conversation</Link></li>
+            <li><Link to="/contact/">Contact Us</Link></li>
           </ul>
         </nav>
       </div>
@@ -87,12 +86,9 @@ export default function SiteFooter() {
       {/* Phones only: one compact row instead of the three link columns above. */}
       <nav aria-label="Quick links" className="container footer-quick">
         <ul>
-          <li><Link to="/medicare-basics/">Medicare Basics</Link></li>
-          <li><Link to="/medicare-coverage-choices/">Coverage Choices</Link></li>
-          <li><Link to="/faq/">FAQ</Link></li>
           <li><Link to="/meet-chris-and-helga/">Meet Chris &amp; Helga</Link></li>
           <li><Link to="/meet-chris-and-helga/#our-story">Our story</Link></li>
-          <li><Link to="/schedule/">Schedule a Conversation</Link></li>
+          <li><Link to="/contact/">Contact Us</Link></li>
         </ul>
       </nav>
 
@@ -104,7 +100,6 @@ export default function SiteFooter() {
           eligibility, coverage, benefits, or costs. Chris and Helga can discuss only the products and plans they are
           licensed, certified, appointed, and authorized to offer.
         </p>
-        <p>{SEP_DISCLAIMER}</p>
         <nav aria-label="Legal">
           <ul className="legal-links">
             {legalLinks.map((l) => (

@@ -15,12 +15,12 @@ export default function Privacy() {
     <EduPage
       path="/privacy/"
       title="Privacy Policy"
-      description="How AnchorPath Insurance Services collects, uses, shares, and protects information through this website, including our schedule-a-conversation form."
+      description="How AnchorPath Insurance Services collects, uses, shares, and protects information through this website and when you call or email us."
       lede="We collect as little information as we can, use it only to respond to you, and never sell it."
       cta={{
         title: 'Have a privacy question?',
         body: `Email ${site.email} or call a licensed insurance agent: Chris at ${site.agents[0].phone.display} or Helga at ${site.agents[1].phone.display}.`,
-        primary: { to: '/schedule/', label: 'Contact us' },
+        primary: { to: '/contact/', label: 'Contact Us' },
       }}
     >
       <p>
@@ -35,30 +35,24 @@ export default function Privacy() {
 
       <h2>Information we collect</h2>
       <h3>Information you give us</h3>
-      <p>When you submit our “Schedule a Conversation” form, we collect:</p>
-      <ul>
-        <li>Your first and last name</li>
-        <li>Your email address and/or phone number, and your preferred contact method</li>
-        <li>Your ZIP code</li>
-        <li>Your meeting preferences, the kind of conversation you want, your general situation (for example, “turning 65”), and a preferred time of day</li>
-        <li>Any short notes you choose to add</li>
-        <li>A record of your consent: the consent wording and version you agreed to, the date and time, and the page you submitted from</li>
-      </ul>
       <p>
-        We do not ask for, and ask you not to send, Social Security numbers, Medicare numbers, financial information,
-        detailed health information, or prescriptions through this website or ordinary email.
+        This website has no forms and does not ask you to enter any information. When you call or email us, we receive
+        what you choose to share, such as your name, phone number, email address, and your message.
+      </p>
+      <p>
+        We ask you not to send Social Security numbers, Medicare numbers, financial information, detailed health
+        information, or prescriptions by ordinary email.
       </p>
       <h3>Information collected automatically</h3>
       <ul>
         <li>
           <strong>Technical data.</strong> Like most websites, our hosting provider processes your IP address, browser
-          type, and pages requested to deliver and secure the site. When you submit the form, we record your IP address
-          and browser type with your consent record.
+          type, and pages requested to deliver and secure the site.
         </li>
         <li>
           <strong>Analytics.</strong> We use a privacy-focused analytics service that does not use cookies and does not
-          track you across other websites. It counts page views and actions such as button clicks and form completion,
-          without recording what you type into the form.
+          track you across other websites. It counts page views and actions such as button clicks, including taps on our
+          phone numbers.
         </li>
       </ul>
 
@@ -71,8 +65,8 @@ export default function Privacy() {
 
       <h2>How we use information</h2>
       <ul>
-        <li>To respond to your request and schedule the conversation you asked for, which is an insurance solicitation</li>
-        <li>To keep records of your request and consent, as insurance and Medicare rules require</li>
+        <li>To respond to your call or email</li>
+        <li>To keep records of our contact with you, as insurance and Medicare rules require</li>
         <li>To honor requests not to be contacted</li>
         <li>To keep the website secure, working, and useful</li>
       </ul>
@@ -84,16 +78,16 @@ export default function Privacy() {
       </p>
       <ul>
         <li>Vercel, which hosts this website and provides privacy-focused analytics</li>
-        <li>Resend, which delivers form submissions to our agents’ email</li>
-        <li>Our business email provider, where those messages are received</li>
+        <li>Our business email provider, where your emails are received</li>
+        <li>Our business phone service, which records calls</li>
       </ul>
       <p>We may also disclose information when required by law or to protect rights and safety.</p>
 
       <h2>Security</h2>
       <p>
-        The website uses encrypted connections (HTTPS). Access to form submissions is limited to our licensed agents,
+        The website uses encrypted connections (HTTPS). Access to your emails and call records is limited to our licensed agents,
         and our accounts are protected with multifactor authentication. No method of transmission or storage is
-        completely secure, which is one reason we ask you not to send sensitive information through the website.
+        completely secure, which is one reason we ask you not to send sensitive information by email.
       </p>
 
       <h2>How Long Do We Keep Your Information?</h2>
@@ -110,10 +104,10 @@ export default function Privacy() {
         other legal requirements).
       </p>
       <p>
-        Specifically, we keep form submissions and the consent records that go with them for{' '}
+        Specifically, we keep the messages you send us and records of our contact with you for{' '}
         {site.privacy.leadRetention ?? <Pending>retention period required before launch</Pending>}. Medicare rules
         require records related to Medicare plan marketing and enrollment to be kept for 10 years, and we apply the
-        same period to the requests you send us so we can show when and how you asked to be contacted.
+        same period to the messages you send us so we can show when and how you contacted us.
       </p>
       <p>
         When we have no ongoing legitimate business need to process your personal information, we will either delete
@@ -125,7 +119,7 @@ export default function Privacy() {
       <h2>Your choices</h2>
       <ul>
         <li>You can ask us not to contact you again at any time, by phone, email, or by telling us during a conversation.</li>
-        <li>You can ask to see, correct, or delete the information you submitted through this website.</li>
+        <li>You can ask to see, correct, or delete the information you have sent us.</li>
       </ul>
       <p>
         To make a request, email <a href={`mailto:${site.email}`}>{site.email}</a> or call a licensed insurance agent: <AgentPhones />.
@@ -136,7 +130,7 @@ export default function Privacy() {
 
       <h2>Other websites</h2>
       <p>
-        We link to official resources such as Medicare.gov and Social Security. Those websites have their own privacy
+        We link to official resources such as the California Department of Insurance. Those websites have their own privacy
         policies, and we are not responsible for their practices.
       </p>
 

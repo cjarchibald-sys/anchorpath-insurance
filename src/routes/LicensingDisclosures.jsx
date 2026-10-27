@@ -15,8 +15,8 @@ export default function LicensingDisclosures() {
       lede="Who we are, how we are licensed, and the disclosures that apply to this website."
       cta={{
         title: 'Questions about our licensing?',
-        primary: { to: '/schedule/', label: 'Schedule a Conversation' },
-        secondary: { to: '/medicare-basics/', label: 'Return to Medicare Basics' },
+        primary: { to: '/contact/', label: 'Contact Us' },
+        secondary: { to: '/meet-chris-and-helga/', label: 'Meet Chris & Helga' },
       }}
     >
       <h2>Business identity</h2>

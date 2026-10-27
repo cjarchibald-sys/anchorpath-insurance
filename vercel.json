@@ -5,8 +5,7 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/about", "destination": "/meet-chris-and-helga/", "permanent": true },
-    { "source": "/contact", "destination": "/schedule/", "permanent": true },
-    { "source": "/medicare-plans", "destination": "/medicare-coverage-choices/", "permanent": true }
+    { "source": "/medicare-plans", "destination": "/", "permanent": false }
   ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }

@@ -109,6 +109,17 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 | 2026-10-05 | **Schedule page sidebar:** removed the second copy of the TPMO disclaimer and the sentence "Both are independent, California-licensed insurance agents, not Medicare." The disclaimer still appears in the footer on the Schedule page. |
 | 2026-10-03 | **Accessibility:** fixed audit items F1 (gold focus outline on dark backgrounds), F2 (Escape returns focus to the menu button), F3 (Email/Phone grouped with "at least one is required") and F13 (accessibility reports go to email or phone, never the Schedule form). Items F4–F12 are deferred. CMS doesn't require WCAG; the motivation is California's Unruh Act, the ADA, possible Section 504/1557 obligations via carrier contracts, and the audience. |
 
+## Information site (branch `info-site`, 2026-10-27)
+
+While the full marketing site (`a11y-audit`) waits for Spark/carrier/CMS approval, a smaller **communication (non-marketing) site** is built on branch `info-site` to replace the Coming Soon page.
+
+- **Pages:** Home, Meet Chris & Helga, Contact (`/contact/`), Licensing & Disclosures, Privacy, Accessibility, Terms. Everything else returns the 404 page.
+- **No plan, benefit, cost, drug, enrollment-period or "coverage review" content**, so Spark's guide §1 doesn't classify it as marketing. No contact form: phone (labeled "licensed insurance agent", §4.21) and email only. The serverless form endpoint, consent and validation code are removed on this branch.
+- **Kept:** footer §1726 identity block, non-affiliation statement, TPMO disclaimer (CMS requires it on TPMO websites), educational-limits notice. The SEP disclaimer was removed because the site doesn't advertise.
+- **Privacy Policy** rewritten for no form (calls and email only); the owner-approved retention section is unchanged apart from "messages you send us" replacing "form submissions".
+- **Don't add** educational Medicare pages, a form or plan wording here without the owner's approval and a new Spark review; that would make it marketing.
+- **Submitted to Spark** as Communication Material(s). `a11y-audit` stays frozen while Spark reviews the full site.
+
 ## Branches (as of 2026-10-03)
 
 - `main`: production. The old Tailwind Coming Soon page is live.

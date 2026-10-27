@@ -1,23 +1,5 @@
-export const navGroups = [
-  {
-    label: 'Learn Medicare',
-    items: [
-      { to: '/medicare-basics/', label: 'Medicare Basics' },
-      { to: '/medicare-coverage-choices/', label: 'Your Coverage Choices' },
-      { to: '/faq/', label: 'FAQ' },
-      { to: '/resources/', label: 'Resources & Checklists' },
-    ],
-  },
-  {
-    label: 'Your Situation',
-    items: [
-      { to: '/turning-65/', label: 'Turning 65' },
-      { to: '/retiring-after-65/', label: 'Retiring After 65' },
-      { to: '/already-on-medicare/', label: 'Already on Medicare' },
-      { to: '/california-medicare-resources/', label: 'California Medicare Resources' },
-    ],
-  },
-]
+// Information site (2026-10-27): no Learn Medicare / Your Situation menus.
+export const navGroups = []
 
 export const meetUs = { to: '/meet-chris-and-helga/', label: 'Meet Us' }
 
