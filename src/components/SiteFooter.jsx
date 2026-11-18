@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { site } from '../site.config'
 import { navGroups, meetUs, legalLinks } from './navigation'
-import { PHONE_NOTICE_BOTH, TelLink, Tty } from './ui'
+import { PHONE_NOTICE_ONE, TelLink, Tty } from './ui'
 import { Wordmark } from './SiteHeader'
 
 // Cal. Ins. Code §1726: filed name, state of domicile and principal place of
@@ -52,13 +52,13 @@ export default function SiteFooter() {
               <span key={a.key}>
                 {a.publicName}: <TelLink tel={a.phone.tel} className="agent-phone" cta={`footer-${a.key}`}>{a.phone.display}</TelLink>
                 <br />
+                {PHONE_NOTICE_ONE}
+                <br />
               </span>
             ))}
             <Tty />
             <br />
             {site.phoneHours}
-            <br />
-            {PHONE_NOTICE_BOTH}
             <br />
             {site.agents.map((a) => (
               <span key={a.key}>

@@ -1,5 +1,6 @@
+import { Fragment } from 'react'
 import Seo from '../components/Seo'
-import { PageHero, PHONE_NOTICE_BOTH, TelLink, Tty } from '../components/ui'
+import { PageHero, PHONE_NOTICE_ONE, TelLink, Tty } from '../components/ui'
 import { site } from '../site.config'
 
 // Information site: phone and email only, no web form (owner decision 2026-10-27).
@@ -18,13 +19,16 @@ export default function Contact() {
       <div className="container narrow prose contact-page">
         <h2>Call a licensed insurance agent</h2>
         {site.agents.map((a) => (
-          <p key={a.key} className="big-phone">
-            {a.publicName}:{' '}
-            <TelLink tel={a.phone.tel} className="agent-phone" cta={`contact-${a.key}`}>{a.phone.display}</TelLink>
-          </p>
+          <Fragment key={a.key}>
+            <p className="big-phone">
+              {a.publicName}:{' '}
+              <TelLink tel={a.phone.tel} className="agent-phone" cta={`contact-${a.key}`}>{a.phone.display}</TelLink>
+            </p>
+            <p className="phone-notice">{PHONE_NOTICE_ONE}</p>
+          </Fragment>
         ))}
         <p>
-          <Tty />. {site.phoneHours}. {PHONE_NOTICE_BOTH}
+          <Tty />, {site.phoneHours}.
         </p>
         <p>If we miss your call, we will return it {site.responseStandard}. Calls may be recorded.</p>
 

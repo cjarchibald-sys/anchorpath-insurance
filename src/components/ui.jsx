@@ -22,11 +22,11 @@ export function TelLink({ tel, children, cta, className }) {
   )
 }
 
-// Spark review (2026-11-18): every agent phone number carries a TTY number,
-// the days and hours, and the notice that dialing it reaches a licensed
-// insurance agent (Spark guide §4.21).
+// Spark review (2026-11-18, confirmed by Spark): every agent phone number is
+// followed by its own full sentence below (never a combined "either number"
+// version), and TTY 711 and the days and hours appear with the numbers
+// (Spark guide §4.21).
 export const PHONE_NOTICE_ONE = 'Dialing this number will connect you with a licensed insurance agent.'
-export const PHONE_NOTICE_BOTH = 'Dialing either number will connect you with a licensed insurance agent.'
 
 export function Tty() {
   return (
@@ -36,19 +36,20 @@ export function Tty() {
   )
 }
 
-// Both agents' lines in one sentence:
-// "Chris (408) … or Helga (408) …, TTY 711, Monday–Friday …. Dialing either number …"
+// Both agents' lines, each number followed by its own sentence:
+// "Chris (408) …. Dialing this number … Helga (408) …. Dialing this number …
+// TTY 711, Monday–Friday …."
 export function AgentPhones({ cta }) {
-  const [chris, helga] = site.agents
-  const link = (a) => (
-    <>
-      {a.publicName}{' '}
-      <TelLink tel={a.phone.tel} className="agent-phone" cta={cta && `${cta}-${a.key}`}>{a.phone.display}</TelLink>
-    </>
-  )
   return (
     <>
-      {link(chris)} or {link(helga)}, <Tty />, {site.phoneHours}. {PHONE_NOTICE_BOTH}
+      {site.agents.map((a) => (
+        <span key={a.key}>
+          {a.publicName}{' '}
+          <TelLink tel={a.phone.tel} className="agent-phone" cta={cta && `${cta}-${a.key}`}>{a.phone.display}</TelLink>.{' '}
+          {PHONE_NOTICE_ONE}{' '}
+        </span>
+      ))}
+      <Tty />, {site.phoneHours}.
     </>
   )
 }
