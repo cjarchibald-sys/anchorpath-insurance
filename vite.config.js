@@ -2,7 +2,6 @@ import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { site } from './src/site.config.js'
-import { pages } from './src/content/pages.js'
 
 // Production shows the pre-launch page until VITE_PUBLIC_LAUNCH=true is set in
 // the Vercel production environment. Local dev and preview deployments always
@@ -19,10 +18,8 @@ function launchBlockers() {
   if (!site.tpmoCounts?.organizations || !site.tpmoCounts?.products) blockers.push('site.tpmoCounts (organization and product counts from the Spark TPMO Disclaimer Tool)')
   if (!site.privacy.effectiveDate) blockers.push('site.privacy.effectiveDate')
   if (!site.privacy.leadRetention) blockers.push('site.privacy.leadRetention')
-  if (!site.accessibilityReviewed) blockers.push('site.accessibilityReviewed')
-  for (const [path, page] of Object.entries(pages)) {
-    if (!page.reviewed) blockers.push(`pages['${path}'].reviewed (licensed-owner fact-check date)`)
-  }
+  // Owner decision 2026-11-18: page fact-check dates and the manual
+  // accessibility review date no longer gate launch; Spark's approval does.
   if (/Disallow:\s*\/\s*$/m.test(readFileSync('public/robots.txt', 'utf8'))) {
     blockers.push('public/robots.txt still blocks all crawlers')
   }
