@@ -49,13 +49,14 @@ export const site = {
   tty: { display: '711', tel: '711' },
   responseStandard: 'within one business day',
 
-  // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)), PY2027 wording supplied by
-  // Spark Advisors Compliance (2026-11-18). Rendered verbatim by TpmoDisclaimer
+  // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)), PY2027 wording from the Spark
+  // TPMO Disclaimer Tool (2026-11-18). Rendered verbatim by TpmoDisclaimer
   // in SiteFooter.jsx; do not paraphrase. The two counts must come from the
   // Spark TPMO Disclaimer Tool and match what the agents actually represent in
-  // their California service area. TODO: owner to supply both counts. While
-  // either is null, a visible placeholder renders and a launch build is blocked.
-  tpmoCounts: { organizations: null, products: null },
+  // their California service area. Counts and wording from the Spark TPMO
+  // Disclaimer Tool, supplied by the owner 2026-11-18. While either is null, a
+  // visible placeholder renders and a launch build is blocked.
+  tpmoCounts: { organizations: 10, products: 300 },
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.
