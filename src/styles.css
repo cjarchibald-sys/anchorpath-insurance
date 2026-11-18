@@ -332,6 +332,7 @@ main > .page-hero:first-child { padding-top: 2rem; }
 .schedule-aside h2 { margin-top: 0; font-size: 1.4rem; }
 .schedule-aside h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 700; }
 .big-phone { font-size: 1.5rem; font-weight: 700; }
+.big-phone + .phone-notice { margin-top: -0.75rem; } /* Spark: each number's own notice sits right under it */
 @media (max-width: 900px) {
   .schedule-grid { grid-template-columns: minmax(0, 1fr); }
   .schedule-aside { position: static; }

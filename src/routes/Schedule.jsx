@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react'
+import { Fragment, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
-import { AgentEmails, AgentPhones, Callout, PageHero, PHONE_NOTICE_BOTH, TelLink, Tty } from '../components/ui'
+import { AgentEmails, AgentPhones, Callout, PageHero, PHONE_NOTICE_ONE, TelLink, Tty } from '../components/ui'
 import { site } from '../site.config'
 import {
   CONSENT_TEXT, CONSENT_VERSION, NOTES_MAX, OPTIONS, SENSITIVE_WARNING, SOLICITATION_NOTICE,
@@ -271,13 +271,16 @@ export default function Schedule() {
           <h2 id="aside-title">Prefer to call?</h2>
           <p>Reach a licensed insurance agent directly:</p>
           {site.agents.map((a) => (
-            <p key={a.key} className="big-phone">
-              {a.publicName}:{' '}
-              <TelLink tel={a.phone.tel} className="agent-phone" cta={`schedule-aside-${a.key}`}>{a.phone.display}</TelLink>
-            </p>
+            <Fragment key={a.key}>
+              <p className="big-phone">
+                {a.publicName}:{' '}
+                <TelLink tel={a.phone.tel} className="agent-phone" cta={`schedule-aside-${a.key}`}>{a.phone.display}</TelLink>
+              </p>
+              <p className="phone-notice">{PHONE_NOTICE_ONE}</p>
+            </Fragment>
           ))}
           <p>
-            <Tty />. {site.phoneHours}. {PHONE_NOTICE_BOTH}
+            <Tty />, {site.phoneHours}.
           </p>
           <p>If we miss your call, we will return it {site.responseStandard}.</p>
           <p>
