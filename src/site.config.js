@@ -45,14 +45,17 @@ export const site = {
   phoneRecordsCalls: true,
   email: 'chris@anchorpathinsurance.com',
   phoneHours: 'Monday–Friday, 9 a.m.–5 p.m. Pacific',
+  // Spark review 2026-11-18: show a TTY number with the agents' phone numbers.
+  tty: { display: '711', tel: '711' },
   responseStandard: 'within one business day',
 
-  // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)). Shown in the footer of every
-  // page (including Schedule), on Licensing & Disclosures, in the FAQ, and on the
-  // Coming Soon page. Owner-supplied wording, confirmed by owner as acceptable
-  // (2026-10-03). Use verbatim; do not paraphrase.
-  tpmoDisclaimer:
-    'We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options.',
+  // CMS TPMO disclaimer (42 CFR 422.2267(e)(41)), PY2027 wording supplied by
+  // Spark Advisors Compliance (2026-11-18). Rendered verbatim by TpmoDisclaimer
+  // in SiteFooter.jsx; do not paraphrase. The two counts must come from the
+  // Spark TPMO Disclaimer Tool and match what the agents actually represent in
+  // their California service area. TODO: owner to supply both counts. While
+  // either is null, a visible placeholder renders and a launch build is blocked.
+  tpmoCounts: { organizations: null, products: null },
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.

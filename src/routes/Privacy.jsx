@@ -19,7 +19,12 @@ export default function Privacy() {
       lede="We collect as little information as we can, use it only to respond to you, and never sell it."
       cta={{
         title: 'Have a privacy question?',
-        body: `Email ${site.email} or call a licensed insurance agent: Chris at ${site.agents[0].phone.display} or Helga at ${site.agents[1].phone.display}.`,
+        body: (
+          <>
+            Email <a href={`mailto:${site.email}`}>{site.email}</a>, or call a licensed insurance agent:{' '}
+            <AgentPhones cta="privacy-band" />
+          </>
+        ),
         primary: { to: '/contact/', label: 'Contact Us' },
       }}
     >
@@ -122,7 +127,8 @@ export default function Privacy() {
         <li>You can ask to see, correct, or delete the information you have sent us.</li>
       </ul>
       <p>
-        To make a request, email <a href={`mailto:${site.email}`}>{site.email}</a> or call a licensed insurance agent: <AgentPhones />.
+        To make a request, email <a href={`mailto:${site.email}`}>{site.email}</a>, or call a licensed insurance agent:{' '}
+        <AgentPhones />
       </p>
 
       <h2>Children</h2>

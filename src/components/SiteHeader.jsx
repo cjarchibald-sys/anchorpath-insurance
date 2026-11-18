@@ -17,7 +17,7 @@ export function Wordmark({ reverse = false }) {
         height="45"
       />
       <span className="wordmark-text">
-        <span className="wordmark-name">AnchorPath</span>
+        <span className="wordmark-name">AnchorPath</span>{' '}
         <span className="wordmark-sub">Insurance Services</span>
       </span>
     </span>
@@ -105,13 +105,14 @@ export default function SiteHeader() {
           <span>{site.serviceArea}</span>
           <span>
             Call a licensed insurance agent: <AgentPhones cta="utility-bar" />
-            <span className="utility-hours"> · {site.phoneHours}</span>
           </span>
         </div>
       </div>
       <div className="container header-inner" ref={navRef}>
-        <Link to="/" className="brand" aria-label={`${site.name}, home`}>
+        {/* WCAG 2.5.3: the link's name starts with its visible words (audit F5). */}
+        <Link to="/" className="brand">
           <Wordmark />
+          <span className="visually-hidden">, home</span>
         </Link>
 
         <button

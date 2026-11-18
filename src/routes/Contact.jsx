@@ -1,5 +1,5 @@
 import Seo from '../components/Seo'
-import { PageHero, TelLink } from '../components/ui'
+import { PageHero, PHONE_NOTICE_BOTH, TelLink, Tty } from '../components/ui'
 import { site } from '../site.config'
 
 // Information site: phone and email only, no web form (owner decision 2026-10-27).
@@ -24,8 +24,9 @@ export default function Contact() {
           </p>
         ))}
         <p>
-          {site.phoneHours}. If we miss your call, we will return it {site.responseStandard}. Calls may be recorded.
+          <Tty />. {site.phoneHours}. {PHONE_NOTICE_BOTH}
         </p>
+        <p>If we miss your call, we will return it {site.responseStandard}. Calls may be recorded.</p>
 
         <h2>Email</h2>
         <ul>
