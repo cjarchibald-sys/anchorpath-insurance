@@ -1,6 +1,6 @@
-// Content record for every public page (Section 17.1). `reviewed` stays null
-// until the licensed content owner fact-checks the page; the launch guard in
-// vite.config.js refuses a production launch build while any page is unreviewed.
+// Content record for every public page (Section 17.1). `reviewed` is an
+// optional record of the licensed owner's fact-check date. It no longer gates
+// launch (owner decision 2026-11-18: Spark's approval is the gate).
 
 export const OWNER = 'Chris Archibald (licensed content owner)'
 

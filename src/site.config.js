@@ -70,7 +70,8 @@ export const site = {
   },
 
   // Internal record only (not shown on the site, owner decision 2026-10-01).
-  // Date of the last manual keyboard and screen-reader review; gates launch.
+  // Optional date of the last manual keyboard and screen-reader review. No
+  // longer gates launch (owner decision 2026-11-18).
   accessibilityReviewed: null,
 }
 
