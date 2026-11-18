@@ -24,8 +24,8 @@ export function LegalIdentity() {
   )
 }
 
-// CMS TPMO disclaimer, PY2027 wording from Spark Advisors (verbatim; never
-// paraphrase). Counts come from site.tpmoCounts.
+// CMS TPMO disclaimer, PY2027 wording from the Spark TPMO Disclaimer Tool
+// (verbatim; never paraphrase). Counts come from site.tpmoCounts.
 export function TpmoDisclaimer() {
   const { organizations, products } = site.tpmoCounts
   const count = (value, label) =>
@@ -34,7 +34,7 @@ export function TpmoDisclaimer() {
     <p className="tpmo">
       We do not offer every plan available in your area. Currently we represent{' '}
       {count(organizations, 'number of organizations')} organizations which offer {count(products, 'number of plans')}{' '}
-      products in your area. Please contact Medicare.gov, 1-800-MEDICARE to get information on all of your options.
+      products in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
     </p>
   )
 }
