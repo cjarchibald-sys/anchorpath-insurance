@@ -61,7 +61,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 
 - **`__SITE_LIVE__`** is true locally and on Vercel previews. In production (`VERCEL_ENV=production`) it is false unless `VITE_PUBLIC_LAUNCH=true`. When it's false, the app renders only `Prelaunch`.
 - **The launch guard** (in `vite.config.js`) makes a build with `VITE_PUBLIC_LAUNCH=true` fail while any of these is unresolved:
-  - `principalPlaceOfBusiness` or `tpmoDisclaimer` in `site.config.js`;
+  - `principalPlaceOfBusiness` in `site.config.js`, or either count in `site.tpmoCounts` (from the Spark TPMO Disclaimer Tool);
   - `phoneRecordsCalls` in `site.config.js` is false (every published agent number must record calls);
   - `privacy.effectiveDate` or `privacy.leadRetention`;
   - `accessibilityReviewed`;
@@ -87,7 +87,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 
 - **Minimal footprint for compliance work.** Don't refactor, restyle, rename or "improve" anything that wasn't asked for. Cite the requirement behind every compliance change (for example 42 CFR 422.2267(e)(41) or Cal. Ins. Code §1726).
 - **Never invent** license numbers, phone numbers, carrier names, plan counts or legal text. Use a visible `TODO` placeholder and tell the owner.
-- **TPMO disclaimer** (`site.tpmoDisclaimer`): use the owner-confirmed wording **verbatim**; never paraphrase it. It appears in the footer of every page (including Schedule), on Licensing & Disclosures, in the FAQ and on Prelaunch.
+- **TPMO disclaimer** (`TpmoDisclaimer` in `SiteFooter.jsx`, counts in `site.tpmoCounts`): Spark's PY2027 wording, **verbatim**; never paraphrase it. It appears in the footer of every page (including Schedule), on Licensing & Disclosures, in the FAQ and on Prelaunch.
 - **§1726 identity block** (`LegalIdentity`): name, license numbers, state of domicile and principal place of business, all in **one font size**.
 - **Never alter** compliance copy without the owner's sign-off: the TPMO disclaimer, license language, the "California-licensed independent insurance agent" wording, consent text, or carrier-provided notices. If a fix would touch them, flag it instead.
 - **Deploy to Vercel previews only. Never merge to `main` or touch production without the owner's explicit approval.**
@@ -105,6 +105,7 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 | 2026-10-03 | **TPMO disclaimer, confirmed by the owner:** "We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1–800–MEDICARE to get information on all of your options." Claude flagged that this matches the pre-2024 CMS wording; the owner is getting written confirmation from Spark Advisors for CY2027. |
 | 2026-10-05 | **Call recording:** (408) 365-4412 and Helga's (408) 596-3508 are direct lines that don't record calls. CMS requires recording MA/Part D marketing, sales and enrollment calls (42 CFR 422.2274(g)), and California requires all-party notice (Penal Code §632). Don't publish any non-recording number. |
 | 2026-10-07 | **Recorded phone lines published:** Chris (408) 650-8107 and Helga (408) 694-5404, confirmed by the owner as CMS-compliant recording lines. Both appear wherever the site offers a phone number (`AgentPhones` in `ui.jsx`); the old single `site.phone` is gone. `phoneRecordsCalls: true`. |
+| 2026-11-18 | **Spark review feedback (both sites):** (1) every agent phone number carries Spark's notice "Dialing this number will connect you with a licensed insurance agent." ("Dialing either number…" where both numbers appear together), in addition to the existing "licensed insurance agent" labels; (2) TTY 711 (`site.tty`) and the days and hours appear with every number. `AgentPhones` and `AgentPhone` in `ui.jsx` render number, TTY, hours and notice together. (3) TPMO disclaimer replaced with Spark's PY2027 wording: "We do not offer every plan available in your area. Currently we represent [N] organizations which offer [N] products in your area. Please contact Medicare.gov, 1-800-MEDICARE to get information on all of your options." Counts live in `site.tpmoCounts` and must come from the **Spark TPMO Disclaimer Tool**; they are null (visible placeholder, launch blocked) until the owner supplies them. This supersedes the 2026-10-03 owner-confirmed wording. Also fixed audit F5 (logo link name, WCAG 2.5.3). |
 | 2026-10-07 | **Spark guide fixes (Spark Advisors Marketing Material Requirements Guide, June 2026):** "licensed insurance agent" label beside every agent phone number (§4.21); SEP disclaimer in the footer (§4.8); benefits-across-plans (§4.6) and verbatim out-of-network (§4.23) disclaimers on Medicare Basics and Your Coverage Choices; Medicare Advantage Open Enrollment Period (Jan 1–Mar 31) references removed from Medicare Basics and Already on Medicare (§6.2). Disclaimer text lives in `src/content/disclaimers.js`. Still open: TPMO wording with counts (§4.1), Federal Contracting Statement (§4.4), product scope in the consent (§4.15), required form fields (§4.15), SMID (§3), and Spark/carrier/CMS approval before launch (§2). Full review: https://claude.ai/code/artifact/0c889651-b17b-463c-8d3b-2a45ea7ccab8 |
 | 2026-10-05 | **Schedule page sidebar:** removed the second copy of the TPMO disclaimer and the sentence "Both are independent, California-licensed insurance agents, not Medicare." The disclaimer still appears in the footer on the Schedule page. |
 | 2026-10-03 | **Accessibility:** fixed audit items F1 (gold focus outline on dark backgrounds), F2 (Escape returns focus to the menu button), F3 (Email/Phone grouped with "at least one is required") and F13 (accessibility reports go to email or phone, never the Schedule form). Items F4–F12 are deferred. CMS doesn't require WCAG; the motivation is California's Unruh Act, the ADA, possible Section 504/1557 obligations via carrier contracts, and the audience. |
@@ -131,6 +132,6 @@ GitHub repo ──push──▶ Vercel builds: main = production, other branches
 ## Still open before launch
 
 - Spark review, carrier review and CMS filing of the website before launch (Spark guide §2), plus the open Spark-guide items listed in the 2026-10-07 decision.
-- Written confirmation from Spark Advisors of the TPMO wording for CY2027.
+- TPMO disclaimer counts from the Spark TPMO Disclaimer Tool (`site.tpmoCounts`).
 - Page fact-check dates (`pages.js`) and the manual accessibility review date (`site.accessibilityReviewed`).
 - The owner's go-ahead, then the launch steps above.

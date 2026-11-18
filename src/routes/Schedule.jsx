@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
 import Seo from '../components/Seo'
-import { AgentEmails, AgentPhones, Callout, PageHero, TelLink } from '../components/ui'
+import { AgentEmails, AgentPhones, Callout, PageHero, PHONE_NOTICE_BOTH, TelLink, Tty } from '../components/ui'
 import { site } from '../site.config'
 import {
   CONSENT_TEXT, CONSENT_VERSION, NOTES_MAX, OPTIONS, SENSITIVE_WARNING, SOLICITATION_NOTICE,
@@ -135,8 +135,7 @@ export default function Schedule() {
               <h2>Thank you. Your request was sent.</h2>
               <p>
                 Chris or Helga will contact you {site.responseStandard} using your preferred contact method. If you
-                need to reach us sooner, call a licensed insurance agent: <AgentPhones cta="form-success" />{' '}
-                ({site.phoneHours}).
+                need to reach us sooner, call a licensed insurance agent: <AgentPhones cta="form-success" />
               </p>
               <p>
                 While you wait, you might find the <Link to="/resources/#conversation-checklist">conversation checklist</Link>{' '}
@@ -163,8 +162,8 @@ export default function Schedule() {
                 <div className="form-result failure" role="alert" tabIndex={-1} ref={resultRef}>
                   <p>
                     <strong>Your request could not be sent.</strong> Nothing was lost; please try again, or call a licensed insurance agent:{' '}
-                    <AgentPhones cta="form-failure" /> ({site.phoneHours})
-                    or email <AgentEmails />.
+                    <AgentPhones cta="form-failure" />{' '}
+                    Or email <AgentEmails />.
                   </p>
                 </div>
               )}
@@ -277,7 +276,10 @@ export default function Schedule() {
               <TelLink tel={a.phone.tel} className="agent-phone" cta={`schedule-aside-${a.key}`}>{a.phone.display}</TelLink>
             </p>
           ))}
-          <p>{site.phoneHours}. If we miss your call, we will return it {site.responseStandard}.</p>
+          <p>
+            <Tty />. {site.phoneHours}. {PHONE_NOTICE_BOTH}
+          </p>
+          <p>If we miss your call, we will return it {site.responseStandard}.</p>
           <p>
             Or email <AgentEmails />. Please do not send sensitive information by
             email.

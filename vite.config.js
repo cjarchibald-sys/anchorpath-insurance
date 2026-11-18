@@ -16,7 +16,7 @@ function launchBlockers() {
   const blockers = []
   if (!site.principalPlaceOfBusiness) blockers.push('site.principalPlaceOfBusiness (city and state)')
   if (!site.phoneRecordsCalls) blockers.push('site.phoneRecordsCalls: every published agent phone must record calls (42 CFR 422.2274(g))')
-  if (!site.tpmoDisclaimer) blockers.push('site.tpmoDisclaimer (exact CY2027 wording from Spark Advisors)')
+  if (!site.tpmoCounts?.organizations || !site.tpmoCounts?.products) blockers.push('site.tpmoCounts (organization and product counts from the Spark TPMO Disclaimer Tool)')
   if (!site.privacy.effectiveDate) blockers.push('site.privacy.effectiveDate')
   if (!site.privacy.leadRetention) blockers.push('site.privacy.leadRetention')
   if (!site.accessibilityReviewed) blockers.push('site.accessibilityReviewed')

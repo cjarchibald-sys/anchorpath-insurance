@@ -140,8 +140,8 @@ export default function Home() {
             </div>
           </div>
           <p className="cta-band-alt">
-            Prefer to call? Reach a licensed insurance agent: <AgentPhones cta="home-final" /> ·{' '}
-            {site.phoneHours}. For official information, visit Medicare.gov or call 1-800-MEDICARE.
+            Prefer to call? Reach a licensed insurance agent: <AgentPhones cta="home-final" /> For official
+            information, visit Medicare.gov or call 1-800-MEDICARE.
           </p>
         </div>
       </section>

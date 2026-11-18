@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { site } from '../site.config'
 import { navGroups, meetUs, legalLinks } from './navigation'
-import { TelLink } from './ui'
+import { PHONE_NOTICE_BOTH, TelLink, Tty } from './ui'
 import { SEP_DISCLAIMER } from '../content/disclaimers'
 import { Wordmark } from './SiteHeader'
 
@@ -24,13 +24,17 @@ export function LegalIdentity() {
   )
 }
 
-// CMS TPMO disclaimer. Exact wording from site.config.js; never paraphrase.
+// CMS TPMO disclaimer, PY2027 wording from Spark Advisors (verbatim; never
+// paraphrase). Counts come from site.tpmoCounts.
 export function TpmoDisclaimer() {
+  const { organizations, products } = site.tpmoCounts
+  const count = (value, label) =>
+    value ?? <mark className="placeholder">[{label} from the Spark TPMO Disclaimer Tool]</mark>
   return (
     <p className="tpmo">
-      {site.tpmoDisclaimer ?? (
-        <mark className="placeholder">[CMS TPMO disclaimer — exact wording pending from Spark Advisors; required before launch]</mark>
-      )}
+      We do not offer every plan available in your area. Currently we represent{' '}
+      {count(organizations, 'number of organizations')} organizations which offer {count(products, 'number of plans')}{' '}
+      products in your area. Please contact Medicare.gov, 1-800-MEDICARE to get information on all of your options.
     </p>
   )
 }
@@ -51,7 +55,11 @@ export default function SiteFooter() {
                 <br />
               </span>
             ))}
+            <Tty />
+            <br />
             {site.phoneHours}
+            <br />
+            {PHONE_NOTICE_BOTH}
             <br />
             {site.agents.map((a) => (
               <span key={a.key}>
