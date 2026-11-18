@@ -54,9 +54,10 @@ export const site = {
   // in SiteFooter.jsx; do not paraphrase. The two counts must come from the
   // Spark TPMO Disclaimer Tool and match what the agents actually represent in
   // their California service area. Counts and wording from the Spark TPMO
-  // Disclaimer Tool, supplied by the owner 2026-11-18. While either is null, a
+  // Disclaimer Tool, supplied by the owner 2026-11-18 (corrected the same day to
+  // include a carrier missed on the first run). While either is null, a
   // visible placeholder renders and a launch build is blocked.
-  tpmoCounts: { organizations: 10, products: 300 },
+  tpmoCounts: { organizations: 11, products: 304 },
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.
