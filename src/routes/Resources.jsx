@@ -36,7 +36,7 @@ const checklists = [
   {
     id: 'annual-review-checklist',
     title: 'Annual review checklist',
-    intro: 'Each fall, before the October 15–December 7 Open Enrollment Period.',
+    intro: 'Each fall, before the October 15–December 7 Annual Enrollment Period.',
     items: [
       'Read your Annual Notice of Change when it arrives',
       'Check each prescription against next year’s drug list and costs',

@@ -12,3 +12,8 @@ export const BENEFITS_DISCLAIMER =
 // §4.23 (verbatim): required wherever out-of-network providers are referenced.
 export const OUT_OF_NETWORK_DISCLAIMER =
   "Out-of-network/non-contracted providers are under no obligation to treat Plan members, except in emergency situations. Please call the Plan's customer service number or see your Evidence of Coverage for more information, including the cost-sharing that applies to out-of-network services."
+
+// §4.4 Federal Contracting Statement (Spark review 2026-11-20). Owner to confirm
+// wording with Spark; plan types (HMO/PPO/PFFS, Part D) not listed until confirmed.
+export const FEDERAL_CONTRACTING_STATEMENT =
+  "AnchorPath Insurance Services is a licensed representative of Medicare Advantage organizations that have a Medicare contract. Enrollment in any plan depends on the plan's contract renewal with Medicare."

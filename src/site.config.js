@@ -58,6 +58,9 @@ export const site = {
   // include a carrier missed on the first run). While either is null, a
   // visible placeholder renders and a launch build is blocked.
   tpmoCounts: { organizations: 11, products: 304 },
+  // Spark guide §3: the Spark Marketing ID (SMID) assigned to this submission
+  // must be printed on the material. Spark review 2026-11-20.
+  smid: 'MULTI-PLLZpvtSwpY',
 
   // Set true only when Medicare Supplement advertising is approved; renders the
   // California outline-of-coverage notice where Medigap is discussed.

@@ -2,10 +2,12 @@
 // evidence always matches the words the visitor saw. Bump the version whenever
 // the wording changes. Draft pending FMO/counsel approval (Section 11.4).
 
-export const CONSENT_VERSION = '2026-10-01-1'
+export const CONSENT_VERSION = '2026-11-20-1'
 
+// Spark's model permission-to-contact wording (verbatim, Spark review
+// 2026-11-20), followed by the consent duration Spark asked us to state.
 export const CONSENT_TEXT =
-  'By submitting this form, I request that a licensed insurance agent with AnchorPath Insurance Services contact me using the phone number or email address I provided to discuss Medicare insurance information and options. I understand that this is a solicitation for insurance, that my consent is not a condition of purchasing any product or service, and that I may ask not to be contacted again.'
+  'By providing your name and contact information you are consenting to receive sales and marketing calls, text messages and/or emails from the licensed insurance agent listed on this form about Medicare Plans at the number provided, and you agree such calls and/or text messages may use an automated system for the selection or dialing of telephone numbers, automated voice calls, AI generative voice calls, pre recorded messages played when a connection is made, or pre recorded voicemail messages, even if you are on a government do-not-call registry. These calls are for marketing purposes and cellular charges may apply. This agreement is not a condition of enrollment and you can change your permission preferences at any time by contacting the agent listed on this form. This consent lasts for 12 months from the date you submit this form.'
 
 export const SOLICITATION_NOTICE =
   'The purpose of this form is to request information or contact about insurance. By submitting it, you are asking a licensed insurance agent to contact you using the information you provide.'

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { site } from '../site.config'
 import { navGroups, meetUs, legalLinks } from './navigation'
 import { PHONE_NOTICE_ONE, TelLink, Tty } from './ui'
-import { SEP_DISCLAIMER } from '../content/disclaimers'
+import { FEDERAL_CONTRACTING_STATEMENT, SEP_DISCLAIMER } from '../content/disclaimers'
 import { Wordmark } from './SiteHeader'
 
 // Cal. Ins. Code §1726: filed name, state of domicile and principal place of
@@ -107,6 +107,7 @@ export default function SiteFooter() {
       <div className="container footer-legal">
         <LegalIdentity />
         <TpmoDisclaimer />
+        <p>{FEDERAL_CONTRACTING_STATEMENT}</p>
         <p>
           The information on this website is general educational information and is not a determination of
           eligibility, coverage, benefits, or costs. Chris and Helga can discuss only the products and plans they are
@@ -121,6 +122,7 @@ export default function SiteFooter() {
           </ul>
         </nav>
         <p className="copyright">© {new Date().getFullYear()} {site.name}</p>
+        <p className="copyright">{site.smid}</p>
       </div>
     </footer>
   )

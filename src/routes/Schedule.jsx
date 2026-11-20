@@ -245,6 +245,18 @@ export default function Schedule() {
                   value={form.website} onChange={(e) => set('website', e.target.value)} />
               </div>
 
+              {/* Spark model consent refers to "the licensed insurance agent listed on this form". */}
+              <p className="hint" id="form-agents">
+                Licensed insurance agents for this form:{' '}
+                {site.agents.map((ag, i) => (
+                  <Fragment key={ag.key}>
+                    {i > 0 && ' and '}
+                    {ag.legalName}, California Insurance License #{ag.license}
+                  </Fragment>
+                ))}
+                , {site.name}.
+              </p>
+
               <div className={`field consent${errors.consent ? ' has-error' : ''}`}>
                 {errors.consent && <p id="consent-error" className="error-text">{errors.consent}</p>}
                 <label className="checkbox" htmlFor="consent">

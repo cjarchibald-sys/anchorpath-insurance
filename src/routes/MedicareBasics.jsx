@@ -105,7 +105,7 @@ export default function MedicareBasics() {
           January 1–March 31 each year, for people who missed their enrollment window for Part A or Part B. Coverage
           starts the month after you sign up, and late enrollment penalties may apply.
         </dd>
-        <dt>Open Enrollment Period</dt>
+        <dt>Annual Enrollment Period</dt>
         <dd>
           October 15–December 7 each year. People with Medicare can join, switch, or drop a Medicare Advantage or Part D
           plan, with changes taking effect January 1.
